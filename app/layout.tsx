@@ -10,8 +10,30 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "CARS SR99 Kft.",
-  description: "Prémium autókereskedés - modern, gyors és megbízható online élmény",
+  metadataBase: new URL("https://cars-sr99-website.vercel.app"),
+  title: {
+    default: "CARS SR99 Kft. | Prémium használtautó kereskedés Zalaegerszeg",
+    template: "%s | CARS SR99 Kft.",
+  },
+  description:
+    "Prémium használtautó kereskedés Zalaegerszegen: JSZP ellenőrzött járművek, autóbeszámítás, transzparens ügyintézés és gyors kapcsolatfelvétel.",
+  keywords: [
+    "Prémium használtautó kereskedés Zalaegerszeg",
+    "CARS SR99 Kft.",
+    "Autóbeszámítás",
+    "JSZP ellenőrzött járművek",
+    "hibrid autók",
+    "használtautó",
+  ],
+  openGraph: {
+    title: "CARS SR99 Kft. | Prémium használtautó kereskedés Zalaegerszeg",
+    description:
+      "Fedezze fel JSZP ellenőrzött kínálatunkat, kérjen gyors kapcsolatfelvételt vagy autóbeszámítási ajánlatot.",
+    url: "https://cars-sr99-website.vercel.app",
+    siteName: "CARS SR99 Kft.",
+    locale: "hu_HU",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

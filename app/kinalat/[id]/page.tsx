@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -9,6 +10,40 @@ type CarDetailsPageProps = {
     id: string;
   }>;
 };
+
+export async function generateMetadata({ params }: CarDetailsPageProps): Promise<Metadata> {
+  const { id } = await params;
+  const car = getCarById(id);
+
+  if (!car) {
+    return {
+      title: "Jármű nem található",
+      description: "A keresett jármű nem érhető el a CARS SR99 Kft. kínálatában.",
+    };
+  }
+
+  const carName = `${car.marka} ${car.modell}`;
+  const title = `Eladó ${carName} - CARS SR99 Kft.`;
+  const description = `${car.evjarat}-es ${carName}, ${car.futasteljesitmeny} futásteljesítménnyel, ${car.uzemanyag} hajtással. JSZP ellenőrzött jármű a CARS SR99 Kft. kínálatában.`;
+  const pageUrl = `/kinalat/${car.id}`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: pageUrl,
+      type: "article",
+      images: [
+        {
+          url: car.imageUrl,
+          alt: carName,
+        },
+      ],
+    },
+  };
+}
 
 export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
   const { id } = await params;

@@ -40,3 +40,11 @@ npm run dev
 ```text
 http://localhost:3000
 ```
+
+## Deployment (Vercel)
+
+Ez a projekt Vercel környezetre van optimalizálva (Next.js App Router + server/client komponens felépítés).
+
+1. Importáld a repót a Vercelben: **Add New Project** → válaszd a GitHub repository-t.
+2. A Vercel automatikusan felismeri a Next.js beállításokat; indítsd a deploy-t alapértelmezett build konfigurációval.
+3. Deploy után állítsd be az egyedi domaint (ha szükséges), majd ellenőrizd a production URL-en a dinamikus járműoldalakat.

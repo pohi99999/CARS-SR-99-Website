@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import EventBanner from "@/components/EventBanner";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import "./globals.css";
@@ -44,6 +45,7 @@ export default function RootLayout({
   return (
     <html lang="hu" className={`${inter.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-slate-50 text-slate-900">
+        <EventBanner />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

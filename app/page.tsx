@@ -1,10 +1,30 @@
+import CarFilter from "@/components/CarFilter";
 import Link from "next/link";
 import InventorySection from "@/components/InventorySection";
 import WarrantySection from "@/components/WarrantySection";
 import { fetchInventory } from "@/services/inventoryService";
 
-export default async function Home() {
+type HomePageProps = {
+  searchParams: Promise<{
+    marka?: string;
+    uzemanyag?: string;
+  }>;
+};
+
+const allowedMarkak = new Set(["Toyota", "Kia"]);
+const allowedUzemanyagok = new Set(["Hibrid", "Benzin", "Diesel"]);
+
+export default async function Home({ searchParams }: HomePageProps) {
+  const params = await searchParams;
+  const selectedMarka = params.marka && allowedMarkak.has(params.marka) ? params.marka : "Összes";
+  const selectedUzemanyag =
+    params.uzemanyag && allowedUzemanyagok.has(params.uzemanyag) ? params.uzemanyag : "Összes";
   const inventory = await fetchInventory();
+  const filteredCars = inventory.filter((car) => {
+    const markaMatches = selectedMarka === "Összes" || car.marka === selectedMarka;
+    const uzemanyagMatches = selectedUzemanyag === "Összes" || car.uzemanyag === selectedUzemanyag;
+    return markaMatches && uzemanyagMatches;
+  });
 
   return (
     <>
@@ -32,7 +52,8 @@ export default async function Home() {
         </div>
       </section>
 
-      <InventorySection cars={inventory} />
+      <CarFilter initialMarka={selectedMarka} initialUzemanyag={selectedUzemanyag} />
+      <InventorySection cars={filteredCars} />
       <WarrantySection />
     </>
   );

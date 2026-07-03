@@ -11,3 +11,4 @@
 | 2026-07-03 | SEO optimalizálás (Metadata) és Vercel deployment előkészítése | Kész |
 | 2026-07-03 | Aszinkron adatkezelés (Service réteg) és globális Loading UI kialakítása | Kész |
 | 2026-07-03 | Vercel build hiba javítása: Suspense boundary hozzáadása a ContactForm-hoz | Kész |
+| 2026-07-03 | Szűrő modul és Rendezvény Banner integrálása | Kész |

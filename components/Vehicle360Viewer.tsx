@@ -17,6 +17,7 @@ export default function Vehicle360Viewer({ imageUrl, carName }: Vehicle360Viewer
 
   function handlePointerDown(event: React.PointerEvent<HTMLDivElement>) {
     dragStartXRef.current = event.clientX;
+    event.currentTarget.setPointerCapture(event.pointerId);
   }
 
   function handlePointerMove(event: React.PointerEvent<HTMLDivElement>) {
@@ -32,7 +33,14 @@ export default function Vehicle360Viewer({ imageUrl, carName }: Vehicle360Viewer
     dragStartXRef.current = event.clientX;
   }
 
-  function handlePointerUp() {
+  function handlePointerUp(event: React.PointerEvent<HTMLDivElement>) {
+    if (dragStartXRef.current !== null) {
+      try {
+        event.currentTarget.releasePointerCapture(event.pointerId);
+      } catch {
+        // Pointer capture release fallback
+      }
+    }
     dragStartXRef.current = null;
   }
 

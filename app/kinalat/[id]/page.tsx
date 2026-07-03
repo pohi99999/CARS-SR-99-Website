@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import LeasingCalculator from "@/components/LeasingCalculator";
-import { getCarById, parsePriceToNumber } from "@/data/inventory";
+import { parsePriceToNumber } from "@/data/inventory";
+import { getCarByIdAsync } from "@/services/inventoryService";
 
 type CarDetailsPageProps = {
   params: Promise<{
@@ -13,7 +14,7 @@ type CarDetailsPageProps = {
 
 export async function generateMetadata({ params }: CarDetailsPageProps): Promise<Metadata> {
   const { id } = await params;
-  const car = getCarById(id);
+  const car = await getCarByIdAsync(id);
 
   if (!car) {
     return {
@@ -47,7 +48,7 @@ export async function generateMetadata({ params }: CarDetailsPageProps): Promise
 
 export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
   const { id } = await params;
-  const car = getCarById(id);
+  const car = await getCarByIdAsync(id);
 
   if (!car) {
     notFound();

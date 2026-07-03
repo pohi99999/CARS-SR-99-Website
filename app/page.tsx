@@ -1,8 +1,11 @@
 import Link from "next/link";
 import InventorySection from "@/components/InventorySection";
 import WarrantySection from "@/components/WarrantySection";
+import { fetchInventory } from "@/services/inventoryService";
 
-export default function Home() {
+export default async function Home() {
+  const inventory = await fetchInventory();
+
   return (
     <>
       <section className="relative overflow-hidden">
@@ -29,7 +32,7 @@ export default function Home() {
         </div>
       </section>
 
-      <InventorySection />
+      <InventorySection cars={inventory} />
       <WarrantySection />
     </>
   );

@@ -1,9 +1,18 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="bg-[#2B2B2B] text-slate-200">
       <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-3 lg:px-8">
         <div>
-          <h2 className="text-sm font-semibold uppercase tracking-wider text-cyan-400">
+          <Image
+            src="/logo.png"
+            alt="CARS SR99 Kft. hivatalos logó"
+            width={140}
+            height={45}
+            className="h-auto w-[120px] sm:w-[140px]"
+          />
+          <h2 className="mt-3 text-sm font-semibold uppercase tracking-wider text-cyan-400">
             CARS SR99 Kft.
           </h2>
           <p className="mt-3 text-sm leading-6 text-slate-300">

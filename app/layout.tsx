@@ -34,6 +34,14 @@ export const metadata: Metadata = {
     siteName: "CARS SR99 Kft.",
     locale: "hu_HU",
     type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "CARS SR99 Kft. hivatalos logó",
+      },
+    ],
   },
 };
 

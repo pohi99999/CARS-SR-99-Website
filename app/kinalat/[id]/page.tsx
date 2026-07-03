@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ImageGallery from "@/components/ImageGallery";
 import LeasingCalculator from "@/components/LeasingCalculator";
 import { parsePriceToNumber } from "@/data/inventory";
 import { getCarByIdAsync } from "@/services/inventoryService";
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: CarDetailsPageProps): Promise
       type: "article",
       images: [
         {
-          url: car.imageUrl,
+          url: car.images[0],
           alt: carName,
         },
       ],
@@ -65,16 +65,7 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
       </div>
 
       <div className="grid gap-8 lg:grid-cols-2">
-        <div className="overflow-hidden rounded-2xl bg-white shadow-md">
-          <Image
-            src={car.imageUrl}
-            alt={`${car.marka} ${car.modell}`}
-            width={1200}
-            height={800}
-            priority
-            className="h-full w-full object-cover"
-          />
-        </div>
+        <ImageGallery images={car.images} />
 
         <div className="rounded-2xl bg-white p-6 shadow-md">
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-600">{car.marka}</p>

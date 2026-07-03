@@ -15,7 +15,7 @@ export default function CarCard({ car }: CarCardProps) {
       <article className="overflow-hidden rounded-2xl bg-white shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl">
         <div className="aspect-[16/10] w-full overflow-hidden bg-slate-200">
           <Image
-            src={car.imageUrl}
+            src={car.images[0]}
             alt={`${car.marka} ${car.modell}`}
             width={1200}
             height={800}

@@ -44,6 +44,10 @@ export default function CarCard({ car }: CarCardProps) {
           </div>
         </dl>
 
+        <div className="rounded-lg border border-emerald-100 bg-emerald-50 px-3 py-2 text-xs font-medium text-emerald-800">
+          JSZP transzparencia: futásteljesítmény és kártörténet ellenőrzött.
+        </div>
+
         <Link
           href={`/kinalat/${car.id}`}
           className="inline-flex w-full items-center justify-center rounded-full bg-cyan-400 px-4 py-2.5 text-sm font-semibold text-[#2B2B2B] transition hover:bg-cyan-300"

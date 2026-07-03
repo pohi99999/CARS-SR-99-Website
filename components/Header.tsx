@@ -7,6 +7,7 @@ import { useState } from "react";
 const navItems = [
   { href: "/", label: "Főoldal" },
   { href: "/kinalatunk", label: "Kínálatunk" },
+  { href: "/autobeszamitas", label: "Autóbeszámítás" },
   { href: "/sr99-garancia", label: "SR99 Garancia" },
   { href: "/kapcsolat", label: "Kapcsolat" },
 ];

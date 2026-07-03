@@ -75,6 +75,24 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
             Kapcsolatfelvétel
           </Link>
 
+          <section className="mt-8 rounded-xl border border-emerald-200 bg-emerald-50 p-5">
+            <h2 className="text-base font-semibold text-emerald-900">
+              Járműelőélet és Transzparencia
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-emerald-800">
+              A jármű futásteljesítménye és kártörténete a JSZP rendszerében ellenőrzött.
+              Vásárlás előtt is fontosnak tartjuk a hiteles, átlátható információkat.
+            </p>
+            <a
+              href="https://szuf.magyarorszag.hu/jszp_szuf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center justify-center rounded-full bg-[#2B2B2B] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1f1f1f]"
+            >
+              Lekérdezés a JSZP-ben
+            </a>
+          </section>
+
           <LeasingCalculator price={numericPrice} />
         </div>
       </div>

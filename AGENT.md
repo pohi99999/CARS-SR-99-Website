@@ -7,3 +7,4 @@
 | 2026-07-03 | Kínálat grid és SR99 Garancia szekció kialakítása | Kész |
 | 2026-07-03 | Dinamikus jármű adatlap és lízing kalkulátor kialakítása | Kész |
 | 2026-07-03 | Kapcsolat oldal és okos lead-generáló űrlap kialakítása | Kész |
+| 2026-07-03 | JSZP blokk és Autóbeszámítás modul | Kész |

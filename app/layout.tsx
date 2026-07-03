@@ -8,6 +8,7 @@ import EventBanner from "@/components/EventBanner";
 import FomoNotification from "@/components/FomoNotification";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import TrackingScripts from "@/components/TrackingScripts";
 import "./globals.css";
 
 const inter = Inter({
@@ -39,6 +40,9 @@ export const metadata: Metadata = {
     "hibrid autók",
     "használtautó Zalaegerszeg",
   ],
+  verification: {
+    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
+  },
   alternates: {
     canonical: baseUrl,
   },
@@ -112,6 +116,7 @@ export default function RootLayout({
       className={`${inter.variable} ${montserrat.variable} h-full antialiased`}
     >
       <body className="relative flex min-h-full flex-col bg-background text-foreground">
+        <TrackingScripts />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}

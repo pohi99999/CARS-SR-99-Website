@@ -15,6 +15,7 @@ export default function CookieBanner() {
 
   function handleDecision(decision: "accepted" | "rejected") {
     window.localStorage.setItem(consentStorageKey, decision);
+    window.dispatchEvent(new Event("cookie_consent_updated"));
     setIsDismissed(true);
   }
 

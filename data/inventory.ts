@@ -51,3 +51,12 @@ export const inventory: Car[] = [
     imageUrl: "https://placehold.co/1200x800/111827/FFFFFF?text=Toyota+RAV4+Hybrid",
   },
 ];
+
+export function getCarById(id: string): Car | undefined {
+  return inventory.find((car) => car.id === id);
+}
+
+export function parsePriceToNumber(price: string): number {
+  const normalized = price.replace(/[^\d]/g, "");
+  return Number.parseInt(normalized, 10);
+}

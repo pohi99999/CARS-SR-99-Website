@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Car } from "@/data/inventory";
 
 type CarCardProps = {
@@ -43,12 +44,12 @@ export default function CarCard({ car }: CarCardProps) {
           </div>
         </dl>
 
-        <button
-          type="button"
+        <Link
+          href={`/kinalat/${car.id}`}
           className="inline-flex w-full items-center justify-center rounded-full bg-cyan-400 px-4 py-2.5 text-sm font-semibold text-[#2B2B2B] transition hover:bg-cyan-300"
         >
           Részletek
-        </button>
+        </Link>
       </div>
     </article>
   );

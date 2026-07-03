@@ -1,31 +1,54 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import ContactForm from "@/components/ContactForm";
+import { Clock, ShieldCheck, MapPin, Phone, Mail } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Kapcsolat",
+  description: "Lépjen kapcsolatba a CARS SR99 Kft. csapatával! Telephelyünk Zalaegerszeg Ságod hrsz. 807/15 alatt található.",
+  alternates: {
+    canonical: "https://cars-sr99.vercel.app/kapcsolat",
+  },
+};
 
 export default function ContactPage() {
   return (
     <section className="mx-auto w-full max-w-7xl px-6 py-12 sm:px-6 lg:px-8">
       <div className="grid gap-8 lg:grid-cols-2">
-        <div className="rounded-2xl bg-white p-6 shadow-md transition-all duration-300 sm:p-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-600">Kapcsolat</p>
-          <h1 className="mt-3 text-3xl font-bold tracking-tight text-[#2B2B2B] sm:text-4xl">
+        <div className="rounded-2xl border border-white/10 bg-black/40 p-6 shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-white/5 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-400">Kapcsolat</p>
+          <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-100 sm:text-4xl">
             Vegye fel velünk a kapcsolatot
           </h1>
+          <p className="mt-3 text-sm text-slate-300">
+            Kérdése van valamelyik járművünkről, vagy tesztvezetést egyeztetne? Szakértő csapatunk készséggel áll rendelkezésére.
+          </p>
 
-          <div className="mt-8 space-y-6 text-sm text-slate-700">
-            <div>
-              <h2 className="text-base font-semibold text-slate-900">Elérhetőség</h2>
-              <p className="mt-2 leading-6">
-                CARS SR99 Kft.
+          <div className="mt-8 space-y-6 text-sm text-slate-300">
+            <div className="rounded-xl border border-white/10 bg-white/5 p-5 space-y-3">
+              <h2 className="text-base font-semibold text-cyan-300 flex items-center gap-2">
+                <MapPin className="h-5 w-5 text-cyan-400" /> Elérhetőség & Telephely
+              </h2>
+              <p className="leading-6 text-slate-300">
+                <strong>CARS SR99 Kft.</strong>
                 <br />
                 8900 Zalaegerszeg, Ságod hrsz. 807/15
-                <br />
-                Tel: 06-70 907-06-69
               </p>
+              <div className="flex items-center gap-2 text-slate-200 font-medium">
+                <Phone className="h-4 w-4 text-cyan-400" />
+                <a href="tel:+36709070669" className="hover:text-cyan-300 transition">06-70 907-06-69</a>
+              </div>
+              <div className="flex items-center gap-2 text-slate-200 font-medium">
+                <Mail className="h-4 w-4 text-cyan-400" />
+                <a href="mailto:info@carssr99.hu" className="hover:text-cyan-300 transition">info@carssr99.hu</a>
+              </div>
             </div>
 
-            <div>
-              <h2 className="text-base font-semibold text-slate-900">Nyitvatartás</h2>
-              <p className="mt-2 leading-6">
+            <div className="rounded-xl border border-white/10 bg-white/5 p-5">
+              <h2 className="text-base font-semibold text-cyan-300 flex items-center gap-2">
+                <Clock className="h-5 w-5 text-cyan-400" /> Nyitvatartási idő
+              </h2>
+              <p className="mt-2 leading-6 text-slate-300">
                 Hétfő-Péntek: 09:00-17:00
                 <br />
                 Szombat: Előre egyeztetett időpontban
@@ -34,17 +57,20 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div>
-              <h2 className="text-base font-semibold text-slate-900">Biztonságos megtekintés</h2>
-              <p className="mt-2 leading-6">
-                A hatalmas Ságodi Iparterület kiváló lehetőséget biztosít a járművek kényelmes,
-                biztonságos megtekintésére és a nyugodt tesztvezetésre.
-              </p>
+            <div className="rounded-xl border border-cyan-500/20 bg-cyan-500/10 p-5 space-y-2 text-slate-200">
+              <h2 className="text-base font-semibold text-cyan-300 flex items-center gap-2">
+                <ShieldCheck className="h-5 w-5 text-cyan-400" /> Bizalomépítő garanciáink
+              </h2>
+              <ul className="list-disc pl-5 space-y-1 text-xs sm:text-sm text-slate-300">
+                <li>⚡ <strong>Garantált válaszidő:</strong> Munkanapokon 24 órán belül válaszolunk.</li>
+                <li>🚗 <strong>Nyugodt környezet:</strong> A Ságodi Iparterületen tágas, biztonságos megtekintés és tesztvezetés várja.</li>
+                <li>📄 <strong>Teljes átláthatóság:</strong> Hivatalos JSZP lekérdezés minden autónkhoz.</li>
+              </ul>
             </div>
 
             <div>
-              <h2 className="text-base font-semibold text-slate-900">Telephely térképen</h2>
-              <div className="mt-3 overflow-hidden rounded-xl border border-slate-200">
+              <h2 className="text-base font-semibold text-slate-100 mb-3">Telephely térképen</h2>
+              <div className="overflow-hidden rounded-xl border border-white/10">
                 <iframe
                   title="CARS SR99 Kft. telephely - Zalaegerszeg, Ságod"
                   src="https://maps.google.com/maps?q=Zalaegerszeg%20S%C3%A1god&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -57,7 +83,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <Suspense fallback={<div className="text-gray-500 animate-pulse">Űrlap betöltése...</div>}>
+        <Suspense fallback={<div className="text-cyan-400 animate-pulse p-8">Űrlap betöltése...</div>}>
           <ContactForm />
         </Suspense>
       </div>

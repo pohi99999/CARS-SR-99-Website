@@ -139,11 +139,11 @@ export default function CarFilter({ initialMarka, initialUzemanyag }: CarFilterP
 
   return (
     <section className="mx-auto w-full max-w-7xl px-6 pt-8 sm:px-6 lg:px-8">
-      <div className="rounded-2xl border border-black/10 bg-black/5 p-4 shadow-sm backdrop-blur-md transition-all duration-300 dark:border-white/10 dark:bg-white/5 sm:p-5">
+      <div className="rounded-2xl border border-white/10 bg-black/40 p-4 shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-white/5 sm:p-6">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <div>
-            <label htmlFor="filter-marka" className="mb-1 block text-sm font-medium text-slate-700">
-              Márka
+            <label htmlFor="filter-marka" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-cyan-400">
+              Márka szűrő
             </label>
             <div className="flex items-center gap-2">
               <select
@@ -154,11 +154,11 @@ export default function CarFilter({ initialMarka, initialUzemanyag }: CarFilterP
                   setMarka(value);
                   pushWithFilters(value, uzemanyag);
                 }}
-                className="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm text-slate-900 outline-none transition focus:border-[#2B2B2B] focus:ring-2 focus:ring-[#2B2B2B]/20"
+                className="w-full rounded-xl border border-white/20 bg-slate-900/90 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
               >
                 {markaOptions.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
+                  <option key={option} value={option} className="bg-slate-900 text-slate-100">
+                    {option === "Összes" ? "Minden márka" : option}
                   </option>
                 ))}
               </select>
@@ -167,7 +167,11 @@ export default function CarFilter({ initialMarka, initialUzemanyag }: CarFilterP
                 onClick={startVoiceSearch}
                 disabled={!voiceSupported || isListening}
                 aria-label="Hangalapú márka keresés"
-                className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-700 hover:border-cyan-400 hover:text-cyan-600 disabled:cursor-not-allowed disabled:opacity-50"
+                className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
+                  isListening
+                    ? "border-cyan-400 bg-cyan-400/20 text-cyan-300 animate-pulse"
+                    : "border-white/20 bg-white/10 text-slate-200 hover:border-cyan-400 hover:text-cyan-300"
+                } disabled:cursor-not-allowed disabled:opacity-50`}
                 title={
                   voiceSupported
                     ? isListening
@@ -179,21 +183,21 @@ export default function CarFilter({ initialMarka, initialUzemanyag }: CarFilterP
                 <Mic size={16} />
               </button>
             </div>
-            <p className="mt-1 text-xs text-slate-500">
+            <p className="mt-1.5 text-xs text-slate-400">
               {voiceSupported
                 ? isListening
-                  ? "Hallgatás folyamatban... mondja ki a márkát (pl. Toyota)."
-                  : "Tipp: kattintson a mikrofonra és mondja ki a kívánt márkát."
-                : "A böngészőben nem érhető el SpeechRecognition, fallback: kézi választás."}
+                  ? "Hallgatás... mondja ki a márkát (pl. Toyota)."
+                  : "Tipp: kattintson a mikrofonra a hangalapú kereséshez."
+                : "Hangalapú keresés ezen az eszköszön nem elérhető."}
             </p>
           </div>
 
           <div>
             <label
               htmlFor="filter-uzemanyag"
-              className="mb-1 block text-sm font-medium text-slate-700"
+              className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-cyan-400"
             >
-              Üzemanyag
+              Üzemanyag szűrő
             </label>
             <select
               id="filter-uzemanyag"
@@ -203,11 +207,11 @@ export default function CarFilter({ initialMarka, initialUzemanyag }: CarFilterP
                 setUzemanyag(value);
                 pushWithFilters(marka, value);
               }}
-              className="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm text-slate-900 outline-none transition focus:border-[#2B2B2B] focus:ring-2 focus:ring-[#2B2B2B]/20"
+              className="w-full rounded-xl border border-white/20 bg-slate-900/90 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
             >
               {uzemanyagOptions.map((option) => (
-                <option key={option} value={option}>
-                  {option}
+                <option key={option} value={option} className="bg-slate-900 text-slate-100">
+                  {option === "Összes" ? "Minden üzemanyag" : option}
                 </option>
               ))}
             </select>

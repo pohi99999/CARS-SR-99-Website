@@ -18,9 +18,9 @@ export default function CarCard({ car }: CarCardProps) {
   const addCar = useCompareStore((state) => state.addCar);
 
   return (
-    <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} glareEnable glareMaxOpacity={0.1} className="h-full">
-      <article className="overflow-hidden rounded-2xl border border-black/10 bg-black/5 shadow-[0_20px_45px_rgba(2,8,23,0.45)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/35 hover:shadow-[0_24px_55px_rgba(34,211,238,0.18)] dark:border-white/10 dark:bg-white/5">
-        <div className="h-56 w-full overflow-hidden bg-slate-900 md:h-64">
+    <Tilt tiltMaxAngleX={4} tiltMaxAngleY={4} glareEnable glareMaxOpacity={0.08} className="h-full">
+      <article className="flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-[0_20px_45px_rgba(2,8,23,0.45)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-[0_24px_55px_rgba(34,211,238,0.22)] dark:border-white/10 dark:bg-white/5">
+        <div className="relative h-56 w-full overflow-hidden bg-slate-900 md:h-64">
           <Image
             src={car.images[0]}
             alt={`${car.marka} ${car.modell}`}
@@ -30,13 +30,15 @@ export default function CarCard({ car }: CarCardProps) {
             blurDataURL={blurDataUrl}
             className="h-full w-full object-cover transition duration-500 hover:scale-105"
           />
+          <div className="absolute top-3 left-3 rounded-full border border-cyan-400/30 bg-black/60 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-300 backdrop-blur-sm">
+            {car.marka}
+          </div>
         </div>
 
-        <div className="space-y-5 p-5">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-cyan-400">{car.marka}</p>
-            <div className="mt-1 flex items-center justify-between gap-2">
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">{car.modell}</h3>
+        <div className="flex flex-1 flex-col justify-between space-y-5 p-5">
+          <div className="space-y-4">
+            <div className="flex items-start justify-between gap-2">
+              <h3 className="text-xl font-bold tracking-tight text-slate-100">{car.modell}</h3>
               <button
                 type="button"
                 aria-label="Autó hozzáadása az összehasonlításhoz"
@@ -51,40 +53,45 @@ export default function CarCard({ car }: CarCardProps) {
                     image: car.images[0],
                   })
                 }
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-500/80 text-slate-700 transition-all duration-300 hover:border-cyan-300 hover:text-cyan-300 dark:text-slate-200"
+                className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/20 text-slate-300 transition-all duration-300 hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-300"
               >
                 <Scale size={16} />
               </button>
             </div>
+
+            <div className="flex flex-wrap gap-2 text-xs font-medium text-slate-200">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-slate-300">
+                <CalendarRange size={13} className="text-cyan-400" />
+                {car.evjarat}
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-slate-300">
+                <Gauge size={13} className="text-cyan-400" />
+                {car.futasteljesitmeny}
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-slate-300">
+                <Fuel size={13} className="text-cyan-400" />
+                {car.uzemanyag}
+              </span>
+            </div>
           </div>
 
-          <div className="flex flex-wrap gap-2 text-xs font-medium text-slate-700 dark:text-slate-200">
-            <span className="inline-flex items-center gap-1 rounded-full border border-slate-500/40 bg-slate-200/70 px-3 py-1.5 dark:border-slate-500/60 dark:bg-slate-800/70">
-              <CalendarRange size={13} className="text-cyan-300" />
-              {car.evjarat}
-            </span>
-            <span className="inline-flex items-center gap-1 rounded-full border border-slate-500/40 bg-slate-200/70 px-3 py-1.5 dark:border-slate-500/60 dark:bg-slate-800/70">
-              <Gauge size={13} className="text-cyan-300" />
-              {car.futasteljesitmeny}
-            </span>
-            <span className="inline-flex items-center gap-1 rounded-full border border-slate-500/40 bg-slate-200/70 px-3 py-1.5 dark:border-slate-500/60 dark:bg-slate-800/70">
-              <Fuel size={13} className="text-cyan-300" />
-              {car.uzemanyag}
-            </span>
+          <div className="space-y-4 pt-2">
+            <div className="flex items-baseline justify-between border-t border-white/10 pt-3">
+              <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">Vételár:</span>
+              <p className="text-2xl font-extrabold tracking-tight text-cyan-400">{car.ar}</p>
+            </div>
+
+            <div className="rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-3 py-2 text-xs font-medium text-emerald-300">
+              ✓ JSZP ellenőrzött futásteljesítmény & kártörténet
+            </div>
+
+            <Link
+              href={`/kinalat/${car.id}`}
+              className="inline-flex w-full items-center justify-center rounded-full bg-cyan-400 px-4 py-3 text-sm font-semibold text-[#2B2B2B] shadow-[0_0_20px_rgba(34,211,238,0.25)] transition-all duration-300 hover:bg-cyan-300 hover:shadow-[0_0_28px_rgba(34,211,238,0.4)]"
+            >
+              Részletek megtekintése
+            </Link>
           </div>
-
-          <p className="text-2xl font-extrabold tracking-tight text-cyan-300">{car.ar}</p>
-
-          <div className="rounded-lg border border-emerald-500/35 bg-emerald-500/10 px-3 py-2 text-xs font-medium text-emerald-700 dark:text-emerald-200">
-            JSZP transzparencia: futásteljesítmény és kártörténet ellenőrzött.
-          </div>
-
-          <Link
-            href={`/kinalat/${car.id}`}
-            className="inline-flex w-full items-center justify-center rounded-full bg-cyan-400 px-4 py-2.5 text-sm font-semibold text-[#2B2B2B] transition-all duration-300 hover:bg-cyan-300/95 hover:shadow-[0_0_20px_rgba(34,211,238,0.28)]"
-          >
-            Részletek
-          </Link>
         </div>
       </article>
     </Tilt>

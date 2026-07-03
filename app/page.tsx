@@ -39,6 +39,7 @@ export default async function Home({ searchParams }: HomePageProps) {
           muted
           playsInline
           preload="auto"
+          poster="/hero-poster.jpg"
           className="absolute inset-0 h-full w-full object-cover"
         >
           <source
@@ -50,7 +51,7 @@ export default async function Home({ searchParams }: HomePageProps) {
 
         <div className="mx-auto flex min-h-[calc(100vh-10rem)] w-full max-w-7xl items-center px-6 py-20 sm:px-6 lg:px-8">
           <div className="relative z-10 max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-500">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
               CARS SR99 Kft.
             </p>
             <h1 className="mt-5 text-4xl font-bold tracking-tight text-slate-100 sm:text-5xl lg:text-6xl">
@@ -59,22 +60,22 @@ export default async function Home({ searchParams }: HomePageProps) {
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
               Toyota és Kia modellek gondosan válogatva – hibrid, benzin és diesel kínálattal, értékálló garanciával.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Link
                 href="/kinalat"
-                className="inline-flex items-center justify-center rounded-full bg-cyan-400 px-7 py-3 text-sm font-semibold text-[#2B2B2B] shadow-[0_0_24px_rgba(34,211,238,0.35)] transition hover:bg-cyan-300"
+                className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-cyan-400 px-7 py-3.5 text-sm font-semibold text-[#2B2B2B] shadow-[0_0_24px_rgba(34,211,238,0.35)] transition-all duration-300 hover:bg-cyan-300 hover:shadow-[0_0_32px_rgba(34,211,238,0.5)]"
               >
                 Fedezze fel kínálatunkat →
               </Link>
               <Link
                 href="/kapcsolat"
-                className="inline-flex items-center justify-center border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 rounded-full px-7 py-3 text-sm font-semibold transition"
+                className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border-2 border-cyan-400 px-7 py-3.5 text-sm font-semibold text-cyan-400 transition-all duration-300 hover:bg-cyan-400/10 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)]"
               >
                 Kérjen visszahívást
               </Link>
             </div>
 
-            <div className="mt-12 grid grid-cols-3 gap-8 border-t border-slate-700/50 pt-8">
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 border-t border-slate-700/50 pt-8">
               <div>
                 <p className="text-3xl font-bold text-cyan-400">500+</p>
                 <p className="mt-1 text-sm text-slate-400">Eladott autó</p>

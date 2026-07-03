@@ -68,12 +68,12 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
             </div>
           </dl>
 
-          <button
-            type="button"
+          <Link
+            href={`/kapcsolat?car=${encodeURIComponent(`${car.marka} ${car.modell}`)}`}
             className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-cyan-400 px-6 py-3 text-sm font-semibold text-[#2B2B2B] transition hover:bg-cyan-300"
           >
             Kapcsolatfelvétel
-          </button>
+          </Link>
 
           <LeasingCalculator price={numericPrice} />
         </div>

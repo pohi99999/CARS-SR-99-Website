@@ -1,6 +1,9 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { submitToHubSpot } from "@/services/hubspotService";
+import { sendLeadWebhook } from "@/services/webhookService";
+import { trackFormSubmission } from "@/utils/analytics";
 
 type TradeInFormData = {
   brand: string;
@@ -34,35 +37,50 @@ export default function TradeInForm() {
     setIsSubmitting(true);
 
     try {
-      const webhookUrl = process.env.NEXT_PUBLIC_WEBHOOK_URL;
-
-      if (!webhookUrl) {
-        console.info(
-          "[SR99 TradeInForm] NEXT_PUBLIC_WEBHOOK_URL nincs beállítva. Lokális fejlesztési mód: UX sikeresen tesztelhető.",
-        );
-        setIsSubmitted(true);
-        return;
-      }
-
-      const response = await fetch(webhookUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          source: "trade-in-form",
-          submittedAt: new Date().toISOString(),
-          ...formData,
-        }),
+      // 1. Fire GA4 & Meta Pixel Lead event
+      trackFormSubmission("beszamitas", {
+        car_brand: formData.brand,
+        car_model: formData.model,
+        car_year: formData.year,
       });
 
-      if (!response.ok) {
-        throw new Error(`Webhook request failed: ${response.status}`);
+      // 2. Parallel Lead Webhook call (with automatic retry)
+      sendLeadWebhook("beszamitas", formData).catch((err) =>
+        console.error("[SR99 TradeInForm] Webhook call failed:", err)
+      );
+
+      // 3. Parallel HubSpot Forms API call
+      submitToHubSpot({
+        formType: "beszamitas",
+        fields: [
+          { name: "firstname", value: formData.name },
+          { name: "email", value: formData.email },
+          { name: "phone", value: formData.phone },
+          { name: "trade_in_brand", value: formData.brand },
+          { name: "trade_in_model", value: formData.model },
+          { name: "trade_in_year", value: formData.year },
+          { name: "trade_in_mileage", value: formData.mileage },
+          { name: "trade_in_condition", value: formData.condition },
+        ],
+      }).catch((err) => console.error("[SR99 TradeInForm] HubSpot call failed:", err));
+
+      // Legacy fallback webhook if configured
+      const legacyUrl = process.env.NEXT_PUBLIC_WEBHOOK_URL;
+      if (legacyUrl) {
+        await fetch(legacyUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            source: "trade-in-form",
+            submittedAt: new Date().toISOString(),
+            ...formData,
+          }),
+        }).catch(() => {});
       }
 
       setIsSubmitted(true);
     } catch (error) {
-      console.error("[SR99 TradeInForm] Webhook küldési hiba:", error);
+      console.error("[SR99 TradeInForm] Form submit error:", error);
     } finally {
       setIsSubmitting(false);
     }

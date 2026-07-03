@@ -6,6 +6,7 @@ import { CalendarRange, Fuel, Gauge, Scale } from "lucide-react";
 import Tilt from "react-parallax-tilt";
 import type { Car } from "@/data/inventory";
 import { useCompareStore } from "@/store/compareStore";
+import { trackViewContent } from "@/utils/analytics";
 
 type CarCardProps = {
   car: Car;
@@ -87,6 +88,12 @@ export default function CarCard({ car }: CarCardProps) {
 
             <Link
               href={`/kinalat/${car.id}`}
+              onClick={() =>
+                trackViewContent(`${car.marka} ${car.modell}`, car.marka, {
+                  car_id: car.id,
+                  price: car.ar,
+                })
+              }
               className="inline-flex w-full items-center justify-center rounded-full bg-cyan-400 px-4 py-3 text-sm font-semibold text-[#2B2B2B] shadow-[0_0_20px_rgba(34,211,238,0.25)] transition-all duration-300 hover:bg-cyan-300 hover:shadow-[0_0_28px_rgba(34,211,238,0.4)]"
             >
               Részletek megtekintése

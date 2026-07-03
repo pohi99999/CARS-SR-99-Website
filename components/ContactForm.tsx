@@ -2,6 +2,9 @@
 
 import { FormEvent, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { submitToHubSpot } from "@/services/hubspotService";
+import { sendLeadWebhook } from "@/services/webhookService";
+import { trackFormSubmission } from "@/utils/analytics";
 
 type ContactFormData = {
   name: string;
@@ -39,38 +42,51 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     const message = displayedMessage;
+    const submissionData = {
+      ...formData,
+      message,
+      carInterest: searchParams.get("car") || undefined,
+    };
 
     try {
-      const webhookUrl = process.env.NEXT_PUBLIC_WEBHOOK_URL;
-
-      if (!webhookUrl) {
-        console.info(
-          "[SR99 ContactForm] NEXT_PUBLIC_WEBHOOK_URL nincs beállítva. Lokális fejlesztési mód: UX sikeresen tesztelhető.",
-        );
-        setIsSubmitted(true);
-        return;
-      }
-
-      const response = await fetch(webhookUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          source: "contact-form",
-          submittedAt: new Date().toISOString(),
-          ...formData,
-          message,
-        }),
+      // 1. Fire GA4 & Meta Pixel Lead event
+      trackFormSubmission("kapcsolat", {
+        car_interest: submissionData.carInterest,
       });
 
-      if (!response.ok) {
-        throw new Error(`Webhook request failed: ${response.status}`);
+      // 2. Parallel Lead Webhook call (with automatic retry)
+      sendLeadWebhook("kapcsolat", submissionData).catch((err) =>
+        console.error("[SR99 ContactForm] Webhook call failed:", err)
+      );
+
+      // 3. Parallel HubSpot Forms API call
+      submitToHubSpot({
+        formType: "kapcsolat",
+        fields: [
+          { name: "firstname", value: formData.name },
+          { name: "email", value: formData.email },
+          { name: "phone", value: formData.phone },
+          { name: "message", value: message },
+        ],
+      }).catch((err) => console.error("[SR99 ContactForm] HubSpot call failed:", err));
+
+      // Legacy fallback webhook if configured
+      const legacyUrl = process.env.NEXT_PUBLIC_WEBHOOK_URL;
+      if (legacyUrl) {
+        await fetch(legacyUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            source: "contact-form",
+            submittedAt: new Date().toISOString(),
+            ...submissionData,
+          }),
+        }).catch(() => {});
       }
 
       setIsSubmitted(true);
     } catch (error) {
-      console.error("[SR99 ContactForm] Webhook küldési hiba:", error);
+      console.error("[SR99 ContactForm] Form submit error:", error);
     } finally {
       setIsSubmitting(false);
     }

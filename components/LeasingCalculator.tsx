@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { trackGA4Event } from "@/utils/analytics";
 import {
   Bar,
   BarChart,
@@ -81,7 +82,15 @@ export default function LeasingCalculator({ price }: LeasingCalculatorProps) {
             max={70}
             step={1}
             value={downPaymentPercent}
-            onChange={(event) => setDownPaymentPercent(Number(event.target.value))}
+            onChange={(event) => {
+              const val = Number(event.target.value);
+              setDownPaymentPercent(val);
+              trackGA4Event("leasing_kalkulator_hasznalat", {
+                price,
+                down_payment_percent: val,
+                term_months: termMonths,
+              });
+            }}
             className="h-2 w-full cursor-pointer appearance-none rounded-lg bg-slate-700 accent-cyan-400"
           />
         </div>
@@ -100,7 +109,15 @@ export default function LeasingCalculator({ price }: LeasingCalculatorProps) {
             max={84}
             step={12}
             value={termMonths}
-            onChange={(event) => setTermMonths(Number(event.target.value))}
+            onChange={(event) => {
+              const val = Number(event.target.value);
+              setTermMonths(val);
+              trackGA4Event("leasing_kalkulator_hasznalat", {
+                price,
+                down_payment_percent: downPaymentPercent,
+                term_months: val,
+              });
+            }}
             className="h-2 w-full cursor-pointer appearance-none rounded-lg bg-slate-700 accent-cyan-400"
           />
         </div>

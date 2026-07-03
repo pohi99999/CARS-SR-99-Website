@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { trackContactClick } from "@/utils/analytics";
 
 export default function Footer() {
   return (
@@ -65,11 +68,23 @@ export default function Footer() {
           <ul className="space-y-3 text-sm text-slate-300">
             <li className="flex items-center gap-2">
               <Phone className="h-4 w-4 shrink-0 text-cyan-400" />
-              <span>06-70 907-06-69</span>
+              <a
+                href="tel:+36709070669"
+                onClick={() => trackContactClick("phone")}
+                className="transition-colors hover:text-cyan-400"
+              >
+                06-70 907-06-69
+              </a>
             </li>
             <li className="flex items-center gap-2">
               <Mail className="h-4 w-4 shrink-0 text-cyan-400" />
-              <span>info@carssr99.hu</span>
+              <a
+                href="mailto:info@carssr99.hu"
+                onClick={() => trackContactClick("email")}
+                className="transition-colors hover:text-cyan-400"
+              >
+                info@carssr99.hu
+              </a>
             </li>
             <li className="flex items-start gap-2">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-cyan-400" />

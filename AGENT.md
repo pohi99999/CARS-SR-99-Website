@@ -18,3 +18,4 @@
 | 2026-07-03 | Prémium UX 2. Fázis: Embla Carousel képgaléria és Fullscreen modal beépítése | Kész |
 | 2026-07-03 | Prémium UX 3. Fázis: Reszponzív AI Chat Asszisztens UI beépítése | Kész |
 | 2026-07-03 | 4. Fázis: Technikai SEO (Sitemap, Robots, JSON-LD) és űrlap Webhook integráció | Kész |
+| 2026-07-03 | 5. Fázis: Bizalomépítő UX elemek (Rólunk, Vélemények, FOMO) beépítése | Kész |

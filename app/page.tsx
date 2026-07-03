@@ -1,6 +1,8 @@
+import AboutSection from "@/components/AboutSection";
 import CarFilter from "@/components/CarFilter";
 import Link from "next/link";
 import InventorySection from "@/components/InventorySection";
+import Testimonials from "@/components/Testimonials";
 import WarrantySection from "@/components/WarrantySection";
 import { fetchInventory } from "@/services/inventoryService";
 
@@ -54,6 +56,8 @@ export default async function Home({ searchParams }: HomePageProps) {
 
       <CarFilter initialMarka={selectedMarka} initialUzemanyag={selectedUzemanyag} />
       <InventorySection cars={filteredCars} />
+      <AboutSection />
+      <Testimonials />
       <WarrantySection />
     </>
   );

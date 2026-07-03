@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import FomoNotification from "@/components/FomoNotification";
 import ImageGallery from "@/components/ImageGallery";
 import LeasingCalculator from "@/components/LeasingCalculator";
 import { parsePriceToNumber } from "@/data/inventory";
@@ -80,6 +81,7 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
 
   return (
     <section className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <FomoNotification />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

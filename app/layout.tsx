@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Providers from "@/app/providers";
 import AIChatAssistant from "@/components/AIChatAssistant";
+import CompareDock from "@/components/CompareDock";
 import CookieBanner from "@/components/CookieBanner";
 import EventBanner from "@/components/EventBanner";
 import Footer from "@/components/Footer";
@@ -62,6 +63,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
           <AIChatAssistant />
+          <CompareDock />
           <CookieBanner />
         </Providers>
       </body>

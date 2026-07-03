@@ -6,6 +6,7 @@ import FomoNotification from "@/components/FomoNotification";
 import ImageGallery from "@/components/ImageGallery";
 import LeasingCalculator from "@/components/LeasingCalculator";
 import PdfBrochureButton from "@/components/PdfBrochureButton";
+import Vehicle360Viewer from "@/components/Vehicle360Viewer";
 import { parsePriceToNumber } from "@/data/inventory";
 import { getCarByIdAsync } from "@/services/inventoryService";
 
@@ -140,6 +141,7 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
             fuel={car.uzemanyag}
             imageUrl={car.images[0]}
           />
+          <Vehicle360Viewer imageUrl={car.images[0]} carName={carName} />
 
           <Link
             href={`/kapcsolat?car=${encodeURIComponent(`${car.marka} ${car.modell}`)}`}

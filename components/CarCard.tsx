@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Scale } from "lucide-react";
 import Tilt from "react-parallax-tilt";
 import type { Car } from "@/data/inventory";
+import { useCompareStore } from "@/store/compareStore";
 
 type CarCardProps = {
   car: Car;
@@ -13,6 +15,8 @@ const blurDataUrl =
   "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxMCI+PHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjEwIiBmaWxsPSIjMWEyODMzIi8+PC9zdmc+";
 
 export default function CarCard({ car }: CarCardProps) {
+  const addCar = useCompareStore((state) => state.addCar);
+
   return (
     <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} glareEnable glareMaxOpacity={0.1} className="h-full">
       <article className="overflow-hidden rounded-2xl bg-white shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl">
@@ -31,7 +35,27 @@ export default function CarCard({ car }: CarCardProps) {
         <div className="space-y-4 p-5">
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-cyan-600">{car.marka}</p>
-            <h3 className="mt-1 text-lg font-semibold text-[#2B2B2B]">{car.modell}</h3>
+            <div className="mt-1 flex items-center justify-between gap-2">
+              <h3 className="text-lg font-semibold text-[#2B2B2B]">{car.modell}</h3>
+              <button
+                type="button"
+                aria-label="Autó hozzáadása az összehasonlításhoz"
+                onClick={() =>
+                  addCar({
+                    id: car.id,
+                    marka: car.marka,
+                    modell: car.modell,
+                    ar: car.ar,
+                    futasteljesitmeny: car.futasteljesitmeny,
+                    uzemanyag: car.uzemanyag,
+                    image: car.images[0],
+                  })
+                }
+                className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-slate-300 text-slate-600 transition hover:border-cyan-400 hover:text-cyan-600"
+              >
+                <Scale size={16} />
+              </button>
+            </div>
           </div>
 
           <dl className="grid grid-cols-2 gap-3 text-sm text-slate-600">

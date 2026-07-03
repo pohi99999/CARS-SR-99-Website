@@ -93,7 +93,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
             type="button"
             aria-label="Galéria megnyitása teljes képernyőn"
             onClick={openFullscreen}
-            className="absolute right-3 top-3 inline-flex items-center gap-2 rounded-full bg-black/65 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-black/80"
+            className="absolute right-3 top-3 inline-flex min-h-11 items-center gap-2 rounded-full bg-black/65 px-3 py-1.5 text-xs font-semibold text-white hover:bg-black/80"
           >
             <Expand size={14} aria-hidden="true" />
             Nagyítás
@@ -109,7 +109,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                 type="button"
                 aria-label={`${index + 1}. kép kiválasztása`}
                 onClick={() => scrollToSlide(index)}
-                className={`relative h-16 w-24 shrink-0 overflow-hidden rounded-lg border-2 transition ${
+                className={`relative h-16 w-24 shrink-0 overflow-hidden rounded-lg border-2 transition-all duration-300 ${
                   isActive ? "border-cyan-400" : "border-slate-300"
                 }`}
               >
@@ -132,7 +132,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
           <button
             type="button"
             onClick={() => setIsFullscreenOpen(false)}
-            className="absolute right-4 top-4 rounded-full bg-white/10 p-2 text-white transition hover:bg-white/20"
+            className="absolute right-4 top-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20"
             aria-label="Bezárás"
           >
             <X size={22} />
@@ -141,7 +141,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
           <button
             type="button"
             onClick={() => modalEmblaApi?.scrollPrev()}
-            className="absolute left-4 rounded-full bg-white/10 p-2 text-white transition hover:bg-white/20"
+            className="absolute left-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20"
             aria-label="Előző kép"
           >
             <ChevronLeft size={24} />
@@ -171,7 +171,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
           <button
             type="button"
             onClick={() => modalEmblaApi?.scrollNext()}
-            className="absolute right-4 rounded-full bg-white/10 p-2 text-white transition hover:bg-white/20"
+            className="absolute right-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20"
             aria-label="Következő kép"
           >
             <ChevronRight size={24} />

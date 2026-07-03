@@ -23,7 +23,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <section className="mx-auto w-full max-w-7xl px-6 py-16 sm:px-6 lg:px-8">
       <div className="mb-8">
         <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-400">Ügyfélvélemények</p>
         <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-100 sm:text-4xl">
@@ -35,7 +35,7 @@ export default function Testimonials() {
         {testimonials.map((item) => (
           <article
             key={item.title}
-            className="rounded-2xl border border-white/10 bg-[#1a1a1a]/70 p-6 shadow-md backdrop-blur-sm"
+            className="rounded-2xl border border-black/10 bg-black/5 p-6 shadow-md backdrop-blur-md transition-all duration-300 dark:border-white/10 dark:bg-white/5"
           >
             <div className="mb-3 flex items-center gap-1 text-amber-400">
               {Array.from({ length: 5 }).map((_, index) => (

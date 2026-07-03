@@ -14,7 +14,7 @@ export default function CompareDock() {
 
   return (
     <aside className="fixed bottom-0 left-0 right-0 z-40 border-t border-white/10 bg-[#141414]/95 backdrop-blur-sm">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-6 py-3 sm:px-6 lg:px-8">
         <div className="flex items-center gap-2 overflow-x-auto">
           {cars.map((car) => (
             <div key={car.id} className="flex min-w-[120px] items-center gap-2 rounded-lg bg-white/5 p-2">

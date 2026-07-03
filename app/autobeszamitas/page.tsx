@@ -2,9 +2,9 @@ import TradeInForm from "@/components/TradeInForm";
 
 export default function TradeInPage() {
   return (
-    <section className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <section className="mx-auto w-full max-w-7xl px-6 py-12 sm:px-6 lg:px-8">
       <div className="grid gap-8 lg:grid-cols-2">
-        <div className="rounded-2xl bg-white p-6 shadow-md sm:p-8">
+        <div className="rounded-2xl bg-white p-6 shadow-md transition-all duration-300 sm:p-8">
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-600">
             Autóbeszámítás
           </p>

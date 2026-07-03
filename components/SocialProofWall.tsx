@@ -25,7 +25,7 @@ const posts = [
 
 export default function SocialProofWall() {
   return (
-    <section className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <section className="mx-auto w-full max-w-7xl px-6 py-16 sm:px-6 lg:px-8">
       <div className="mb-8">
         <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-400">Social Proof</p>
         <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-100 sm:text-4xl">

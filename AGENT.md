@@ -23,3 +23,4 @@
 | 2026-07-03 | 7. Fázis: Ultra-prémium UX (Theme Toggle, Recharts grafikon, SEO Breadcrumb) | Kész |
 | 2026-07-03 | 8. Fázis: Ultra-prémium funkciók (Összehasonlító, Voice Search, 360 View, Social Proof) | Kész |
 | 2026-07-03 | Lighthouse A11y & Performance javítások, Header finomhangolás, 404 oldalak pótlása, UI kártya redesign és globális videó háttér beállítva. | Kész |
+| 2026-07-03 | 9. Fázis: Prémium UI/UX finomhangolás (Tipográfia, Glassmorphism), A11y optimalizálás és Videó láthatóság | Kész |

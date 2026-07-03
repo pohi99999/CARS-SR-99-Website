@@ -24,7 +24,7 @@ export default function CookieBanner() {
 
   return (
     <section className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-[#2B2B2B]/95 backdrop-blur">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 py-4 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-6 py-4 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
         <p className="text-sm leading-6 text-slate-200">
           Oldalunk sütiket használ a legjobb felhasználói élmény és a webes analitika (látogatottság
           mérése) biztosítása érdekében.

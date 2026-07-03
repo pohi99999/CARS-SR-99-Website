@@ -20,11 +20,11 @@ export default function Header() {
 
   return (
     <header className="bg-[#2B2B2B] text-white shadow-sm">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2" aria-label="CARS SR99 Kft. főoldal">
           <Image
             src="/logo.png"
-            alt="CARS SR99 Kft. hivatalos logó"
+            alt="CARS SR99 Kft. logó"
             width={60}
             height={20}
             className="h-auto w-[52px] sm:w-[60px]"
@@ -35,7 +35,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-white transition hover:text-cyan-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 md:hidden"
+          className="inline-flex items-center justify-center rounded-md p-3 text-white hover:text-cyan-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 md:hidden"
           aria-label="Navigáció megnyitása"
           aria-expanded={isOpen}
           onClick={() => setIsOpen((prev) => !prev)}
@@ -81,7 +81,7 @@ export default function Header() {
       </div>
 
       {isOpen && (
-        <nav className="border-t border-white/10 px-4 pb-4 md:hidden sm:px-6">
+        <nav className="border-t border-white/10 px-6 pb-4 md:hidden sm:px-6">
           <div className="flex flex-col gap-3 pt-4 text-sm font-medium">
             {navItems.map((item) => {
               const isActive = pathname === item.href;

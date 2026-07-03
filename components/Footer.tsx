@@ -3,11 +3,11 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-[#2B2B2B] text-slate-200">
-      <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-3 lg:px-8">
+      <div className="mx-auto grid w-full max-w-7xl gap-8 px-6 py-10 sm:px-6 lg:grid-cols-3 lg:px-8">
         <div>
           <Image
             src="/logo.png"
-            alt="CARS SR99 Kft. hivatalos logó"
+            alt="CARS SR99 Kft. logó"
             width={140}
             height={45}
             className="h-auto w-[120px] sm:w-[140px]"

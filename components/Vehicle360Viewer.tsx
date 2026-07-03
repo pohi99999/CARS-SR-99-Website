@@ -53,7 +53,7 @@ export default function Vehicle360Viewer({ imageUrl, carName }: Vehicle360Viewer
             <button
               type="button"
               onClick={() => setIsOpen(false)}
-              className="absolute right-3 top-3 rounded-full bg-white/10 p-2 text-white transition hover:bg-white/20"
+              className="absolute right-3 top-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20"
               aria-label="360 nézet bezárása"
             >
               <X size={20} />

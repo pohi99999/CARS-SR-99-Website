@@ -138,8 +138,8 @@ export default function CarFilter({ initialMarka, initialUzemanyag }: CarFilterP
   }
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
-      <div className="rounded-2xl bg-white p-4 shadow-sm sm:p-5">
+    <section className="mx-auto w-full max-w-7xl px-6 pt-8 sm:px-6 lg:px-8">
+      <div className="rounded-2xl border border-black/10 bg-black/5 p-4 shadow-sm backdrop-blur-md transition-all duration-300 dark:border-white/10 dark:bg-white/5 sm:p-5">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <div>
             <label htmlFor="filter-marka" className="mb-1 block text-sm font-medium text-slate-700">
@@ -167,7 +167,7 @@ export default function CarFilter({ initialMarka, initialUzemanyag }: CarFilterP
                 onClick={startVoiceSearch}
                 disabled={!voiceSupported || isListening}
                 aria-label="Hangalapú márka keresés"
-                className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-700 transition hover:border-cyan-400 hover:text-cyan-600 disabled:cursor-not-allowed disabled:opacity-50"
+                className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-700 hover:border-cyan-400 hover:text-cyan-600 disabled:cursor-not-allowed disabled:opacity-50"
                 title={
                   voiceSupported
                     ? isListening

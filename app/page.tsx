@@ -47,7 +47,7 @@ export default async function Home({ searchParams }: HomePageProps) {
         </video>
         <div className="absolute inset-0 bg-black/60" />
 
-        <div className="mx-auto flex min-h-[calc(100vh-10rem)] w-full max-w-7xl items-center px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto flex min-h-[calc(100vh-10rem)] w-full max-w-7xl items-center px-6 py-20 sm:px-6 lg:px-8">
           <div className="relative z-10 max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-500">
               CARS SR99 Kft.

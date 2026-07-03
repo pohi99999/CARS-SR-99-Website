@@ -29,6 +29,21 @@ body {
   min-height: 100vh;
 }
 
+h1,
+h2,
+h3 {
+  font-family: var(--font-montserrat), var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+p {
+  @apply leading-relaxed;
+}
+
+a,
+button {
+  @apply transition-all duration-300;
+}
+
 body::before {
   content: "";
   position: fixed;

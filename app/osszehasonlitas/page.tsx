@@ -14,7 +14,7 @@ export default function ComparePage() {
   const { cars } = useCompareStore();
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <section className="mx-auto w-full max-w-7xl px-6 py-12 sm:px-6 lg:px-8">
       <h1 className="text-3xl font-bold tracking-tight text-slate-100">Gépjármű-összehasonlító</h1>
       <p className="mt-3 text-sm text-slate-300">
         Vesse össze a kiválasztott autókat egyetlen táblázatban.

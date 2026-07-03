@@ -85,7 +85,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="rounded-2xl bg-white p-6 shadow-md sm:p-8">
+    <section className="rounded-2xl bg-white p-6 shadow-md transition-all duration-300 sm:p-8">
       <h2 className="text-2xl font-bold tracking-tight text-[#2B2B2B]">Írjon nekünk</h2>
       <p className="mt-2 text-sm text-slate-600">
         Töltse ki az űrlapot, és rövid időn belül felvesszük Önnel a kapcsolatot.

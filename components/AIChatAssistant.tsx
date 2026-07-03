@@ -20,7 +20,7 @@ export default function AIChatAssistant() {
       ) : null}
 
       {isOpen ? (
-        <section className="fixed inset-0 z-40 h-full w-full rounded-none bg-white md:inset-auto md:bottom-20 md:right-6 md:h-[500px] md:w-96 md:rounded-2xl md:shadow-2xl">
+        <section className="fixed inset-0 z-40 h-full w-full rounded-none border border-black/10 bg-black/5 backdrop-blur-md md:inset-auto md:bottom-20 md:right-6 md:h-[500px] md:w-96 md:rounded-2xl md:shadow-2xl dark:border-white/10 dark:bg-white/5">
           <header className="flex items-center justify-between rounded-none bg-[#2B2B2B] px-4 py-3 text-white md:rounded-t-2xl">
             <div>
               <p className="text-sm font-semibold">SR99 AI Asszisztens</p>
@@ -33,7 +33,7 @@ export default function AIChatAssistant() {
               type="button"
               onClick={() => setIsOpen(false)}
               aria-label="Chat bezárása"
-              className="rounded-full p-2 text-slate-200 transition hover:bg-white/10 hover:text-white"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full text-slate-200 hover:bg-white/10 hover:text-white"
             >
               <X size={18} />
             </button>
@@ -50,6 +50,7 @@ export default function AIChatAssistant() {
             <div className="flex items-center gap-2">
               <input
                 type="text"
+                aria-label="Chat üzenet mező"
                 placeholder="Írja ide az üzenetét..."
                 className="h-11 flex-1 rounded-full border border-slate-300 bg-white px-4 text-sm text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-300/30"
               />

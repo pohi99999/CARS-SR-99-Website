@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navItems = [
   { href: "/", label: "Főoldal" },
@@ -74,6 +75,7 @@ export default function Header() {
               </Link>
             );
           })}
+          <ThemeToggle />
         </nav>
       </div>
 
@@ -95,6 +97,9 @@ export default function Header() {
                 </Link>
               );
             })}
+            <div className="pt-2">
+              <ThemeToggle />
+            </div>
           </div>
         </nav>
       )}

@@ -20,3 +20,4 @@
 | 2026-07-03 | 4. Fázis: Technikai SEO (Sitemap, Robots, JSON-LD) és űrlap Webhook integráció | Kész |
 | 2026-07-03 | 5. Fázis: Bizalomépítő UX elemek (Rólunk, Vélemények, FOMO) beépítése | Kész |
 | 2026-07-03 | 6. Fázis: Wow-faktor beépítése (Videós Hero, Page Transitions, PDF Brossúra) | Kész |
+| 2026-07-03 | 7. Fázis: Ultra-prémium UX (Theme Toggle, Recharts grafikon, SEO Breadcrumb) | Kész |

@@ -9,6 +9,9 @@ type CarCardProps = {
   car: Car;
 };
 
+const blurDataUrl =
+  "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxMCI+PHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjEwIiBmaWxsPSIjMWEyODMzIi8+PC9zdmc+";
+
 export default function CarCard({ car }: CarCardProps) {
   return (
     <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} glareEnable glareMaxOpacity={0.1} className="h-full">
@@ -19,6 +22,8 @@ export default function CarCard({ car }: CarCardProps) {
             alt={`${car.marka} ${car.modell}`}
             width={1200}
             height={800}
+            placeholder="blur"
+            blurDataURL={blurDataUrl}
             className="h-full w-full object-cover"
           />
         </div>

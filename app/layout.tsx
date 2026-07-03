@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Providers from "@/app/providers";
 import AIChatAssistant from "@/components/AIChatAssistant";
 import CookieBanner from "@/components/CookieBanner";
 import EventBanner from "@/components/EventBanner";
@@ -53,14 +54,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="hu" className={`${inter.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col bg-slate-50 text-slate-900">
-        <EventBanner />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <AIChatAssistant />
-        <CookieBanner />
+    <html lang="hu" suppressHydrationWarning className={`${inter.variable} h-full antialiased`}>
+      <body className="flex min-h-full flex-col bg-background text-foreground">
+        <Providers>
+          <EventBanner />
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <AIChatAssistant />
+          <CookieBanner />
+        </Providers>
       </body>
     </html>
   );

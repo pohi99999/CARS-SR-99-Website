@@ -9,6 +9,9 @@ type ImageGalleryProps = {
   images: string[];
 };
 
+const blurDataUrl =
+  "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxMCI+PHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjEwIiBmaWxsPSIjMGYxNzJhIi8+PC9zdmc+";
+
 export default function ImageGallery({ images }: ImageGalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isFullscreenOpen, setIsFullscreenOpen] = useState(false);
@@ -76,6 +79,8 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                       alt={`Jármű fotó ${index + 1}`}
                       fill
                       priority={index === 0}
+                      placeholder="blur"
+                      blurDataURL={blurDataUrl}
                       className="object-cover"
                     />
                   </div>
@@ -106,7 +111,14 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                   isActive ? "border-cyan-400" : "border-slate-300"
                 }`}
               >
-                <Image src={image} alt="" fill className="object-cover" />
+                <Image
+                  src={image}
+                  alt=""
+                  fill
+                  placeholder="blur"
+                  blurDataURL={blurDataUrl}
+                  className="object-cover"
+                />
               </button>
             );
           })}
@@ -143,6 +155,8 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                         src={image}
                         alt={`Nagyított jármű fotó ${index + 1}`}
                         fill
+                        placeholder="blur"
+                        blurDataURL={blurDataUrl}
                         className="object-contain"
                       />
                     </div>

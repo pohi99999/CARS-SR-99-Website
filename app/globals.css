@@ -5,6 +5,16 @@
   --foreground: #e5e7eb;
 }
 
+.light {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+}
+
+.dark {
+  --background: #121212;
+  --foreground: #e5e7eb;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -35,6 +45,10 @@ body::before {
   opacity: 0.26;
   animation: sr99-grid-flow 18s linear infinite;
   z-index: -1;
+}
+
+.light body::before {
+  opacity: 0.18;
 }
 
 @keyframes sr99-grid-flow {

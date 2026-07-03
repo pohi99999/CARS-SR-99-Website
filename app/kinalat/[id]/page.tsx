@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import FomoNotification from "@/components/FomoNotification";
 import ImageGallery from "@/components/ImageGallery";
 import LeasingCalculator from "@/components/LeasingCalculator";
@@ -86,6 +87,13 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Breadcrumbs
+        items={[
+          { name: "Főoldal", href: "/" },
+          { name: "Kínálatunk", href: "/#kinalat" },
+          { name: carName },
+        ]}
       />
       <div className="mb-6">
         <Link href="/#kinalat" className="text-sm font-medium text-cyan-600 hover:text-cyan-500">

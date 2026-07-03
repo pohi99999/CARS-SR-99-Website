@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  --background: #121212;
+  --foreground: #e5e7eb;
 }
 
 @theme inline {
@@ -15,4 +15,36 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(34, 211, 238, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 50% 20%, rgba(34, 211, 238, 0.18), transparent 45%);
+  background-size:
+    48px 48px,
+    48px 48px,
+    100% 100%;
+  opacity: 0.26;
+  animation: sr99-grid-flow 18s linear infinite;
+  z-index: -1;
+}
+
+@keyframes sr99-grid-flow {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-16px, -24px, 0) scale(1.02);
+  }
+  100% {
+    transform: translate3d(-32px, -48px, 0) scale(1);
+  }
 }

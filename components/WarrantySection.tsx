@@ -1,6 +1,16 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function WarrantySection() {
   return (
-    <section className="bg-[#2B2B2B] py-16 text-slate-100">
+    <motion.section
+      className="bg-[#2B2B2B]/80 py-16 text-slate-100 backdrop-blur-sm"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.55, ease: "easeOut" }}
+    >
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-400">SR99 Garancia</p>
         <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
@@ -38,6 +48,6 @@ export default function WarrantySection() {
           </article>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

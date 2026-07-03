@@ -34,10 +34,10 @@ export default async function Home({ searchParams }: HomePageProps) {
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-500">
               CARS SR99 Kft.
             </p>
-            <h1 className="mt-5 text-4xl font-bold tracking-tight text-[#2B2B2B] sm:text-5xl lg:text-6xl">
+            <h1 className="mt-5 text-4xl font-bold tracking-tight text-slate-100 sm:text-5xl lg:text-6xl">
               Üdvözöljük a CARS SR99 Kft. új weboldalán
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
               Prémium választék, biztonságos ügyintézés és modern autóvásárlási élmény egy helyen.
             </p>
             <div className="mt-10">

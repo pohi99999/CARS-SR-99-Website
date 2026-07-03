@@ -41,6 +41,19 @@ export default function ContactPage() {
                 biztonságos megtekintésére és a nyugodt tesztvezetésre.
               </p>
             </div>
+
+            <div>
+              <h2 className="text-base font-semibold text-slate-900">Telephely térképen</h2>
+              <div className="mt-3 overflow-hidden rounded-xl border border-slate-200">
+                <iframe
+                  title="CARS SR99 Kft. telephely - Zalaegerszeg, Ságod"
+                  src="https://maps.google.com/maps?q=Zalaegerszeg%20S%C3%A1god&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  className="h-64 w-full [filter:invert(90%)_hue-rotate(180deg)_saturate(90%)_contrast(92%)]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            </div>
           </div>
         </div>
 

@@ -14,3 +14,4 @@
 | 2026-07-03 | Szűrő modul és Rendezvény Banner integrálása | Kész |
 | 2026-07-03 | Hivatalos céglogó integrálása a UI-ba és a SEO metaadatokba | Kész |
 | 2026-07-03 | GDPR Cookie Banner implementálása és integrálása | Kész |
+| 2026-07-03 | Prémium UX/UI fejlesztések: Framer Motion, 3D kártyák és Google Maps beépítése | Kész |

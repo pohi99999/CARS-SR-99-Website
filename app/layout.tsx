@@ -71,7 +71,7 @@ export default function RootLayout({
           loop
           muted
           playsInline
-          className="pointer-events-none fixed inset-0 -z-50 h-full w-full object-cover opacity-60"
+          className="sr99-bg-video pointer-events-none fixed inset-0 -z-50 h-full w-full object-cover opacity-60"
         >
           <source src="/bg-video.mp4" type="video/mp4" />
         </video>

@@ -65,6 +65,7 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
     "@context": "https://schema.org",
     "@type": "Product",
     name: carName,
+    model: car.modell,
     image: car.images,
     description: carDescription,
     category: "Vehicle",

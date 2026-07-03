@@ -35,6 +35,10 @@ h3 {
   font-family: var(--font-montserrat), var(--font-inter), Arial, Helvetica, sans-serif;
 }
 
+h1 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 p {
   @apply leading-relaxed;
 }
@@ -76,4 +80,8 @@ body::before {
   100% {
     transform: translate3d(-32px, -48px, 0) scale(1);
   }
+}
+
+.sr99-bg-video {
+  will-change: transform;
 }

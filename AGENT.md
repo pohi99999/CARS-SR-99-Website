@@ -13,3 +13,4 @@
 | 2026-07-03 | Vercel build hiba javítása: Suspense boundary hozzáadása a ContactForm-hoz | Kész |
 | 2026-07-03 | Szűrő modul és Rendezvény Banner integrálása | Kész |
 | 2026-07-03 | Hivatalos céglogó integrálása a UI-ba és a SEO metaadatokba | Kész |
+| 2026-07-03 | GDPR Cookie Banner implementálása és integrálása | Kész |

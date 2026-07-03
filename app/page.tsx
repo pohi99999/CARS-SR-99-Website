@@ -37,6 +37,7 @@ export default async function Home({ searchParams }: HomePageProps) {
           loop
           muted
           playsInline
+          preload="auto"
           className="absolute inset-0 h-full w-full object-cover"
         >
           <source
@@ -59,7 +60,7 @@ export default async function Home({ searchParams }: HomePageProps) {
             </p>
             <div className="mt-10">
               <Link
-                href="/kinalatunk"
+                href="/kinalat"
                 className="inline-flex items-center justify-center rounded-full bg-cyan-400 px-7 py-3 text-sm font-semibold text-[#2B2B2B] shadow-[0_0_24px_rgba(34,211,238,0.35)] transition hover:bg-cyan-300"
               >
                 Kínálatunk megtekintése

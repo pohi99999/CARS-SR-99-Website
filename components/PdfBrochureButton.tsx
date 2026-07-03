@@ -89,6 +89,7 @@ export default function PdfBrochureButton({
   return (
     <button
       type="button"
+      aria-label="Jármű adatlap letöltése PDF formátumban"
       onClick={handleDownloadPdf}
       disabled={isGenerating}
       className="mt-4 inline-flex w-full items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:bg-slate-50"

@@ -92,12 +92,12 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
       <Breadcrumbs
         items={[
           { name: "Főoldal", href: "/" },
-          { name: "Kínálatunk", href: "/#kinalat" },
+          { name: "Kínálatunk", href: "/kinalat" },
           { name: carName },
         ]}
       />
       <div className="mb-6">
-        <Link href="/#kinalat" className="text-sm font-medium text-cyan-600 hover:text-cyan-500">
+        <Link href="/kinalat" className="text-sm font-medium text-cyan-600 hover:text-cyan-500">
           ← Vissza a kínálathoz
         </Link>
       </div>

@@ -8,9 +8,9 @@ import ThemeToggle from "@/components/ThemeToggle";
 
 const navItems = [
   { href: "/", label: "Főoldal" },
-  { href: "/kinalatunk", label: "Kínálatunk" },
+  { href: "/kinalat", label: "Kínálatunk" },
   { href: "/autobeszamitas", label: "Autóbeszámítás" },
-  { href: "/sr99-garancia", label: "SR99 Garancia" },
+  { href: "/garancia", label: "SR99 Garancia" },
   { href: "/kapcsolat", label: "Kapcsolat" },
 ];
 
@@ -21,15 +21,16 @@ export default function Header() {
   return (
     <header className="bg-[#2B2B2B] text-white shadow-sm">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center" aria-label="CARS SR99 Kft. főoldal">
+        <Link href="/" className="flex items-center gap-2" aria-label="CARS SR99 Kft. főoldal">
           <Image
             src="/logo.png"
             alt="CARS SR99 Kft. hivatalos logó"
-            width={180}
-            height={60}
-            className="h-auto w-[140px] sm:w-[180px]"
+            width={60}
+            height={20}
+            className="h-auto w-[52px] sm:w-[60px]"
             priority
           />
+          <span className="text-sm font-semibold tracking-wider text-white">CARS SR99 Kft.</span>
         </Link>
 
         <button

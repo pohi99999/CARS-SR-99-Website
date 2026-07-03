@@ -91,6 +91,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
 
           <button
             type="button"
+            aria-label="Galéria megnyitása teljes képernyőn"
             onClick={openFullscreen}
             className="absolute right-3 top-3 inline-flex items-center gap-2 rounded-full bg-black/65 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-black/80"
           >
@@ -106,6 +107,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
               <button
                 key={`${image}-thumb`}
                 type="button"
+                aria-label={`${index + 1}. kép kiválasztása`}
                 onClick={() => scrollToSlide(index)}
                 className={`relative h-16 w-24 shrink-0 overflow-hidden rounded-lg border-2 transition ${
                   isActive ? "border-cyan-400" : "border-slate-300"

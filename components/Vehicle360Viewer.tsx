@@ -40,6 +40,7 @@ export default function Vehicle360Viewer({ imageUrl, carName }: Vehicle360Viewer
     <>
       <button
         type="button"
+        aria-label="360 fokos nézet megnyitása"
         onClick={() => setIsOpen(true)}
         className="mt-4 inline-flex w-full items-center justify-center rounded-full border border-cyan-400/50 px-6 py-3 text-sm font-semibold text-cyan-300 transition hover:border-cyan-300 hover:bg-cyan-400/10"
       >

@@ -12,7 +12,7 @@ export default function InventorySection({ cars }: InventorySectionProps) {
   return (
     <motion.section
       id="kinalat"
-      className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8"
+      className="mx-auto w-full max-w-7xl rounded-3xl border border-white/10 bg-[#121212]/80 px-4 py-16 shadow-[0_24px_55px_rgba(2,8,23,0.35)] backdrop-blur-sm sm:px-6 lg:px-8"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

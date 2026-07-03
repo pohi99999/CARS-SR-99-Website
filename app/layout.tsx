@@ -56,11 +56,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="hu" suppressHydrationWarning className={`${inter.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col bg-background text-foreground">
+      <body className="relative flex min-h-full flex-col bg-background text-foreground">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="pointer-events-none fixed inset-0 -z-50 h-full w-full object-cover opacity-20"
+        >
+          <source src="/bg-video.mp4" type="video/mp4" />
+        </video>
         <Providers>
           <EventBanner />
           <Header />
-          <main className="flex-1">{children}</main>
+          <main className="relative z-10 flex-1 bg-[#121212]/70 backdrop-blur-md">{children}</main>
           <Footer />
           <AIChatAssistant />
           <CompareDock />

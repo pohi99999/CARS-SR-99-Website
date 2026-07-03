@@ -33,6 +33,7 @@ export default function CookieBanner() {
         <div className="flex shrink-0 gap-3">
           <button
             type="button"
+            aria-label="Cookie-k elutasítása"
             onClick={() => handleDecision("rejected")}
             className="rounded-full bg-slate-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-500"
           >
@@ -40,6 +41,7 @@ export default function CookieBanner() {
           </button>
           <button
             type="button"
+            aria-label="Cookie-k elfogadása"
             onClick={() => handleDecision("accepted")}
             className="rounded-full bg-cyan-400 px-4 py-2 text-sm font-semibold text-[#2B2B2B] transition hover:bg-cyan-300"
           >

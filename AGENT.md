@@ -16,3 +16,4 @@
 | 2026-07-03 | GDPR Cookie Banner implementálása és integrálása | Kész |
 | 2026-07-03 | Prémium UX/UI fejlesztések: Framer Motion, 3D kártyák és Google Maps beépítése | Kész |
 | 2026-07-03 | Prémium UX 2. Fázis: Embla Carousel képgaléria és Fullscreen modal beépítése | Kész |
+| 2026-07-03 | Prémium UX 3. Fázis: Reszponzív AI Chat Asszisztens UI beépítése | Kész |

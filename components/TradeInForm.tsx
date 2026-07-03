@@ -27,10 +27,45 @@ const initialFormData: TradeInFormData = {
 export default function TradeInForm() {
   const [formData, setFormData] = useState<TradeInFormData>(initialFormData);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      const webhookUrl = process.env.NEXT_PUBLIC_WEBHOOK_URL;
+
+      if (!webhookUrl) {
+        console.info(
+          "[SR99 TradeInForm] NEXT_PUBLIC_WEBHOOK_URL nincs beállítva. Lokális fejlesztési mód: UX sikeresen tesztelhető.",
+        );
+        setIsSubmitted(true);
+        return;
+      }
+
+      const response = await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          source: "trade-in-form",
+          submittedAt: new Date().toISOString(),
+          ...formData,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Webhook request failed: ${response.status}`);
+      }
+
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("[SR99 TradeInForm] Webhook küldési hiba:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   function setField<K extends keyof TradeInFormData>(field: K, value: TradeInFormData[K]) {
@@ -187,9 +222,14 @@ export default function TradeInForm() {
 
         <button
           type="submit"
+          disabled={isSubmitting}
           className="inline-flex w-full items-center justify-center rounded-full bg-cyan-400 px-6 py-3 text-sm font-semibold text-[#2B2B2B] transition hover:bg-cyan-300"
         >
-          Előzetes értékbecslés kérése
+          {isSubmitting
+            ? "Küldés..."
+            : isSubmitted
+              ? "Sikeres küldés!"
+              : "Előzetes értékbecslés kérése"}
         </button>
       </form>
 

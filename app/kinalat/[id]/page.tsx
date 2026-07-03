@@ -55,9 +55,35 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
   }
 
   const numericPrice = parsePriceToNumber(car.ar);
+  const carName = `${car.marka} ${car.modell}`;
+  const carDescription = `${car.evjarat}-es ${carName}, ${car.futasteljesitmeny} futásteljesítménnyel, ${car.uzemanyag} hajtással. JSZP ellenőrzött jármű a CARS SR99 Kft. kínálatában.`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: carName,
+    image: car.images,
+    description: carDescription,
+    category: "Vehicle",
+    brand: {
+      "@type": "Brand",
+      name: car.marka,
+    },
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "HUF",
+      price: numericPrice,
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/UsedCondition",
+      url: `https://cars-sr99-website.vercel.app/kinalat/${car.id}`,
+    },
+  };
 
   return (
     <section className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mb-6">
         <Link href="/#kinalat" className="text-sm font-medium text-cyan-600 hover:text-cyan-500">
           ← Vissza a kínálathoz

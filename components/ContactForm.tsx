@@ -21,6 +21,7 @@ export default function ContactForm() {
   const searchParams = useSearchParams();
   const [formData, setFormData] = useState<ContactFormData>(initialFormData);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const prefilledMessage = useMemo(() => {
     const carName = searchParams.get("car");
@@ -33,9 +34,46 @@ export default function ContactForm() {
 
   const displayedMessage = formData.message.length > 0 ? formData.message : prefilledMessage;
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+
+    const message = displayedMessage;
+
+    try {
+      const webhookUrl = process.env.NEXT_PUBLIC_WEBHOOK_URL;
+
+      if (!webhookUrl) {
+        console.info(
+          "[SR99 ContactForm] NEXT_PUBLIC_WEBHOOK_URL nincs beállítva. Lokális fejlesztési mód: UX sikeresen tesztelhető.",
+        );
+        setIsSubmitted(true);
+        return;
+      }
+
+      const response = await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          source: "contact-form",
+          submittedAt: new Date().toISOString(),
+          ...formData,
+          message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Webhook request failed: ${response.status}`);
+      }
+
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("[SR99 ContactForm] Webhook küldési hiba:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   function handleFieldChange(field: keyof ContactFormData, value: string) {
@@ -116,9 +154,10 @@ export default function ContactForm() {
 
         <button
           type="submit"
+          disabled={isSubmitting}
           className="inline-flex w-full items-center justify-center rounded-full bg-cyan-400 px-6 py-3 text-sm font-semibold text-[#2B2B2B] transition hover:bg-cyan-300"
         >
-          Üzenet küldése
+          {isSubmitting ? "Küldés..." : isSubmitted ? "Sikeres küldés!" : "Üzenet küldése"}
         </button>
       </form>
 

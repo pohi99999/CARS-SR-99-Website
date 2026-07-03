@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const navItems = [
@@ -17,9 +17,25 @@ const navItems = [
 export default function Header() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="bg-[#2B2B2B] text-white shadow-sm">
+    <header
+      className={`sticky top-0 z-40 w-full text-white transition-all duration-300 ${
+        scrolled
+          ? "backdrop-blur-md bg-[#0f172a]/90 shadow-lg"
+          : "bg-transparent"
+      }`}
+    >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2" aria-label="CARS SR99 Kft. főoldal">
           <Image
@@ -68,7 +84,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`transition ${
+                className={`transition-colors duration-200 ${
                   isActive ? "text-cyan-400" : "text-white hover:text-cyan-400"
                 }`}
               >
@@ -81,7 +97,7 @@ export default function Header() {
       </div>
 
       {isOpen && (
-        <nav className="border-t border-white/10 px-6 pb-4 md:hidden sm:px-6">
+        <nav className="border-t border-white/10 px-6 pb-4 md:hidden sm:px-6 bg-[#0f172a]/95 backdrop-blur-md">
           <div className="flex flex-col gap-3 pt-4 text-sm font-medium">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
@@ -89,7 +105,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`transition ${
+                  className={`transition-colors duration-200 ${
                     isActive ? "text-cyan-400" : "text-white hover:text-cyan-400"
                   }`}
                   onClick={() => setIsOpen(false)}

@@ -1,45 +1,87 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#2B2B2B] text-slate-200">
-      <div className="mx-auto grid w-full max-w-7xl gap-8 px-6 py-10 sm:px-6 lg:grid-cols-3 lg:px-8">
+    <footer className="bg-[#2B2B2B] text-slate-200 border-t border-slate-800">
+      <div className="mx-auto grid w-full max-w-7xl gap-8 px-6 py-12 sm:px-6 lg:grid-cols-3 lg:px-8">
         <div>
-          <Image
-            src="/logo.png"
-            alt="CARS SR99 Kft. logó"
-            width={140}
-            height={45}
-            className="h-auto w-[120px] sm:w-[140px]"
-          />
-          <h2 className="mt-3 text-sm font-semibold uppercase tracking-wider text-cyan-400">
-            CARS SR99 Kft.
-          </h2>
-          <p className="mt-3 text-sm leading-6 text-slate-300">
+          <div className="flex items-center gap-3">
+            <Image
+              src="/logo.png"
+              alt="CARS SR99 Kft. logó"
+              width={50}
+              height={50}
+              className="h-auto w-[40px]"
+            />
+            <span className="text-xl font-bold text-cyan-400">CARS SR99 Kft.</span>
+          </div>
+          <p className="mt-4 text-sm leading-6 text-slate-300">
             Megbízható, prémium autókereskedés modern szemlélettel és ügyfélközpontú kiszolgálással.
           </p>
-        </div>
-
-        <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Elérhetőségek</h3>
-          <p className="mt-3 text-sm leading-6 text-slate-300">
-            8900 Zalaegerszeg, Ságod hrsz. 807/15
-            <br />
-            Tel: 06-70 907-06-69
-            <br />
-            Adószám: 33067656-2-20
+          <p className="mt-4 text-xs text-slate-400">
+            © 2025 CARS SR99 Kft. Minden jog fenntartva.
           </p>
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Nyitvatartás</h3>
-          <p className="mt-3 text-sm leading-6 text-slate-300">
-            Hétfő-Péntek: 09:00-17:00
-            <br />
-            Szombat: Előre egyeztetett időpontban
-            <br />
-            Vasárnap: Zárva
-          </p>
+          <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+            Gyors linkek
+          </h3>
+          <ul className="space-y-2 text-sm">
+            <li>
+              <Link href="/" className="transition-colors duration-200 hover:text-cyan-400">
+                Főoldal
+              </Link>
+            </li>
+            <li>
+              <Link href="/kinalat" className="transition-colors duration-200 hover:text-cyan-400">
+                Kínálat
+              </Link>
+            </li>
+            <li>
+              <Link href="/garancia" className="transition-colors duration-200 hover:text-cyan-400">
+                Garancia
+              </Link>
+            </li>
+            <li>
+              <Link href="/autobeszamitas" className="transition-colors duration-200 hover:text-cyan-400">
+                Autóbeszámítás
+              </Link>
+            </li>
+            <li>
+              <Link href="/kapcsolat" className="transition-colors duration-200 hover:text-cyan-400">
+                Kapcsolat
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+            Elérhetőség
+          </h3>
+          <ul className="space-y-3 text-sm text-slate-300">
+            <li className="flex items-center gap-2">
+              <Phone className="h-4 w-4 shrink-0 text-cyan-400" />
+              <span>06-70 907-06-69</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <Mail className="h-4 w-4 shrink-0 text-cyan-400" />
+              <span>info@carssr99.hu</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-cyan-400" />
+              <span>8900 Zalaegerszeg, Ságod hrsz. 807/15, Magyarország</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-slate-700 py-6 text-center text-xs text-slate-400">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          © 2025 CARS SR99 Kft. Minden jog fenntartva.
         </div>
       </div>
     </footer>

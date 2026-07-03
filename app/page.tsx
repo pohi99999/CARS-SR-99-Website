@@ -5,6 +5,7 @@ import InventorySection from "@/components/InventorySection";
 import SocialProofWall from "@/components/SocialProofWall";
 import Testimonials from "@/components/Testimonials";
 import WarrantySection from "@/components/WarrantySection";
+import TrustBadges from "@/components/TrustBadges";
 import { fetchInventory } from "@/services/inventoryService";
 
 type HomePageProps = {
@@ -53,18 +54,39 @@ export default async function Home({ searchParams }: HomePageProps) {
               CARS SR99 Kft.
             </p>
             <h1 className="mt-5 text-4xl font-bold tracking-tight text-slate-100 sm:text-5xl lg:text-6xl">
-              Üdvözöljük a CARS SR99 Kft. új weboldalán
+              Prémium Autók. Megbízható Kereskedés.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-              Prémium választék, biztonságos ügyintézés és modern autóvásárlási élmény egy helyen.
+              Toyota és Kia modellek gondosan válogatva – hibrid, benzin és diesel kínálattal, értékálló garanciával.
             </p>
-            <div className="mt-10">
+            <div className="mt-10 flex flex-wrap gap-4">
               <Link
                 href="/kinalat"
                 className="inline-flex items-center justify-center rounded-full bg-cyan-400 px-7 py-3 text-sm font-semibold text-[#2B2B2B] shadow-[0_0_24px_rgba(34,211,238,0.35)] transition hover:bg-cyan-300"
               >
-                Kínálatunk megtekintése
+                Fedezze fel kínálatunkat →
               </Link>
+              <Link
+                href="/kapcsolat"
+                className="inline-flex items-center justify-center border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 rounded-full px-7 py-3 text-sm font-semibold transition"
+              >
+                Kérjen visszahívást
+              </Link>
+            </div>
+
+            <div className="mt-12 grid grid-cols-3 gap-8 border-t border-slate-700/50 pt-8">
+              <div>
+                <p className="text-3xl font-bold text-cyan-400">500+</p>
+                <p className="mt-1 text-sm text-slate-400">Eladott autó</p>
+              </div>
+              <div>
+                <p className="text-3xl font-bold text-cyan-400">15+</p>
+                <p className="mt-1 text-sm text-slate-400">Év tapasztalat</p>
+              </div>
+              <div>
+                <p className="text-3xl font-bold text-cyan-400">4.9</p>
+                <p className="mt-1 text-sm text-slate-400">Ügyfélelégedettség</p>
+              </div>
             </div>
           </div>
         </div>
@@ -72,6 +94,7 @@ export default async function Home({ searchParams }: HomePageProps) {
 
       <CarFilter initialMarka={selectedMarka} initialUzemanyag={selectedUzemanyag} />
       <InventorySection cars={filteredCars} />
+      <TrustBadges />
       <AboutSection />
       <SocialProofWall />
       <Testimonials />
@@ -79,3 +102,4 @@ export default async function Home({ searchParams }: HomePageProps) {
     </>
   );
 }
+

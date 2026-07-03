@@ -5,6 +5,7 @@ import AIChatAssistant from "@/components/AIChatAssistant";
 import CompareDock from "@/components/CompareDock";
 import CookieBanner from "@/components/CookieBanner";
 import EventBanner from "@/components/EventBanner";
+import FomoNotification from "@/components/FomoNotification";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import "./globals.css";
@@ -20,13 +21,13 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cars-sr99-website.vercel.app"),
+  metadataBase: new URL("https://cars-sr99.vercel.app"),
   title: {
-    default: "CARS SR99 Kft. | Prémium használtautó kereskedés Zalaegerszeg",
+    default: "CARS SR99 Kft. – Prémium Autók Toyota és Kia Kínálattal",
     template: "%s | CARS SR99 Kft.",
   },
   description:
-    "Prémium használtautó kereskedés Zalaegerszegen: JSZP ellenőrzött járművek, autóbeszámítás, transzparens ügyintézés és gyors kapcsolatfelvétel.",
+    "Toyota és Kia modellek gondosan válogatva – hibrid, benzin és diesel kínálattal, értékálló garanciával. Ismerje meg prémium autókínálatunkat.",
   keywords: [
     "Prémium használtautó kereskedés Zalaegerszeg",
     "CARS SR99 Kft.",
@@ -36,10 +37,10 @@ export const metadata: Metadata = {
     "használtautó",
   ],
   openGraph: {
-    title: "CARS SR99 Kft. | Prémium használtautó kereskedés Zalaegerszeg",
+    title: "CARS SR99 Kft. – Prémium Autók Toyota és Kia Kínálattal",
     description:
-      "Fedezze fel JSZP ellenőrzött kínálatunkat, kérjen gyors kapcsolatfelvételt vagy autóbeszámítási ajánlatot.",
-    url: "https://cars-sr99-website.vercel.app",
+      "Toyota és Kia modellek gondosan válogatva – hibrid, benzin és diesel kínálattal, értékálló garanciával. Ismerje meg prémium autókínálatunkat.",
+    url: "https://cars-sr99.vercel.app",
     siteName: "CARS SR99 Kft.",
     locale: "hu_HU",
     type: "website",
@@ -51,6 +52,12 @@ export const metadata: Metadata = {
         alt: "CARS SR99 Kft. hivatalos logó",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CARS SR99 Kft. – Prémium Autók Toyota és Kia Kínálattal",
+    description:
+      "Toyota és Kia modellek gondosan válogatva – hibrid, benzin és diesel kínálattal, értékálló garanciával. Ismerje meg prémium autókínálatunkat.",
   },
 };
 
@@ -77,8 +84,9 @@ export default function RootLayout({
         </video>
         <div className="pointer-events-none fixed inset-0 -z-40 bg-black/20" />
         <Providers>
-          <EventBanner />
+          <FomoNotification />
           <Header />
+          <EventBanner />
           <main className="relative z-10 flex-1 bg-[#121212]/45 backdrop-blur-md">{children}</main>
           <Footer />
           <AIChatAssistant />

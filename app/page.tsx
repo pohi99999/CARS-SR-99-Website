@@ -31,8 +31,22 @@ export default async function Home({ searchParams }: HomePageProps) {
   return (
     <>
       <section className="relative overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source
+            src="https://videos.pexels.com/video-files/3802518/3802518-hd_1920_1080_25fps.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div className="absolute inset-0 bg-black/60" />
+
         <div className="mx-auto flex min-h-[calc(100vh-10rem)] w-full max-w-7xl items-center px-4 py-20 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="relative z-10 max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-500">
               CARS SR99 Kft.
             </p>

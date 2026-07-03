@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import FomoNotification from "@/components/FomoNotification";
 import ImageGallery from "@/components/ImageGallery";
 import LeasingCalculator from "@/components/LeasingCalculator";
+import PdfBrochureButton from "@/components/PdfBrochureButton";
 import { parsePriceToNumber } from "@/data/inventory";
 import { getCarByIdAsync } from "@/services/inventoryService";
 
@@ -122,6 +123,15 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
               <dd className="mt-1 font-semibold text-slate-800">{car.uzemanyag}</dd>
             </div>
           </dl>
+
+          <PdfBrochureButton
+            carName={carName}
+            price={car.ar}
+            year={car.evjarat}
+            mileage={car.futasteljesitmeny}
+            fuel={car.uzemanyag}
+            imageUrl={car.images[0]}
+          />
 
           <Link
             href={`/kapcsolat?car=${encodeURIComponent(`${car.marka} ${car.modell}`)}`}

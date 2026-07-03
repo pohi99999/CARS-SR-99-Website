@@ -10,3 +10,4 @@
 | 2026-07-03 | JSZP blokk és Autóbeszámítás modul | Kész |
 | 2026-07-03 | SEO optimalizálás (Metadata) és Vercel deployment előkészítése | Kész |
 | 2026-07-03 | Aszinkron adatkezelés (Service réteg) és globális Loading UI kialakítása | Kész |
+| 2026-07-03 | Vercel build hiba javítása: Suspense boundary hozzáadása a ContactForm-hoz | Kész |

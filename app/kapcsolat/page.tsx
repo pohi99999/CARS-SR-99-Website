@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import ContactForm from "@/components/ContactForm";
 
 export default function ContactPage() {
@@ -43,7 +44,9 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <ContactForm />
+        <Suspense fallback={<div className="text-gray-500 animate-pulse">Űrlap betöltése...</div>}>
+          <ContactForm />
+        </Suspense>
       </div>
     </section>
   );

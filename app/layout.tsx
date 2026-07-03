@@ -75,7 +75,7 @@ export default function RootLayout({
         >
           <source src="/bg-video.mp4" type="video/mp4" />
         </video>
-        <div className="pointer-events-none fixed inset-0 -z-40 bg-black/40" />
+        <div className="pointer-events-none fixed inset-0 -z-40 bg-black/20" />
         <Providers>
           <EventBanner />
           <Header />

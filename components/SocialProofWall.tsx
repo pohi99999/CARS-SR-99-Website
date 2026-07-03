@@ -33,16 +33,16 @@ export default function SocialProofWall() {
         </h2>
       </div>
 
-      <div className="columns-2 gap-4 space-y-4 md:columns-4">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
         {posts.map((post) => (
           <article
             key={post.image}
-            className="break-inside-avoid overflow-hidden rounded-xl border border-white/10 bg-white/5"
+            className="flex h-full min-h-[400px] flex-col overflow-hidden rounded-xl border border-white/10 bg-white/5"
           >
-            <div className="relative aspect-square w-full">
+            <div className="relative aspect-[4/3] w-full">
               <Image src={post.image} alt={post.caption} fill className="object-cover" />
             </div>
-            <p className="p-3 text-xs leading-5 text-slate-200">{post.caption}</p>
+            <p className="flex-1 p-4 text-sm leading-6 text-slate-200">{post.caption}</p>
           </article>
         ))}
       </div>

@@ -10,7 +10,6 @@ const navItems = [
   { href: "/", label: "Főoldal" },
   { href: "/kinalat", label: "Kínálatunk" },
   { href: "/autobeszamitas", label: "Autóbeszámítás" },
-  { href: "/garancia", label: "SR99 Garancia" },
   { href: "/kapcsolat", label: "Kapcsolat" },
 ];
 

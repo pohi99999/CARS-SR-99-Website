@@ -44,11 +44,6 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/garancia" className="transition-colors duration-200 hover:text-cyan-400">
-                Garancia
-              </Link>
-            </li>
-            <li>
               <Link href="/autobeszamitas" className="transition-colors duration-200 hover:text-cyan-400">
                 Autóbeszámítás
               </Link>

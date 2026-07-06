@@ -4,7 +4,6 @@ import HeroCTAButtons from "@/components/HeroCTAButtons";
 import InventorySection from "@/components/InventorySection";
 import SocialProofWall from "@/components/SocialProofWall";
 import Testimonials from "@/components/Testimonials";
-import WarrantySection from "@/components/WarrantySection";
 import TrustBadges from "@/components/TrustBadges";
 import { fetchInventory } from "@/services/inventoryService";
 
@@ -86,7 +85,6 @@ export default async function Home({ searchParams }: HomePageProps) {
       <AboutSection />
       <SocialProofWall />
       <Testimonials />
-      <WarrantySection />
     </>
   );
 }

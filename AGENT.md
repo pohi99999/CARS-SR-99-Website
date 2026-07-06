@@ -26,3 +26,4 @@
 | 2026-07-03 | 9. Fázis: Prémium UI/UX finomhangolás (Tipográfia, Glassmorphism), A11y optimalizálás és Videó láthatóság | Kész |
 | 2026-07-03 | 9.5 Fázis: Háttérvideó kontraszt-finomítás és Social Proof Grid-alapú javítása. | Kész |
 | 2026-07-03 | 10. Fázis: Lighthouse 100/100 optimalizáció (ES6+ build, Lazy Motion, Forced Reflow javítások). | Kész |
+| 2026-07-06 | Garanciális modul eltávolítása (Real Garant kiterjesztett védelem törlése) | Kész |

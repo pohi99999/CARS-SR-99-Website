@@ -51,7 +51,7 @@ export default function AIChatAssistant() {
       } else if (lower.includes("beszámítás") || lower.includes("cseré") || lower.includes("eladnám")) {
         reply = "Autóját korrekt piaci értékbecsléssel beszámítjuk! Töltse ki az Autóbeszámítás menüpont alatti űrlapot az előzetes ajánlathoz.";
       } else if (lower.includes("garancia") || lower.includes("szerviz") || lower.includes("biztosítás")) {
-        reply = "Kiemelt autóinkhoz 12 hónapos Real Garant kiterjesztett garanciát biztosítunk motor- és váltóvédelemmel.";
+        reply = "Minden nálunk vásárolt gépjárműhöz 12 hónapos szervizgaranciát biztosítunk a gondtalan használat érdekében. Részletekről érdeklődjön munkatársainknál!";
       } else if (lower.includes("cím") || lower.includes("hol") || lower.includes("zalaegerszeg") || lower.includes("nyitva")) {
         reply = "Telephelyünk: 8900 Zalaegerszeg, Ságod hrsz. 807/15. Nyitvatartás: Hétfő-Péntek 09:00-17:00.";
       }

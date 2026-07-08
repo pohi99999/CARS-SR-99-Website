@@ -5,12 +5,14 @@ import Providers from "@/app/providers";
 import EventBanner from "@/components/EventBanner";
 import Header from "@/components/Header";
 import TrackingScripts from "@/components/TrackingScripts";
+import {
+  AIChatAssistant,
+  CompareDock,
+  CookieBanner,
+  FomoNotification,
+} from "@/components/DynamicClientComponents";
 
 const Footer = dynamic(() => import("@/components/Footer"));
-const AIChatAssistant = dynamic(() => import("@/components/AIChatAssistant"), { ssr: false });
-const CompareDock = dynamic(() => import("@/components/CompareDock"), { ssr: false });
-const CookieBanner = dynamic(() => import("@/components/CookieBanner"), { ssr: false });
-const FomoNotification = dynamic(() => import("@/components/FomoNotification"), { ssr: false });
 import "./globals.css";
 
 const inter = Inter({

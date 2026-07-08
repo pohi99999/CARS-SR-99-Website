@@ -41,7 +41,7 @@ export default async function Home({ searchParams }: HomePageProps) {
           playsInline
           preload="auto"
           poster="/hero-poster.webp"
-          fetchPriority="high"
+          {...{ fetchPriority: "high" }}
           className="absolute inset-0 h-full w-full object-cover"
         >
           <source

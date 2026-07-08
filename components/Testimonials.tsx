@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import { Star } from "lucide-react";
+import { LazyMotion, domAnimation, m } from "framer-motion";
 
 const testimonials = [
   {
@@ -25,34 +25,15 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          if (sectionRef.current) observer.unobserve(sectionRef.current);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section
-      ref={sectionRef}
-      className={`mx-auto w-full max-w-7xl px-6 py-16 sm:px-6 lg:px-8 transition-all duration-700 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-      }`}
-    >
+    <LazyMotion features={domAnimation}>
+      <m.section
+        className="mx-auto w-full max-w-7xl px-6 py-16 sm:px-6 lg:px-8"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
       <div className="mb-8">
         <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-400">Ügyfélvélemények</p>
         <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-100 sm:text-4xl">
@@ -77,6 +58,7 @@ export default function Testimonials() {
           </article>
         ))}
       </div>
-    </section>
+      </m.section>
+    </LazyMotion>
   );
 }

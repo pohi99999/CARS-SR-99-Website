@@ -1,11 +1,13 @@
-import AboutSection from "@/components/AboutSection";
-import CarFilter from "@/components/CarFilter";
+import dynamic from "next/dynamic";
 import HeroCTAButtons from "@/components/HeroCTAButtons";
 import InventorySection from "@/components/InventorySection";
-import SocialProofWall from "@/components/SocialProofWall";
-import Testimonials from "@/components/Testimonials";
-import TrustBadges from "@/components/TrustBadges";
 import { fetchInventory } from "@/services/inventoryService";
+
+const CarFilter = dynamic(() => import("@/components/CarFilter"));
+const AboutSection = dynamic(() => import("@/components/AboutSection"));
+const TrustBadges = dynamic(() => import("@/components/TrustBadges"));
+const SocialProofWall = dynamic(() => import("@/components/SocialProofWall"));
+const Testimonials = dynamic(() => import("@/components/Testimonials"));
 
 type HomePageProps = {
   searchParams: Promise<{
@@ -38,7 +40,8 @@ export default async function Home({ searchParams }: HomePageProps) {
           muted
           playsInline
           preload="auto"
-          poster="/hero-poster.jpg"
+          poster="/hero-poster.webp"
+          fetchPriority="high"
           className="absolute inset-0 h-full w-full object-cover"
         >
           <source

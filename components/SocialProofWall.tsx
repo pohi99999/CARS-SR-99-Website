@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { LazyMotion, domAnimation, m } from "framer-motion";
 
 const posts = [
   {
@@ -25,7 +28,14 @@ const posts = [
 
 export default function SocialProofWall() {
   return (
-    <section className="mx-auto w-full max-w-7xl px-6 py-16 sm:px-6 lg:px-8">
+    <LazyMotion features={domAnimation}>
+      <m.section
+        className="mx-auto w-full max-w-7xl px-6 py-16 sm:px-6 lg:px-8"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
       <div className="mb-8">
         <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-400">Social Proof</p>
         <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-100 sm:text-4xl">
@@ -46,6 +56,7 @@ export default function SocialProofWall() {
           </article>
         ))}
       </div>
-    </section>
+      </m.section>
+    </LazyMotion>
   );
 }

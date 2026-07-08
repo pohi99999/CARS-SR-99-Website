@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import { ShieldCheck, FileText, Wrench, CreditCard } from "lucide-react";
+import { LazyMotion, domAnimation, m } from "framer-motion";
 
 const badges = [
   {
@@ -27,34 +27,15 @@ const badges = [
 ];
 
 export default function TrustBadges() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          if (sectionRef.current) observer.unobserve(sectionRef.current);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section
-      ref={sectionRef}
-      className={`bg-[#111827] py-12 text-slate-100 border-y border-slate-800/80 transition-all duration-700 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-      }`}
-    >
+    <LazyMotion features={domAnimation}>
+      <m.section
+        className="bg-[#111827] py-12 text-slate-100 border-y border-slate-800/80"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {badges.map((badge, idx) => {
@@ -76,6 +57,7 @@ export default function TrustBadges() {
           })}
         </div>
       </div>
-    </section>
+      </m.section>
+    </LazyMotion>
   );
 }

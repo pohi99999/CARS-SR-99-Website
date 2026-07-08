@@ -20,7 +20,7 @@ export default function CarCard({ car }: CarCardProps) {
 
   return (
     <Tilt tiltMaxAngleX={4} tiltMaxAngleY={4} glareEnable glareMaxOpacity={0.08} className="h-full">
-      <article className="flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-[0_20px_45px_rgba(2,8,23,0.45)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-[0_24px_55px_rgba(34,211,238,0.22)] dark:border-white/10 dark:bg-white/5">
+      <article className="flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-[0_20px_45px_rgba(2,8,23,0.45)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:border-cyan-400/40 hover:shadow-[0_0_15px_rgba(34,211,238,0.5)] dark:border-white/10 dark:bg-white/5">
         <div className="relative h-56 w-full overflow-hidden bg-slate-900 md:h-64">
           <Image
             src={car.images[0]}

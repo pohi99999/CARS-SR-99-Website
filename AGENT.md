@@ -28,3 +28,4 @@
 | 2026-07-03 | 10. Fázis: Lighthouse 100/100 optimalizáció (ES6+ build, Lazy Motion, Forced Reflow javítások). | Kész |
 | 2026-07-06 | Garanciális modul eltávolítása (Real Garant kiterjesztett védelem törlése) | Kész |
 | 2026-07-06 | "SR99 Garancia" menüpont és aloldal végleges kivezetése a navigációból és a fájlrendszerből | Kész |
+| 2026-07-08 | 11. Fázis: Lighthouse 100/100 optimalizáció és prémium UX (Glassmorphism, WebP, Dynamic Imports) | Kész |

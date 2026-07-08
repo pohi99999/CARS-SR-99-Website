@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
+import dynamic from "next/dynamic";
 import Providers from "@/app/providers";
-import AIChatAssistant from "@/components/AIChatAssistant";
-import CompareDock from "@/components/CompareDock";
-import CookieBanner from "@/components/CookieBanner";
 import EventBanner from "@/components/EventBanner";
-import FomoNotification from "@/components/FomoNotification";
-import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import TrackingScripts from "@/components/TrackingScripts";
+
+const Footer = dynamic(() => import("@/components/Footer"));
+const AIChatAssistant = dynamic(() => import("@/components/AIChatAssistant"), { ssr: false });
+const CompareDock = dynamic(() => import("@/components/CompareDock"), { ssr: false });
+const CookieBanner = dynamic(() => import("@/components/CookieBanner"), { ssr: false });
+const FomoNotification = dynamic(() => import("@/components/FomoNotification"), { ssr: false });
 import "./globals.css";
 
 const inter = Inter({
@@ -115,7 +117,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${montserrat.variable} h-full antialiased`}
     >
-      <body className="relative flex min-h-full flex-col bg-background text-foreground">
+      <body className={`${inter.className} relative flex min-h-full flex-col bg-background text-foreground`}>
         <TrackingScripts />
         <script
           type="application/ld+json"

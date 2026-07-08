@@ -31,7 +31,7 @@ export default function Header() {
     <header
       className={`sticky top-0 z-40 w-full text-white transition-all duration-300 ${
         scrolled
-          ? "backdrop-blur-md bg-[#0f172a]/90 shadow-lg"
+          ? "backdrop-blur-md bg-black/40 border-b border-white/10 shadow-lg"
           : "bg-transparent"
       }`}
     >
@@ -96,7 +96,7 @@ export default function Header() {
       </div>
 
       {isOpen && (
-        <nav className="border-t border-white/10 px-6 pb-4 md:hidden sm:px-6 bg-[#0f172a]/95 backdrop-blur-md">
+        <nav className="border-t border-white/10 px-6 pb-4 md:hidden sm:px-6 bg-black/60 backdrop-blur-md border-b border-white/10">
           <div className="flex flex-col gap-3 pt-4 text-sm font-medium">
             {navItems.map((item) => {
               const isActive = pathname === item.href;

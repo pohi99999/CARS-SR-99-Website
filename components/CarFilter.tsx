@@ -2,16 +2,14 @@
 
 import { Mic } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore, useMemo } from "react";
+import { inventory, parsePriceToNumber } from "@/data/inventory";
 
 type CarFilterProps = {
   initialMarka: string;
   initialUzemanyag: string;
+  initialMaxPrice: number;
 };
-
-const markaOptions = ["Összes", "Toyota", "Kia"] as const;
-const uzemanyagOptions = ["Összes", "Hibrid", "Benzin", "Diesel"] as const;
-type MarkaOption = (typeof markaOptions)[number];
 
 type SpeechRecognitionResultItem = {
   transcript: string;
@@ -38,10 +36,39 @@ type SpeechRecognitionLike = {
 
 type SpeechRecognitionConstructor = new () => SpeechRecognitionLike;
 
-export default function CarFilter({ initialMarka, initialUzemanyag }: CarFilterProps) {
+export default function CarFilter({ initialMarka, initialUzemanyag, initialMaxPrice }: CarFilterProps) {
   const router = useRouter();
   const [marka, setMarka] = useState(initialMarka);
   const [uzemanyag, setUzemanyag] = useState(initialUzemanyag);
+  
+  // Calculate dynamic filter options based on real inventory
+  const markaOptions = useMemo(() => {
+    return ["Összes", ...Array.from(new Set(inventory.map((car) => car.marka)))];
+  }, []);
+
+  const uzemanyagOptions = useMemo(() => {
+    return ["Összes", ...Array.from(new Set(inventory.map((car) => car.uzemanyag)))];
+  }, []);
+
+  // Dynamic price calculation
+  const { minPrice, maxPrice } = useMemo(() => {
+    const validPrices = inventory
+      .map((car) => parsePriceToNumber(car.ar))
+      .filter((price) => price > 0);
+    return {
+      minPrice: validPrices.length > 0 ? Math.min(...validPrices) : 0,
+      maxPrice: validPrices.length > 0 ? Math.max(...validPrices) : 10000000,
+    };
+  }, []);
+
+  const [selectedMaxPrice, setSelectedMaxPrice] = useState(initialMaxPrice);
+  const [prevInitialMaxPrice, setPrevInitialMaxPrice] = useState(initialMaxPrice);
+
+  if (initialMaxPrice !== prevInitialMaxPrice) {
+    setPrevInitialMaxPrice(initialMaxPrice);
+    setSelectedMaxPrice(initialMaxPrice);
+  }
+
   const [isListening, setIsListening] = useState(false);
   const recognitionRef = useRef<SpeechRecognitionLike | null>(null);
   const voiceSupported = useSyncExternalStore(
@@ -56,7 +83,7 @@ export default function CarFilter({ initialMarka, initialUzemanyag }: CarFilterP
     () => false,
   );
 
-  function pushWithFilters(nextMarka: string, nextUzemanyag: string) {
+  function pushWithFilters(nextMarka: string, nextUzemanyag: string, nextMaxPrice: number) {
     const params = new URLSearchParams();
 
     if (nextMarka !== "Összes") {
@@ -64,6 +91,9 @@ export default function CarFilter({ initialMarka, initialUzemanyag }: CarFilterP
     }
     if (nextUzemanyag !== "Összes") {
       params.set("uzemanyag", nextUzemanyag);
+    }
+    if (nextMaxPrice < maxPrice) {
+      params.set("maxPrice", nextMaxPrice.toString());
     }
 
     const query = params.toString();
@@ -95,12 +125,14 @@ export default function CarFilter({ initialMarka, initialUzemanyag }: CarFilterP
       );
 
       if (matchedMarka) {
-        const normalized = matchedMarka as MarkaOption;
-        setMarka(normalized);
+        setMarka(matchedMarka);
         const params = new URLSearchParams();
-        params.set("marka", normalized);
+        params.set("marka", matchedMarka);
         if (uzemanyag !== "Összes") {
           params.set("uzemanyag", uzemanyag);
+        }
+        if (selectedMaxPrice < maxPrice) {
+          params.set("maxPrice", selectedMaxPrice.toString());
         }
         const query = params.toString();
         router.push(query.length > 0 ? `/?${query}` : "/");
@@ -120,7 +152,7 @@ export default function CarFilter({ initialMarka, initialUzemanyag }: CarFilterP
       recognition.stop();
       recognitionRef.current = null;
     };
-  }, [router, uzemanyag]);
+  }, [router, uzemanyag, selectedMaxPrice, maxPrice, markaOptions]);
 
   function startVoiceSearch() {
     if (!recognitionRef.current) {
@@ -137,10 +169,18 @@ export default function CarFilter({ initialMarka, initialUzemanyag }: CarFilterP
     }
   }
 
+  function formatPrice(value: number): string {
+    return new Intl.NumberFormat("hu-HU", {
+      style: "currency",
+      currency: "HUF",
+      maximumFractionDigits: 0,
+    }).format(value);
+  }
+
   return (
     <section className="mx-auto w-full max-w-7xl px-6 pt-8 sm:px-6 lg:px-8">
       <div className="rounded-2xl border border-white/10 bg-black/40 p-4 shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-white/5 sm:p-6">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           <div>
             <label htmlFor="filter-marka" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-cyan-400">
               Márka szűrő
@@ -152,7 +192,7 @@ export default function CarFilter({ initialMarka, initialUzemanyag }: CarFilterP
                 onChange={(event) => {
                   const value = event.target.value;
                   setMarka(value);
-                  pushWithFilters(value, uzemanyag);
+                  pushWithFilters(value, uzemanyag, selectedMaxPrice);
                 }}
                 className="w-full rounded-xl border border-white/20 bg-slate-900/90 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
               >
@@ -205,7 +245,7 @@ export default function CarFilter({ initialMarka, initialUzemanyag }: CarFilterP
               onChange={(event) => {
                 const value = event.target.value;
                 setUzemanyag(value);
-                pushWithFilters(marka, value);
+                pushWithFilters(marka, value, selectedMaxPrice);
               }}
               className="w-full rounded-xl border border-white/20 bg-slate-900/90 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
             >
@@ -215,6 +255,36 @@ export default function CarFilter({ initialMarka, initialUzemanyag }: CarFilterP
                 </option>
               ))}
             </select>
+          </div>
+
+          <div>
+            <div className="mb-1.5 flex items-center justify-between">
+              <label htmlFor="filter-price" className="text-xs font-semibold uppercase tracking-wider text-cyan-400">
+                Maximális ár
+              </label>
+              <span className="text-sm font-semibold text-cyan-400">
+                {selectedMaxPrice >= maxPrice ? "Bármely ár" : formatPrice(selectedMaxPrice)}
+              </span>
+            </div>
+            <input
+              id="filter-price"
+              type="range"
+              min={minPrice}
+              max={maxPrice}
+              step={100000}
+              value={selectedMaxPrice}
+              onChange={(event) => {
+                const value = Number(event.target.value);
+                setSelectedMaxPrice(value);
+              }}
+              onMouseUp={() => pushWithFilters(marka, uzemanyag, selectedMaxPrice)}
+              onTouchEnd={() => pushWithFilters(marka, uzemanyag, selectedMaxPrice)}
+              className="h-2 w-full cursor-pointer appearance-none rounded-lg bg-slate-700 accent-cyan-400"
+            />
+            <div className="mt-1 flex justify-between text-xs text-slate-400">
+              <span>{formatPrice(minPrice)}</span>
+              <span>{formatPrice(maxPrice)}</span>
+            </div>
           </div>
         </div>
       </div>

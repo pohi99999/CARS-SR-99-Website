@@ -40,7 +40,7 @@ export default function ContactPage() {
               </div>
               <div className="flex items-center gap-2 text-slate-200 font-medium">
                 <Mail className="h-4 w-4 text-cyan-400" />
-                <a href="mailto:info@carssr99.hu" className="hover:text-cyan-300 transition">info@carssr99.hu</a>
+                <a href="mailto:carssr99@gmail.com" className="hover:text-cyan-300 transition">carssr99@gmail.com</a>
               </div>
             </div>
 

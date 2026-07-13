@@ -74,11 +74,11 @@ export default function Footer() {
             <li className="flex items-center gap-2">
               <Mail className="h-4 w-4 shrink-0 text-cyan-400" />
               <a
-                href="mailto:info@carssr99.hu"
+                href="mailto:carssr99@gmail.com"
                 onClick={() => trackContactClick("email")}
                 className="transition-colors hover:text-cyan-400"
               >
-                info@carssr99.hu
+                carssr99@gmail.com
               </a>
             </li>
             <li className="flex items-start gap-2">

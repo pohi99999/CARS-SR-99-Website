@@ -84,7 +84,7 @@ const jsonLdSchema = {
   logo: `${baseUrl}/logo.png`,
   url: baseUrl,
   telephone: "+36-70-907-0669",
-  email: "info@carssr99.hu",
+  email: "carssr99@gmail.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Ságod hrsz. 807/15",

@@ -1,0 +1,15 @@
+﻿Autó,Évjárat,Motor (ccm/típus),Teljesítmény,Rendszám,Alvázszám (FIN),Km óra állás (árak.md),Ár (árak.md),Kép
+Ford Mondeo,2009,1997 Diesel,103 kW / 140 LE,MA-899CN,WF0GXXGBB9P79600 (md: WF0GXXGBBG9P79600 - eltérés!),211 000 km,860 000 Ft,Nincs
+Ford Kuga Titanium,2011,1997 Diesel,103 kW / 140 LE,WB-644DJ,WFORXXGCDRLB89572 (md: WFORXXGCDRBL89572 - eltérés!),138 000 km,1 549 000 Ft,Nincs
+Seat Alhambra,2015,1968 Diesel,110 kW / 150 LE,WZ-692CE,VSSZZZ7NZGV713669,290 000 km,3 000 000 Ft,Nincs
+Audi A4 Avant,2017,1968 Diesel,140 kW / 190 LE,BR-25110 (OCR: BR-251IO),WAUZZZF46HA133540,187 143 km,300 000 Ft (feltehetően hiányos - valós ár valószínűleg 3 000 000 Ft),Van
+Jaguar F-Pace 20d AWD,2016/2017,1999 Diesel,132 kW / 180 LE,B-04DX (pdf: BN-404DK - eltérés!),SADCA2BN6HA893252 (pdf: SADCA2BN6HA693252 - eltérés!),88 000 km,6 900 000 Ft,Nincs
+Citroën Jumpy Spacetourer,2017,1997 Diesel,110 kW / 150 LE,NK-537DW (pdf: NK-837DW - eltérés!),VF7VEAHXHGZ081589 (pdf: VF7VEAFXH6Z081589 - eltérés!),156 000 km,7 500 000 Ft,Nincs
+BMW F11 525d,2011,1995 ccm Diesel,N/A,OW-530CE,WBAMX31050C524737,N/A,3 300 000 / 3 300 000 / 3 800 000 Ft közül egy (nem egyértelmű),Nincs
+BMW F11 530d xDrive Aura,2011,2993 Diesel,190 kW / 258 LE,SO-847DY (pdf: SO-B47DY OCR),WBAMW91040DV00011,N/A,lásd fent,Nincs
+"BMW F11 (N47, fehér)",2011/2012,1995 Diesel,160 kW / 218 LE,BL-969FY,WBAXB91070DX39707,N/A,lásd fent,Nincs
+Skoda Octavia DSG,2020,1968 Diesel,110 kW / 150 LE,HO-534CJ,TMBJJ7NX8LY014847,293 600 km,5 000 000 Ft,Nincs
+Skoda Octavia Kézi,2022 (md/arak 2011!),N/A,N/A,MD-818LI,TMBJG7NX0NY102082,217 700 km,5 300 000 Ft,Nincs
+Subaru XV,2012,1998 Diesel,80 kW / 109 LE,GU-984MR,JF1GPDLZ3CG005636 (pdf: JF1GPDLZ3CG005638 - eltérés!),237 170 km,1 800 000 Ft,Nincs
+BMW F11 (zöld) - nincs forgalmi/mappa,-,-,-,-,-,249 000 km,3 800 000 Ft,Nincs (nincs mappa se)
+BMW X6 4.0D - nincs forgalmi/mappa,-,-,-,-,-,325 000 km,5 000 000 Ft,Nincs (nincs mappa se)

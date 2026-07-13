@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import HeroCTAButtons from "@/components/HeroCTAButtons";
 import InventorySection from "@/components/InventorySection";
 import { fetchInventory } from "@/services/inventoryService";
+import { parsePriceToNumber } from "@/data/inventory";
 
 const CarFilter = dynamic(() => import("@/components/CarFilter"));
 const AboutSection = dynamic(() => import("@/components/AboutSection"));
@@ -13,22 +14,40 @@ type HomePageProps = {
   searchParams: Promise<{
     marka?: string;
     uzemanyag?: string;
+    maxPrice?: string;
   }>;
 };
 
-const allowedMarkak = new Set(["Toyota", "Kia"]);
-const allowedUzemanyagok = new Set(["Hibrid", "Benzin", "Diesel"]);
-
 export default async function Home({ searchParams }: HomePageProps) {
   const params = await searchParams;
+  
+  const inventory = await fetchInventory();
+
+  // Dynamically collect valid options from the actual inventory
+  const allowedMarkak = new Set(inventory.map(car => car.marka));
+  const allowedUzemanyagok = new Set(inventory.map(car => car.uzemanyag));
+
   const selectedMarka = params.marka && allowedMarkak.has(params.marka) ? params.marka : "Összes";
   const selectedUzemanyag =
     params.uzemanyag && allowedUzemanyagok.has(params.uzemanyag) ? params.uzemanyag : "Összes";
-  const inventory = await fetchInventory();
+
+  // Dynamic price bounds
+  const validPrices = inventory
+    .map((car) => parsePriceToNumber(car.ar))
+    .filter((price) => price > 0);
+  const maxPriceLimit = validPrices.length > 0 ? Math.max(...validPrices) : 10000000;
+
+  const maxPriceParam = params.maxPrice ? parseInt(params.maxPrice, 10) : maxPriceLimit;
+
   const filteredCars = inventory.filter((car) => {
     const markaMatches = selectedMarka === "Összes" || car.marka === selectedMarka;
     const uzemanyagMatches = selectedUzemanyag === "Összes" || car.uzemanyag === selectedUzemanyag;
-    return markaMatches && uzemanyagMatches;
+    
+    const numericPrice = parsePriceToNumber(car.ar);
+    // Allow cars with "Kérjen ajánlatot" (0 Ft) to pass price limits, filter others
+    const priceMatches = numericPrice === 0 || numericPrice <= maxPriceParam;
+
+    return markaMatches && uzemanyagMatches && priceMatches;
   });
 
   return (
@@ -82,7 +101,7 @@ export default async function Home({ searchParams }: HomePageProps) {
         </div>
       </section>
 
-      <CarFilter initialMarka={selectedMarka} initialUzemanyag={selectedUzemanyag} />
+      <CarFilter initialMarka={selectedMarka} initialUzemanyag={selectedUzemanyag} initialMaxPrice={maxPriceParam} />
       <InventorySection cars={filteredCars} />
       <TrustBadges />
       <AboutSection />
@@ -91,4 +110,3 @@ export default async function Home({ searchParams }: HomePageProps) {
     </>
   );
 }
-

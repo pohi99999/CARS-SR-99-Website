@@ -19,14 +19,14 @@ export const inventory: Car[] = [
     futasteljesitmeny: "187 143 km",
     uzemanyag: "Dízel",
     images: [
+      "/geppark/Audi-A4-Avant-2017/kepek/IMG_0782.webp",
       "/geppark/Audi-A4-Avant-2017/kepek/IMG_0775.webp",
       "/geppark/Audi-A4-Avant-2017/kepek/IMG_0776.webp",
       "/geppark/Audi-A4-Avant-2017/kepek/IMG_0777.webp",
       "/geppark/Audi-A4-Avant-2017/kepek/IMG_0778.webp",
       "/geppark/Audi-A4-Avant-2017/kepek/IMG_0779.webp",
       "/geppark/Audi-A4-Avant-2017/kepek/IMG_0780.webp",
-      "/geppark/Audi-A4-Avant-2017/kepek/IMG_0781.webp",
-      "/geppark/Audi-A4-Avant-2017/kepek/IMG_0782.webp"
+      "/geppark/Audi-A4-Avant-2017/kepek/IMG_0781.webp"
     ]
   },
   {

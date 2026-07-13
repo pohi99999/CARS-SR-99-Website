@@ -32,6 +32,8 @@
 | 2026-07-13 | Valódi gépjárműpark integrálása (Mock adatok cseréje, Audi képek élesítése, geppark struktúra szinkronizálása) | Kész |
 | 2026-07-13 | 12. Fázis: Audi HEIC képek konvertálása WebP-be és árszűrő dinamizálása a valós gépparkhoz. | Kész |
 | 2026-07-13 | Globális kapcsolati email cím frissítve a carssr99@gmail.com címre. | Kész |
+| 2026-07-13 | Audi kezdőképe az IMG_0782.webp fájlra módosítva a kiemelt megjelenésért. | Kész |
+
 
 
 

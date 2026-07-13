@@ -58,6 +58,18 @@ export default function LeasingCalculator({ price }: LeasingCalculatorProps) {
     });
   }, [price, downPaymentAmount]);
 
+  if (!price || isNaN(price) || price <= 0) {
+    return (
+      <section className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur-md">
+        <h2 className="text-xl font-bold text-slate-100">Lízing kalkulátor</h2>
+        <p className="mt-4 text-sm text-slate-300">
+          Ehhez a gépjárműhöz jelenleg nem érhető online lízing kalkuláció.
+          Kérjük, érdeklődjön munkatársainknál egyedi ajánlatunkért!
+        </p>
+      </section>
+    );
+  }
+
   return (
     <section className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur-md">
       <h2 className="text-xl font-bold text-slate-100">Lízing kalkulátor</h2>

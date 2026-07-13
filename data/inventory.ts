@@ -11,65 +11,174 @@ export interface Car {
 
 export const inventory: Car[] = [
   {
-    id: "toyota-corolla-hybrid-2020",
-    marka: "Toyota",
-    modell: "Corolla 1.8 Hybrid Comfort",
+    id: "audi-a4-avant-2017",
+    marka: "Audi",
+    modell: "A4 Avant Design S-tronic",
+    evjarat: 2017,
+    ar: "3 000 000 Ft",
+    futasteljesitmeny: "187 143 km",
+    uzemanyag: "Dízel",
+    images: [
+      "/geppark/Audi-A4-Avant-2017/kepek/IMG_0775.HEIC",
+      "/geppark/Audi-A4-Avant-2017/kepek/IMG_0776.HEIC",
+      "/geppark/Audi-A4-Avant-2017/kepek/IMG_0777.HEIC",
+      "/geppark/Audi-A4-Avant-2017/kepek/IMG_0778.HEIC",
+      "/geppark/Audi-A4-Avant-2017/kepek/IMG_0779.HEIC",
+      "/geppark/Audi-A4-Avant-2017/kepek/IMG_0780.HEIC",
+      "/geppark/Audi-A4-Avant-2017/kepek/IMG_0781.HEIC",
+      "/geppark/Audi-A4-Avant-2017/kepek/IMG_0782.HEIC"
+    ]
+  },
+  {
+    id: "bmw-f11-525d-2011",
+    marka: "BMW",
+    modell: "F11 525d",
+    evjarat: 2011,
+    ar: "Kérjen ajánlatot",
+    futasteljesitmeny: "N/A",
+    uzemanyag: "Dízel",
+    images: ["/hero-poster.webp"]
+  },
+  {
+    id: "bmw-f11-530d-xdrive-2011",
+    marka: "BMW",
+    modell: "F11 530d xDrive Aura",
+    evjarat: 2011,
+    ar: "2 900 000 Ft",
+    futasteljesitmeny: "528 000 km",
+    uzemanyag: "Dízel",
+    images: ["/hero-poster.webp"]
+  },
+  {
+    id: "bmw-f11-n47-feher-2011",
+    marka: "BMW",
+    modell: "F11 (N47 motor)",
+    evjarat: 2011,
+    ar: "3 800 000 Ft",
+    futasteljesitmeny: "N/A",
+    uzemanyag: "Dízel",
+    images: ["/hero-poster.webp"]
+  },
+  {
+    id: "bmw-f11-xdrive-2011-fekete",
+    marka: "BMW",
+    modell: "F11 xDrive (fekete)",
+    evjarat: 2011,
+    ar: "3 300 000 Ft",
+    futasteljesitmeny: "210 000 km",
+    uzemanyag: "Dízel",
+    images: ["/hero-poster.webp"]
+  },
+  {
+    id: "bmw-f11-xdrive-2011-zold",
+    marka: "BMW",
+    modell: "F11 xDrive (zöld)",
+    evjarat: 2011,
+    ar: "3 800 000 Ft",
+    futasteljesitmeny: "249 000 km",
+    uzemanyag: "Dízel",
+    images: ["/hero-poster.webp"]
+  },
+  {
+    id: "bmw-f11-xdrive-2013-fekete",
+    marka: "BMW",
+    modell: "F11 xDrive (fekete)",
+    evjarat: 2013,
+    ar: "3 300 000 Ft",
+    futasteljesitmeny: "256 000 km",
+    uzemanyag: "Dízel",
+    images: ["/hero-poster.webp"]
+  },
+  {
+    id: "bmw-x6-4-0d",
+    marka: "BMW",
+    modell: "X6 4.0D",
+    evjarat: 2012,
+    ar: "5 000 000 Ft",
+    futasteljesitmeny: "325 000 km",
+    uzemanyag: "Dízel",
+    images: ["/hero-poster.webp"]
+  },
+  {
+    id: "citroen-jumpy-spacetourer-2017",
+    marka: "Citroën",
+    modell: "Jumpy Spacetourer",
+    evjarat: 2017,
+    ar: "7 500 000 Ft",
+    futasteljesitmeny: "156 000 km",
+    uzemanyag: "Dízel",
+    images: ["/hero-poster.webp"]
+  },
+  {
+    id: "ford-kuga-titanium-2011",
+    marka: "Ford",
+    modell: "Kuga Titanium",
+    evjarat: 2011,
+    ar: "1 549 000 Ft",
+    futasteljesitmeny: "138 000 km",
+    uzemanyag: "Dízel",
+    images: ["/hero-poster.webp"]
+  },
+  {
+    id: "ford-mondeo-2009",
+    marka: "Ford",
+    modell: "Mondeo",
+    evjarat: 2009,
+    ar: "860 000 Ft",
+    futasteljesitmeny: "211 000 km",
+    uzemanyag: "Dízel",
+    images: ["/hero-poster.webp"]
+  },
+  {
+    id: "jaguar-f-pace-2017",
+    marka: "Jaguar",
+    modell: "F-Pace 20d AWD",
+    evjarat: 2017,
+    ar: "6 900 000 Ft",
+    futasteljesitmeny: "88 000 km",
+    uzemanyag: "Dízel",
+    images: ["/hero-poster.webp"]
+  },
+  {
+    id: "seat-alhambra-2015",
+    marka: "Seat",
+    modell: "Alhambra",
+    evjarat: 2015,
+    ar: "3 000 000 Ft",
+    futasteljesitmeny: "290 000 km",
+    uzemanyag: "Dízel",
+    images: ["/hero-poster.webp"]
+  },
+  {
+    id: "skoda-octavia-2020-dsg",
+    marka: "Skoda",
+    modell: "Octavia DSG",
     evjarat: 2020,
-    ar: "7 990 000 Ft",
-    futasteljesitmeny: "78 500 km",
-    uzemanyag: "Hibrid",
-    images: [
-      "https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1611242320536-f12d3541249b?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1400&q=80",
-    ],
+    ar: "5 000 000 Ft",
+    futasteljesitmeny: "293 600 km",
+    uzemanyag: "Dízel",
+    images: ["/hero-poster.webp"]
   },
   {
-    id: "toyota-c-hr-hybrid-2021",
-    marka: "Toyota",
-    modell: "C-HR 2.0 Hybrid Selection",
-    evjarat: 2021,
-    ar: "10 490 000 Ft",
-    futasteljesitmeny: "62 300 km",
-    uzemanyag: "Hibrid",
-    images: [
-      "https://images.unsplash.com/photo-1606016159991-35b57f59f8d6?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1400&q=80",
-    ],
+    id: "skoda-octavia-2022-kezi",
+    marka: "Skoda",
+    modell: "Octavia (kézi váltó)",
+    evjarat: 2022,
+    ar: "5 300 000 Ft",
+    futasteljesitmeny: "217 700 km",
+    uzemanyag: "Dízel",
+    images: ["/hero-poster.webp"]
   },
   {
-    id: "kia-ceed-2021",
-    marka: "Kia",
-    modell: "Ceed 1.5 T-GDi Gold",
-    evjarat: 2021,
-    ar: "8 490 000 Ft",
-    futasteljesitmeny: "54 900 km",
-    uzemanyag: "Benzin",
-    images: [
-      "https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1617195737496-0f9e6a8322d8?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1614200187524-dc4b892acf16?auto=format&fit=crop&w=1400&q=80",
-    ],
-  },
-  {
-    id: "toyota-rav4-hybrid-2019",
-    marka: "Toyota",
-    modell: "RAV4 2.5 Hybrid Executive",
-    evjarat: 2019,
-    ar: "12 990 000 Ft",
-    futasteljesitmeny: "96 100 km",
-    uzemanyag: "Hibrid",
-    images: [
-      "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1592853598062-87a00fc193ed?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1400&q=80",
-    ],
-  },
+    id: "subaru-xv-2012",
+    marka: "Subaru",
+    modell: "XV",
+    evjarat: 2012,
+    ar: "1 800 000 Ft",
+    futasteljesitmeny: "237 170 km",
+    uzemanyag: "Dízel",
+    images: ["/hero-poster.webp"]
+  }
 ];
 
 export function getCarById(id: string): Car | undefined {
@@ -78,5 +187,6 @@ export function getCarById(id: string): Car | undefined {
 
 export function parsePriceToNumber(price: string): number {
   const normalized = price.replace(/[^\d]/g, "");
+  if (!normalized) return 0;
   return Number.parseInt(normalized, 10);
 }

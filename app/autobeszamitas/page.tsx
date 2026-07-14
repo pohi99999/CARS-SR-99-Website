@@ -13,8 +13,8 @@ export default function TradeInPage() {
   return (
     <section className="mx-auto w-full max-w-7xl px-6 py-12 sm:px-6 lg:px-8">
       <div className="grid gap-8 lg:grid-cols-2">
-        <div className="rounded-2xl border border-white/10 bg-black/40 p-6 shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-white/5 sm:p-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-400">
+        <div className="rounded-2xl border-t border-l border-r border-b border-t-white/20 border-l-white/10 border-r-white/5 border-b-white/5 bg-black/40 p-6 shadow-[0_20px_45px_rgba(2,8,23,0.45),inset_0_1px_1px_rgba(255,255,255,0.1)] backdrop-blur-lg dark:bg-white/5 sm:p-8">
+          <p className="text-sm font-extralight uppercase tracking-[0.25em] text-sky-400">
             Autóbeszámítás
           </p>
           <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-100 sm:text-4xl">
@@ -27,8 +27,8 @@ export default function TradeInPage() {
           </p>
 
           <div className="mt-8 space-y-4 text-sm text-slate-300">
-            <div className="rounded-xl border border-white/10 bg-white/5 p-5">
-              <h2 className="font-semibold text-cyan-300">Miért érdemes nálunk beszámíttatni?</h2>
+            <div className="rounded-xl border-t border-l border-r border-b border-t-white/15 border-l-white/10 border-r-white/5 border-b-white/5 bg-white/5 p-5">
+              <h2 className="font-semibold text-sky-300">Miért érdemes nálunk beszámíttatni?</h2>
               <ul className="mt-2 list-disc space-y-1.5 pl-5 text-slate-300">
                 <li>Gyors folyamat és transzparens, piaci értékbecslés.</li>
                 <li>Egyszerű ügyintézés, egy helyen minden papírmunka.</li>
@@ -36,8 +36,8 @@ export default function TradeInPage() {
               </ul>
             </div>
 
-            <div className="rounded-xl border border-white/10 bg-white/5 p-5">
-              <h2 className="font-semibold text-cyan-300">Ságodi telephelyi állapotfelmérés</h2>
+            <div className="rounded-xl border-t border-l border-r border-b border-t-white/15 border-l-white/10 border-r-white/5 border-b-white/5 bg-white/5 p-5">
+              <h2 className="font-semibold text-sky-300">Ságodi telephelyi állapotfelmérés</h2>
               <p className="mt-2 leading-6 text-slate-300">
                 A végső állapotfelmérés a ságodi telephelyen történik, ahol biztonságos, rendezett
                 környezetben végezzük el a részletes vizsgálatot.

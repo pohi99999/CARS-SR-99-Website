@@ -43,9 +43,9 @@ export default function TrustBadges() {
             return (
               <div
                 key={idx}
-                className="flex items-start gap-4 rounded-xl border border-white/5 bg-white/5 p-5 backdrop-blur-sm transition hover:border-cyan-500/30 hover:bg-white/[0.08]"
+                className="flex items-start gap-4 rounded-xl border border-white/5 bg-white/5 p-5 backdrop-blur-sm transition hover:border-sky-500/30 hover:bg-white/[0.08]"
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-cyan-500/10 text-cyan-400">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-sky-500/10 text-sky-400">
                   <IconComponent className="h-6 w-6" />
                 </div>
                 <div>

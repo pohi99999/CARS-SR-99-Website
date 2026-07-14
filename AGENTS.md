@@ -16,7 +16,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 A weboldal feladata a CARS SR99 Kft. (Zalaegerszeg) megbízható, értékesített prémium Toyota és Kia kínálatának (hibrid, benzin, diesel) digitális prezentációja, bizalomépítése és konverzió-orientált lead-szerzése.
 
-- **Theme:** Dark Luxury Glassmorphism (`bg-[#121212]` alap, háttér videóval, `backdrop-blur-md bg-black/40 border border-white/10` üveg kártyákkal, cyan `#22d3ee` kiemelésekkel).
+- **Theme:** Dark Luxury Glassmorphism (`bg-[#121212]` alap, háttér videóval, aszimmetrikus gyémánt-vágott szegélyekkel és belső árnyékokkal ellátott `backdrop-blur-lg bg-black/40` üveg kártyákkal, elegáns Electric Blue `sky-400` / `sky-500` / `indigo-500` kiemelésekkel és ciklikus `.btn-shimmer` mikro-interakciókkal).
 - **SEO & Schema:** Teljes körű `AutoDealer` JSON-LD schema markup, egyedi kanonikus URL-ek aloldalanként, 1200x630 OpenGraph közösségi kép.
 
 ---
@@ -94,3 +94,4 @@ A felületen a következők vannak felkészítve:
 - `93d4c40` - `feat: lead webhook service with retry logic`
 - `525045e` - `feat: wire form events and tracking into components`
 - `59dbd80` - `fix: move HubSpot submission to secure server-side API route`
+- `design: implement Premium Automotive Aesthetics and micro-interactions` - Kivezetve az összes cyan és yellow szín, megvalósítva az új Electric Blue dizájnpaletta, aszimmetrikus gyémánt-vágott üveghatású kártya szegélyek és belső árnyékok, ciklikus shimmer fénycsík gombanimációk és finomított tracking-tight tipográfia.

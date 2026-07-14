@@ -92,7 +92,7 @@ export default function TradeInForm() {
   }
 
   return (
-    <section className="rounded-2xl border border-white/10 bg-black/40 p-6 shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-white/5 sm:p-8">
+    <section className="rounded-2xl border-t border-l border-r border-b border-t-white/20 border-l-white/10 border-r-white/5 border-b-white/5 bg-black/40 p-6 shadow-[0_20px_45px_rgba(2,8,23,0.45),inset_0_1px_1px_rgba(255,255,255,0.1)] backdrop-blur-lg dark:bg-white/5 sm:p-8">
       <h2 className="text-2xl font-bold tracking-tight text-slate-100">Autóbeszámítási űrlap</h2>
       <p className="mt-2 text-sm text-slate-300">
         Adja meg autója főbb adatait, és kötelezettségmentes előzetes értékbecslést küldünk.
@@ -100,7 +100,7 @@ export default function TradeInForm() {
 
       <form className="mt-6 space-y-5" onSubmit={handleSubmit}>
         <fieldset className="space-y-4">
-          <legend className="text-sm font-semibold uppercase tracking-wider text-cyan-400">Jármű adatai</legend>
+          <legend className="text-sm font-light uppercase tracking-widest text-sky-400">Jármű adatai</legend>
 
           <div>
             <label htmlFor="trade-brand" className="mb-1 block text-sm font-medium text-slate-200">
@@ -114,7 +114,7 @@ export default function TradeInForm() {
               placeholder="pl. Toyota"
               value={formData.brand}
               onChange={(event) => setField("brand", event.target.value)}
-              className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
+              className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-400/30"
             />
           </div>
 
@@ -130,7 +130,7 @@ export default function TradeInForm() {
               placeholder="pl. RAV4"
               value={formData.model}
               onChange={(event) => setField("model", event.target.value)}
-              className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
+              className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-400/30"
             />
           </div>
 
@@ -149,7 +149,7 @@ export default function TradeInForm() {
                 placeholder="2020"
                 value={formData.year}
                 onChange={(event) => setField("year", event.target.value)}
-                className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
+                className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-400/30"
               />
             </div>
 
@@ -166,7 +166,7 @@ export default function TradeInForm() {
                 placeholder="120000"
                 value={formData.mileage}
                 onChange={(event) => setField("mileage", event.target.value)}
-                className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
+                className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-400/30"
               />
             </div>
           </div>
@@ -182,7 +182,7 @@ export default function TradeInForm() {
               onChange={(event) =>
                 setField("condition", event.target.value as TradeInFormData["condition"])
               }
-              className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
+              className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-400/30"
             >
               <option value="Kitűnő" className="bg-slate-900 text-slate-100">Kitűnő</option>
               <option value="Normál" className="bg-slate-900 text-slate-100">Normál</option>
@@ -192,7 +192,7 @@ export default function TradeInForm() {
         </fieldset>
 
         <fieldset className="space-y-4">
-          <legend className="text-sm font-semibold uppercase tracking-wider text-cyan-400">Kapcsolati adatok</legend>
+          <legend className="text-sm font-light uppercase tracking-widest text-sky-400">Kapcsolati adatok</legend>
 
           <div>
             <label htmlFor="trade-name" className="mb-1 block text-sm font-medium text-slate-200">
@@ -206,7 +206,7 @@ export default function TradeInForm() {
               placeholder="Kovács János"
               value={formData.name}
               onChange={(event) => setField("name", event.target.value)}
-              className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
+              className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-400/30"
             />
           </div>
 
@@ -223,7 +223,7 @@ export default function TradeInForm() {
                 placeholder="janos@example.com"
                 value={formData.email}
                 onChange={(event) => setField("email", event.target.value)}
-                className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
+                className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-400/30"
               />
             </div>
 
@@ -239,7 +239,7 @@ export default function TradeInForm() {
                 placeholder="+36 30 123 4567"
                 value={formData.phone}
                 onChange={(event) => setField("phone", event.target.value)}
-                className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
+                className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-400/30"
               />
             </div>
           </div>
@@ -249,7 +249,7 @@ export default function TradeInForm() {
           type="submit"
           aria-label="Autóbeszámítási űrlap beküldése"
           disabled={isSubmitting}
-          className="inline-flex w-full items-center justify-center rounded-full bg-cyan-400 px-6 py-3 text-sm font-semibold text-[#2B2B2B] shadow-[0_0_24px_rgba(34,211,238,0.35)] transition hover:bg-cyan-300"
+          className="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_0_24px_rgba(56,189,248,0.35)] transition hover:bg-sky-400 hover:shadow-[0_0_32px_rgba(56,189,248,0.55)] btn-shimmer hover:scale-[1.02] active:scale-[0.98] transition-transform"
         >
           {isSubmitting
             ? "Küldés..."

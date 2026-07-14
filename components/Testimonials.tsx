@@ -35,7 +35,7 @@ export default function Testimonials() {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
       <div className="mb-8">
-        <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-400">Ügyfélvélemények</p>
+        <p className="text-sm font-extralight uppercase tracking-[0.25em] text-sky-400">Ügyfélvélemények</p>
         <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-100 sm:text-4xl">
           Visszajelzések, amelyek igazolják a minőséget
         </h2>
@@ -54,7 +54,7 @@ export default function Testimonials() {
             </div>
             <h3 className="text-lg font-semibold text-slate-100">{item.title}</h3>
             <p className="mt-3 text-sm leading-6 text-slate-300">“{item.quote}”</p>
-            <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-cyan-300">{item.author}</p>
+            <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-sky-300">{item.author}</p>
           </article>
         ))}
       </div>

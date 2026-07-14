@@ -18,14 +18,14 @@ export default function HeroCTAButtons() {
       <Link
         href="/kinalat"
         onClick={handleKinalatClick}
-        className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-cyan-400 px-7 py-3.5 text-sm font-semibold text-[#2B2B2B] shadow-[0_0_24px_rgba(34,211,238,0.35)] transition-all duration-300 hover:bg-cyan-300 hover:shadow-[0_0_32px_rgba(34,211,238,0.5)]"
+        className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-sky-500 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_0_24px_rgba(56,189,248,0.35)] transition-all duration-300 hover:bg-sky-400 hover:shadow-[0_0_32px_rgba(56,189,248,0.55)] btn-shimmer hover:scale-[1.02] active:scale-[0.98] transition-transform"
       >
         Fedezze fel kínálatunkat →
       </Link>
       <Link
         href="/kapcsolat"
         onClick={handleVisszahivasClick}
-        className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border-2 border-cyan-400 px-7 py-3.5 text-sm font-semibold text-cyan-400 transition-all duration-300 hover:bg-cyan-400/10 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)]"
+        className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border-2 border-sky-400 px-7 py-3.5 text-sm font-semibold text-sky-400 transition-all duration-300 hover:bg-sky-400/10 hover:shadow-[0_0_20px_rgba(56,189,248,0.2)] btn-shimmer hover:scale-[1.02] active:scale-[0.98] transition-transform"
       >
         Kérjen visszahívást
       </Link>

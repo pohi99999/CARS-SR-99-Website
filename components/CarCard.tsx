@@ -20,7 +20,7 @@ export default function CarCard({ car }: CarCardProps) {
 
   return (
     <Tilt tiltMaxAngleX={4} tiltMaxAngleY={4} glareEnable glareMaxOpacity={0.08} className="h-full">
-      <article className="flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-[0_20px_45px_rgba(2,8,23,0.45)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:border-cyan-400/40 hover:shadow-[0_0_15px_rgba(34,211,238,0.5)] dark:border-white/10 dark:bg-white/5">
+      <article className="flex h-full flex-col justify-between overflow-hidden rounded-2xl border-t border-l border-r border-b border-t-white/20 border-l-white/10 border-r-white/5 border-b-white/5 bg-black/40 shadow-[0_20px_45px_rgba(2,8,23,0.45),inset_0_1px_1px_rgba(255,255,255,0.1)] backdrop-blur-lg transition-all duration-300 hover:scale-[1.03] hover:border-sky-500/40 hover:shadow-[0_24px_55px_rgba(56,189,248,0.22)] dark:border-white/10 dark:bg-white/5">
         <div className="relative h-56 w-full overflow-hidden bg-slate-900 md:h-64">
           <Image
             src={car.images[0]}
@@ -29,9 +29,9 @@ export default function CarCard({ car }: CarCardProps) {
             height={800}
             placeholder="blur"
             blurDataURL={blurDataUrl}
-            className="h-full w-full object-cover transition duration-500 hover:scale-105"
+            className="h-full w-full object-cover transition-transform duration-700 ease-out hover:scale-110"
           />
-          <div className="absolute top-3 left-3 rounded-full border border-cyan-400/30 bg-black/60 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-300 backdrop-blur-sm">
+          <div className="absolute top-3 left-3 rounded-full border border-sky-400/30 bg-black/60 px-3 py-1 text-xs font-light uppercase tracking-widest text-sky-300 backdrop-blur-sm">
             {car.marka}
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function CarCard({ car }: CarCardProps) {
                     image: car.images[0],
                   })
                 }
-                className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/20 text-slate-300 transition-all duration-300 hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-300"
+                className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/20 text-slate-300 transition-all duration-300 hover:border-sky-400 hover:bg-sky-400/10 hover:text-sky-300"
               >
                 <Scale size={16} />
               </button>
@@ -62,15 +62,15 @@ export default function CarCard({ car }: CarCardProps) {
 
             <div className="flex flex-wrap gap-2 text-xs font-medium text-slate-200">
               <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-slate-300">
-                <CalendarRange size={13} className="text-cyan-400" />
+                <CalendarRange size={13} className="text-sky-400" />
                 {car.evjarat}
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-slate-300">
-                <Gauge size={13} className="text-cyan-400" />
+                <Gauge size={13} className="text-sky-400" />
                 {car.futasteljesitmeny}
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-slate-300">
-                <Fuel size={13} className="text-cyan-400" />
+                <Fuel size={13} className="text-sky-400" />
                 {car.uzemanyag}
               </span>
             </div>
@@ -79,7 +79,7 @@ export default function CarCard({ car }: CarCardProps) {
           <div className="space-y-4 pt-2">
             <div className="flex items-baseline justify-between border-t border-white/10 pt-3">
               <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">Vételár:</span>
-              <p className="text-2xl font-extrabold tracking-tight text-cyan-400">{car.ar}</p>
+              <p className="text-2xl font-extrabold tracking-tight text-sky-400">{car.ar}</p>
             </div>
 
             <div className="rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-3 py-2 text-xs font-medium text-emerald-300">
@@ -94,7 +94,7 @@ export default function CarCard({ car }: CarCardProps) {
                   price: car.ar,
                 })
               }
-              className="inline-flex w-full items-center justify-center rounded-full bg-cyan-400 px-4 py-3 text-sm font-semibold text-[#2B2B2B] shadow-[0_0_20px_rgba(34,211,238,0.25)] transition-all duration-300 hover:bg-cyan-300 hover:shadow-[0_0_28px_rgba(34,211,238,0.4)]"
+              className="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-4 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(56,189,248,0.25)] transition-all duration-300 hover:bg-sky-400 hover:shadow-[0_0_28px_rgba(56,189,248,0.45)] btn-shimmer hover:scale-[1.02] active:scale-[0.98] transition-transform"
             >
               Részletek megtekintése
             </Link>

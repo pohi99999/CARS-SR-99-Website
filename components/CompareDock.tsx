@@ -44,7 +44,7 @@ export default function CompareDock() {
           </button>
           <Link
             href="/osszehasonlitas"
-            className="inline-flex items-center gap-1 rounded-full bg-cyan-400 px-4 py-2 text-xs font-semibold text-[#1f2937] transition hover:bg-cyan-300"
+            className="inline-flex items-center gap-1 rounded-full bg-sky-500 px-4 py-2 text-xs font-semibold text-white transition-all duration-300 hover:bg-sky-400 hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_0_15px_rgba(56,189,248,0.35)]"
           >
             <Scale size={14} />
             Összehasonlítás ({cars.length}/3)

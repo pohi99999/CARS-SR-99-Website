@@ -110,7 +110,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                 aria-label={`${index + 1}. kép kiválasztása`}
                 onClick={() => scrollToSlide(index)}
                 className={`relative h-16 w-24 shrink-0 overflow-hidden rounded-lg border-2 transition-all duration-300 ${
-                  isActive ? "border-cyan-400" : "border-slate-300"
+                  isActive ? "border-sky-400 shadow-[0_0_8px_rgba(56,189,248,0.5)]" : "border-white/20 hover:border-sky-400/50"
                 }`}
               >
                 <Image

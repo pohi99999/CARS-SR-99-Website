@@ -120,7 +120,7 @@ export default function ContactForm() {
             placeholder="Nagy Péter"
             value={formData.name}
             onChange={(event) => handleFieldChange("name", event.target.value)}
-            className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
+            className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-400/30"
           />
         </div>
 
@@ -136,7 +136,7 @@ export default function ContactForm() {
             placeholder="peter@example.com"
             value={formData.email}
             onChange={(event) => handleFieldChange("email", event.target.value)}
-            className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
+            className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-400/30"
           />
         </div>
 
@@ -152,7 +152,7 @@ export default function ContactForm() {
             placeholder="+36 30 123 4567"
             value={formData.phone}
             onChange={(event) => handleFieldChange("phone", event.target.value)}
-            className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
+            className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-400/30"
           />
         </div>
 
@@ -168,7 +168,7 @@ export default function ContactForm() {
             placeholder="Miben segíthetünk?"
             value={displayedMessage}
             onChange={(event) => handleFieldChange("message", event.target.value)}
-            className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
+            className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-400/30"
           />
         </div>
 
@@ -176,7 +176,7 @@ export default function ContactForm() {
           type="submit"
           aria-label="Kapcsolati űrlap beküldése"
           disabled={isSubmitting}
-          className="inline-flex w-full items-center justify-center rounded-full bg-cyan-400 px-6 py-3 text-sm font-semibold text-[#2B2B2B] shadow-[0_0_24px_rgba(34,211,238,0.35)] transition hover:bg-cyan-300"
+          className="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_0_24px_rgba(56,189,248,0.35)] transition hover:bg-sky-400 hover:shadow-[0_0_32px_rgba(56,189,248,0.55)] btn-shimmer hover:scale-[1.02] active:scale-[0.98] transition-transform"
         >
           {isSubmitting ? "Küldés..." : isSubmitted ? "Sikeres küldés!" : "Üzenet küldése"}
         </button>

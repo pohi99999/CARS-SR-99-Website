@@ -68,14 +68,14 @@ export default async function Home({ searchParams }: HomePageProps) {
             type="video/mp4"
           />
         </video>
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-black/90" />
 
         <div className="mx-auto flex min-h-[calc(100vh-10rem)] w-full max-w-7xl items-center px-6 py-20 sm:px-6 lg:px-8">
           <div className="relative z-10 max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
+            <p className="text-sm font-extralight uppercase tracking-[0.25em] text-sky-400">
               CARS SR99 Kft.
             </p>
-            <h1 className="mt-5 text-4xl font-bold tracking-tight text-slate-100 sm:text-5xl lg:text-6xl">
+            <h1 className="mt-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-slate-100">
               Prémium Autók. Megbízható Kereskedés.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
@@ -85,16 +85,16 @@ export default async function Home({ searchParams }: HomePageProps) {
 
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 border-t border-slate-700/50 pt-8">
               <div>
-                <p className="text-3xl font-bold text-cyan-400">500+</p>
-                <p className="mt-1 text-sm text-slate-400">Eladott autó</p>
+                <p className="text-3xl font-bold text-sky-400">500+</p>
+                <p className="mt-1 text-sm font-light tracking-wide text-slate-400">Eladott autó</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-cyan-400">15+</p>
-                <p className="mt-1 text-sm text-slate-400">Év tapasztalat</p>
+                <p className="text-3xl font-bold text-sky-400">15+</p>
+                <p className="mt-1 text-sm font-light tracking-wide text-slate-400">Év tapasztalat</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-cyan-400">4.9</p>
-                <p className="mt-1 text-sm text-slate-400">Ügyfélelégedettség</p>
+                <p className="text-3xl font-bold text-sky-400">4.9</p>
+                <p className="mt-1 text-sm font-light tracking-wide text-slate-400">Ügyfélelégedettség</p>
               </div>
             </div>
           </div>

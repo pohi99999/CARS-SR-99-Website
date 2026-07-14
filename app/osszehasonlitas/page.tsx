@@ -25,7 +25,7 @@ export default function ComparePage() {
           Még nincs kiválasztott autó az összehasonlításhoz.
         </div>
       ) : (
-        <div className="mt-8 overflow-x-auto rounded-2xl border border-white/10 bg-white/5">
+        <div className="mt-8 overflow-x-auto rounded-2xl border-t border-l border-r border-b border-t-white/20 border-l-white/10 border-r-white/5 border-b-white/5 bg-black/40 shadow-[0_20px_45px_rgba(2,8,23,0.45)] backdrop-blur-md">
           <table className="min-w-full border-collapse text-sm">
             <thead>
               <tr>
@@ -35,7 +35,7 @@ export default function ComparePage() {
                 {cars.map((car) => (
                   <th
                     key={car.id}
-                    className="border-b border-white/10 px-4 py-3 text-left font-semibold text-cyan-300"
+                    className="border-b border-white/10 px-4 py-3 text-left font-semibold text-sky-400"
                   >
                     {car.marka} {car.modell}
                   </th>

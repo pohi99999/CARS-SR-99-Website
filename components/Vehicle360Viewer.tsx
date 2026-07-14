@@ -50,7 +50,7 @@ export default function Vehicle360Viewer({ imageUrl, carName }: Vehicle360Viewer
         type="button"
         aria-label="360 fokos nézet megnyitása"
         onClick={() => setIsOpen(true)}
-        className="mt-4 inline-flex w-full items-center justify-center rounded-full border border-cyan-400/50 px-6 py-3 text-sm font-semibold text-cyan-300 transition hover:border-cyan-300 hover:bg-cyan-400/10"
+        className="mt-4 inline-flex w-full items-center justify-center rounded-full border-t border-l border-r border-b border-t-white/20 border-l-white/10 border-r-white/5 border-b-white/5 bg-white/5 px-6 py-3 text-sm font-semibold text-sky-400 hover:text-sky-300 transition-all duration-300 hover:bg-sky-500/10 hover:border-sky-400/30 hover:scale-[1.01] active:scale-[0.99]"
       >
         360° Nézet megnyitása
       </button>
@@ -67,7 +67,7 @@ export default function Vehicle360Viewer({ imageUrl, carName }: Vehicle360Viewer
               <X size={20} />
             </button>
 
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-cyan-300">360° Demo</p>
+            <p className="mb-3 text-sm font-extralight uppercase tracking-[0.25em] text-sky-400">360° Demo</p>
             <h3 className="text-xl font-semibold text-slate-100">{carName}</h3>
             <p className="mt-1 flex items-center gap-2 text-sm text-slate-300">
               <MousePointer2 size={14} />

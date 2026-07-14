@@ -29,10 +29,10 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-40 w-full text-white transition-all duration-300 ${
+      className={`sticky top-0 z-40 w-full text-white transition-all duration-300 border-b ${
         scrolled
-          ? "backdrop-blur-md bg-black/40 border-b border-white/10 shadow-lg"
-          : "bg-transparent"
+          ? "backdrop-blur-md bg-black/40 border-b-white/10 shadow-lg"
+          : "border-b-transparent bg-transparent"
       }`}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 sm:px-6 lg:px-8">
@@ -50,7 +50,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-3 text-white hover:text-cyan-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 md:hidden"
+          className="inline-flex items-center justify-center rounded-md p-3 text-white hover:text-sky-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 md:hidden"
           aria-label="Navigáció megnyitása"
           aria-expanded={isOpen}
           onClick={() => setIsOpen((prev) => !prev)}
@@ -84,7 +84,7 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 className={`transition-colors duration-200 ${
-                  isActive ? "text-cyan-400" : "text-white hover:text-cyan-400"
+                  isActive ? "text-sky-400" : "text-white hover:text-sky-400"
                 }`}
               >
                 {item.label}
@@ -105,7 +105,7 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   className={`transition-colors duration-200 ${
-                    isActive ? "text-cyan-400" : "text-white hover:text-cyan-400"
+                    isActive ? "text-sky-400" : "text-white hover:text-sky-400"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >

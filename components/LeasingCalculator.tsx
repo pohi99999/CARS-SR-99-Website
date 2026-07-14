@@ -60,7 +60,7 @@ export default function LeasingCalculator({ price }: LeasingCalculatorProps) {
 
   if (!price || isNaN(price) || price <= 0) {
     return (
-      <section className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur-md">
+      <section className="mt-8 rounded-2xl border-t border-l border-r border-b border-t-white/20 border-l-white/10 border-r-white/5 border-b-white/5 bg-black/40 p-6 shadow-[0_20px_45px_rgba(2,8,23,0.45),inset_0_1px_1px_rgba(255,255,255,0.1)] backdrop-blur-lg">
         <h2 className="text-xl font-bold text-slate-100">Lízing kalkulátor</h2>
         <p className="mt-4 text-sm text-slate-300">
           Ehhez a gépjárműhöz jelenleg nem érhető online lízing kalkuláció.
@@ -71,7 +71,7 @@ export default function LeasingCalculator({ price }: LeasingCalculatorProps) {
   }
 
   return (
-    <section className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur-md">
+    <section className="mt-8 rounded-2xl border-t border-l border-r border-b border-t-white/20 border-l-white/10 border-r-white/5 border-b-white/5 bg-black/40 p-6 shadow-[0_20px_45px_rgba(2,8,23,0.45),inset_0_1px_1px_rgba(255,255,255,0.1)] backdrop-blur-lg">
       <h2 className="text-xl font-bold text-slate-100">Lízing kalkulátor</h2>
       <p className="mt-2 text-sm text-slate-300">
         Indikatív kalkuláció 10%-os fix kamattal. A pontos ajánlat egyedi elbírálás alapján készül.
@@ -83,7 +83,7 @@ export default function LeasingCalculator({ price }: LeasingCalculatorProps) {
             <label htmlFor="down-payment" className="text-sm font-medium text-slate-200">
               Önerő ({downPaymentPercent}%)
             </label>
-            <span className="text-sm font-semibold text-cyan-400">
+            <span className="text-sm font-semibold text-sky-400">
               {formatCurrency(downPaymentAmount)}
             </span>
           </div>
@@ -103,7 +103,7 @@ export default function LeasingCalculator({ price }: LeasingCalculatorProps) {
                 term_months: termMonths,
               });
             }}
-            className="h-2 w-full cursor-pointer appearance-none rounded-lg bg-slate-700 accent-cyan-400"
+            className="h-2 w-full cursor-pointer appearance-none rounded-lg bg-slate-700 accent-sky-400"
           />
         </div>
 
@@ -112,7 +112,7 @@ export default function LeasingCalculator({ price }: LeasingCalculatorProps) {
             <label htmlFor="term-months" className="text-sm font-medium text-slate-200">
               Futamidő
             </label>
-            <span className="text-sm font-semibold text-cyan-400">{termMonths} hónap</span>
+            <span className="text-sm font-semibold text-sky-400">{termMonths} hónap</span>
           </div>
           <input
             id="term-months"
@@ -130,20 +130,20 @@ export default function LeasingCalculator({ price }: LeasingCalculatorProps) {
                 term_months: val,
               });
             }}
-            className="h-2 w-full cursor-pointer appearance-none rounded-lg bg-slate-700 accent-cyan-400"
+            className="h-2 w-full cursor-pointer appearance-none rounded-lg bg-slate-700 accent-sky-400"
           />
         </div>
       </form>
 
-      <div className="mt-8 rounded-xl border border-cyan-500/20 bg-cyan-500/10 p-5">
-        <p className="text-xs font-semibold uppercase tracking-wider text-cyan-400">Becsült havi törlesztő</p>
-        <p className="mt-2 text-3xl font-extrabold tracking-tight text-cyan-300 sm:text-4xl">
+      <div className="mt-8 rounded-xl border-t border-l border-r border-b border-t-white/15 border-l-white/10 border-r-white/5 border-b-white/5 bg-sky-500/10 p-5">
+        <p className="text-xs font-light uppercase tracking-widest text-sky-400">Becsült havi törlesztő</p>
+        <p className="mt-2 text-3xl font-extrabold tracking-tight text-sky-300 sm:text-4xl">
           {formatCurrency(monthlyPayment)}
           <span className="ml-2 text-base font-medium text-slate-300">/ hó</span>
         </p>
       </div>
 
-      <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-4">
+      <div className="mt-6 rounded-xl border-t border-l border-r border-b border-t-white/15 border-l-white/10 border-r-white/5 border-b-white/5 bg-white/5 p-4">
         <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-400">
           Tőke és kamat arány futamidő szerint
         </p>
@@ -165,13 +165,13 @@ export default function LeasingCalculator({ price }: LeasingCalculatorProps) {
                   name === "toke" ? "Tőke" : "Kamat",
                 ]}
               />
-              <Bar dataKey="toke" name="Tőke" fill="#22d3ee" radius={[6, 6, 0, 0]} />
+              <Bar dataKey="toke" name="Tőke" fill="#38bdf8" radius={[6, 6, 0, 0]} />
               <Bar dataKey="kamat" name="Kamat" fill="#fb923c" radius={[6, 6, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
         <p className="mt-2 text-xs text-slate-400">
-          Kiválasztott futamidő: <span className="font-semibold text-cyan-300">{termMonths} hónap</span>
+          Kiválasztott futamidő: <span className="font-semibold text-sky-300">{termMonths} hónap</span>
         </p>
       </div>
     </section>

@@ -44,7 +44,7 @@ export default function CookieBanner() {
             type="button"
             aria-label="Cookie-k elfogadása"
             onClick={() => handleDecision("accepted")}
-            className="rounded-full bg-cyan-400 px-4 py-2 text-sm font-semibold text-[#2B2B2B] transition hover:bg-cyan-300"
+            className="rounded-full bg-sky-500 px-4 py-2 text-sm font-semibold text-white transition-all duration-300 hover:bg-sky-400 hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_0_15px_rgba(56,189,248,0.35)]"
           >
             Elfogadom
           </button>

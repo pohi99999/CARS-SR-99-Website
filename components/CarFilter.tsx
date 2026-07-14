@@ -179,10 +179,10 @@ export default function CarFilter({ initialMarka, initialUzemanyag, initialMaxPr
 
   return (
     <section className="mx-auto w-full max-w-7xl px-6 pt-8 sm:px-6 lg:px-8">
-      <div className="rounded-2xl border border-white/10 bg-black/40 p-4 shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-white/5 sm:p-6">
+      <div className="rounded-2xl border-t border-l border-r border-b border-t-white/20 border-l-white/10 border-r-white/5 border-b-white/5 bg-black/40 p-4 shadow-[0_20px_45px_rgba(2,8,23,0.45),inset_0_1px_1px_rgba(255,255,255,0.1)] backdrop-blur-lg dark:bg-white/5 sm:p-6">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           <div>
-            <label htmlFor="filter-marka" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-cyan-400">
+            <label htmlFor="filter-marka" className="mb-1.5 block text-xs font-light uppercase tracking-widest text-sky-400">
               Márka szűrő
             </label>
             <div className="flex items-center gap-2">
@@ -194,7 +194,7 @@ export default function CarFilter({ initialMarka, initialUzemanyag, initialMaxPr
                   setMarka(value);
                   pushWithFilters(value, uzemanyag, selectedMaxPrice);
                 }}
-                className="w-full rounded-xl border border-white/20 bg-slate-900/90 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
+                className="w-full rounded-xl border border-white/20 bg-slate-900/90 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-400/30"
               >
                 {markaOptions.map((option) => (
                   <option key={option} value={option} className="bg-slate-900 text-slate-100">
@@ -209,8 +209,8 @@ export default function CarFilter({ initialMarka, initialUzemanyag, initialMaxPr
                 aria-label="Hangalapú márka keresés"
                 className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
                   isListening
-                    ? "border-cyan-400 bg-cyan-400/20 text-cyan-300 animate-pulse"
-                    : "border-white/20 bg-white/10 text-slate-200 hover:border-cyan-400 hover:text-cyan-300"
+                    ? "border-sky-400 bg-sky-400/20 text-sky-300 animate-pulse"
+                    : "border-white/20 bg-white/10 text-slate-200 hover:border-sky-400 hover:text-sky-300"
                 } disabled:cursor-not-allowed disabled:opacity-50`}
                 title={
                   voiceSupported
@@ -235,7 +235,7 @@ export default function CarFilter({ initialMarka, initialUzemanyag, initialMaxPr
           <div>
             <label
               htmlFor="filter-uzemanyag"
-              className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-cyan-400"
+              className="mb-1.5 block text-xs font-light uppercase tracking-widest text-sky-400"
             >
               Üzemanyag szűrő
             </label>
@@ -247,7 +247,7 @@ export default function CarFilter({ initialMarka, initialUzemanyag, initialMaxPr
                 setUzemanyag(value);
                 pushWithFilters(marka, value, selectedMaxPrice);
               }}
-              className="w-full rounded-xl border border-white/20 bg-slate-900/90 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
+              className="w-full rounded-xl border border-white/20 bg-slate-900/90 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-400/30"
             >
               {uzemanyagOptions.map((option) => (
                 <option key={option} value={option} className="bg-slate-900 text-slate-100">
@@ -259,10 +259,10 @@ export default function CarFilter({ initialMarka, initialUzemanyag, initialMaxPr
 
           <div>
             <div className="mb-1.5 flex items-center justify-between">
-              <label htmlFor="filter-price" className="text-xs font-semibold uppercase tracking-wider text-cyan-400">
+              <label htmlFor="filter-price" className="text-xs font-light uppercase tracking-widest text-sky-400">
                 Maximális ár
               </label>
-              <span className="text-sm font-semibold text-cyan-400">
+              <span className="text-sm font-semibold text-sky-400">
                 {selectedMaxPrice >= maxPrice ? "Bármely ár" : formatPrice(selectedMaxPrice)}
               </span>
             </div>
@@ -279,7 +279,7 @@ export default function CarFilter({ initialMarka, initialUzemanyag, initialMaxPr
               }}
               onMouseUp={() => pushWithFilters(marka, uzemanyag, selectedMaxPrice)}
               onTouchEnd={() => pushWithFilters(marka, uzemanyag, selectedMaxPrice)}
-              className="h-2 w-full cursor-pointer appearance-none rounded-lg bg-slate-700 accent-cyan-400"
+              className="h-2 w-full cursor-pointer appearance-none rounded-lg bg-slate-700 accent-sky-400"
             />
             <div className="mt-1 flex justify-between text-xs text-slate-400">
               <span>{formatPrice(minPrice)}</span>

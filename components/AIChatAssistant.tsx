@@ -74,7 +74,7 @@ export default function AIChatAssistant() {
           type="button"
           onClick={() => setIsOpen(true)}
           aria-label="AI chat asszisztens megnyitása"
-          className="fixed bottom-6 right-6 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-cyan-400 text-[#2B2B2B] shadow-[0_0_26px_rgba(34,211,238,0.45)] transition hover:scale-105 hover:bg-cyan-300"
+          className="fixed bottom-6 right-6 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-sky-500 text-white shadow-[0_0_26px_rgba(56,189,248,0.45)] transition hover:scale-105 hover:bg-sky-400 hover:shadow-[0_0_32px_rgba(56,189,248,0.6)]"
         >
           <MessageCircle size={24} />
         </button>
@@ -84,7 +84,7 @@ export default function AIChatAssistant() {
         <section className="fixed inset-0 z-40 flex flex-col h-full w-full rounded-none border border-white/10 bg-[#0f172a] backdrop-blur-md md:inset-auto md:bottom-20 md:right-6 md:h-[500px] md:w-96 md:rounded-2xl md:shadow-2xl">
           <header className="flex items-center justify-between rounded-none bg-[#1e293b] px-4 py-3 text-white md:rounded-t-2xl border-b border-white/10">
             <div>
-              <p className="text-sm font-semibold text-cyan-400">SR99 AI Asszisztens</p>
+              <p className="text-sm font-semibold text-sky-400">SR99 AI Asszisztens</p>
               <div className="mt-1 flex items-center gap-2 text-xs text-slate-300">
                 <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
                 Aktív – Azonnali válasz
@@ -109,7 +109,7 @@ export default function AIChatAssistant() {
                 <div
                   className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-6 shadow-sm ${
                     msg.sender === "user"
-                      ? "rounded-br-none bg-cyan-400 text-[#121212] font-medium"
+                      ? "rounded-br-none bg-sky-500 text-white font-medium shadow-[0_2px_8px_rgba(56,189,248,0.25)]"
                       : "rounded-bl-none border border-white/10 bg-slate-800 text-slate-100"
                   }`}
                 >
@@ -128,11 +128,11 @@ export default function AIChatAssistant() {
                 onChange={(e) => setInputText(e.target.value)}
                 aria-label="Chat üzenet mező"
                 placeholder="Írja ide az üzenetét..."
-                className="h-11 flex-1 rounded-full border border-white/20 bg-slate-900 px-4 text-sm text-slate-100 outline-none transition placeholder:text-slate-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
+                className="h-11 flex-1 rounded-full border border-white/20 bg-slate-900 px-4 text-sm text-slate-100 outline-none transition placeholder:text-slate-400 focus:border-sky-400 focus:ring-2 focus:ring-sky-400/30"
               />
               <button
                 type="submit"
-                className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cyan-400 text-[#2B2B2B] transition hover:bg-cyan-300"
+                className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-sky-500 text-white transition hover:bg-sky-400 hover:scale-105 hover:shadow-[0_0_12px_rgba(56,189,248,0.4)]"
                 aria-label="Üzenet küldése"
               >
                 <SendHorizontal size={18} />

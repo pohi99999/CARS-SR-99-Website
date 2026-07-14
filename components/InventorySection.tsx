@@ -13,14 +13,14 @@ export default function InventorySection({ cars }: InventorySectionProps) {
     <LazyMotion features={domAnimation}>
       <m.section
         id="kinalat"
-        className="mx-auto w-full max-w-7xl rounded-3xl border border-black/10 bg-black/5 px-6 py-16 shadow-[0_24px_55px_rgba(2,8,23,0.35)] backdrop-blur-md transition-all duration-300 dark:border-white/10 dark:bg-white/5 sm:px-6 lg:px-8"
+        className="mx-auto w-full max-w-7xl rounded-3xl border-t border-l border-r border-b border-t-white/20 border-l-white/10 border-r-white/5 border-b-white/5 bg-black/40 px-6 py-16 shadow-[0_24px_55px_rgba(2,8,23,0.35),inset_0_1px_1px_rgba(255,255,255,0.1)] backdrop-blur-lg transition-all duration-300 dark:bg-white/5 sm:px-6 lg:px-8"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.55, ease: "easeOut" }}
       >
         <div className="mb-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-600">Kínálatunk</p>
+          <p className="text-sm font-extralight uppercase tracking-[0.25em] text-sky-400">Kínálatunk</p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-100 sm:text-4xl">
             Kiemelt járművek
           </h2>

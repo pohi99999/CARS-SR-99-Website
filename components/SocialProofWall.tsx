@@ -37,7 +37,7 @@ export default function SocialProofWall() {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
       <div className="mb-8">
-        <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-400">Social Proof</p>
+        <p className="text-sm font-extralight uppercase tracking-[0.25em] text-sky-400">Social Proof</p>
         <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-100 sm:text-4xl">
           Valós ügyfélélmény, prémium kiszolgálás
         </h2>

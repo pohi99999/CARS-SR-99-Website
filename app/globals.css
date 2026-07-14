@@ -39,10 +39,15 @@ body {
 }
 
 h1,
-h2,
+h2 {
+  font-family: var(--font-montserrat), var(--font-inter), Arial, Helvetica, sans-serif;
+  letter-spacing: -0.02em;
+}
+
 h3 {
   font-family: var(--font-montserrat), var(--font-inter), Arial, Helvetica, sans-serif;
 }
+
 
 h1 {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -94,3 +99,44 @@ body::before {
 .sr99-bg-video {
   will-change: transform;
 }
+
+/* Natív Cross-Document View Transitions */
+@view-transition {
+  navigation: auto;
+}
+
+/* Premium Shimmer CTA Gomb */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 30%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  animation: shimmer 6s infinite ease-in-out;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -60%;
+  }
+  30% {
+    left: 140%;
+  }
+  100% {
+    left: 140%;
+  }
+}
+

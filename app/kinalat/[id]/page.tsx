@@ -103,7 +103,7 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
         ]}
       />
       <div className="mb-6">
-        <Link href="/kinalat" className="text-sm font-medium text-cyan-400 hover:text-cyan-300 transition">
+        <Link href="/kinalat" className="text-sm font-medium text-sky-400 hover:text-sky-300 transition">
           ← Vissza a kínálathoz
         </Link>
       </div>
@@ -111,29 +111,29 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
       <div className="grid gap-8 lg:grid-cols-2">
         <ImageGallery images={car.images} />
 
-        <div className="rounded-2xl border border-white/10 bg-black/40 p-6 shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-white/5 sm:p-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-400">{car.marka}</p>
+        <div className="rounded-2xl border-t border-l border-r border-b border-t-white/20 border-l-white/10 border-r-white/5 border-b-white/5 bg-black/40 p-6 shadow-[0_20px_45px_rgba(2,8,23,0.45),inset_0_1px_1px_rgba(255,255,255,0.1)] backdrop-blur-lg dark:bg-white/5 sm:p-8">
+          <p className="text-sm font-extralight uppercase tracking-[0.25em] text-sky-400">{car.marka}</p>
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-100">{car.modell}</h1>
-          <p className="mt-3 text-3xl font-extrabold text-cyan-400">{car.ar}</p>
+          <p className="mt-3 text-3xl font-extrabold text-sky-400">{car.ar}</p>
 
           <dl className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+            <div className="rounded-xl border-t border-l border-r border-b border-t-white/15 border-l-white/10 border-r-white/5 border-b-white/5 bg-white/5 p-4">
               <dt className="text-xs uppercase tracking-wide text-slate-400 font-medium">Márka</dt>
               <dd className="mt-1 font-semibold text-slate-100">{car.marka}</dd>
             </div>
-            <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+            <div className="rounded-xl border-t border-l border-r border-b border-t-white/15 border-l-white/10 border-r-white/5 border-b-white/5 bg-white/5 p-4">
               <dt className="text-xs uppercase tracking-wide text-slate-400 font-medium">Modell</dt>
               <dd className="mt-1 font-semibold text-slate-100">{car.modell}</dd>
             </div>
-            <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+            <div className="rounded-xl border-t border-l border-r border-b border-t-white/15 border-l-white/10 border-r-white/5 border-b-white/5 bg-white/5 p-4">
               <dt className="text-xs uppercase tracking-wide text-slate-400 font-medium">Évjárat</dt>
               <dd className="mt-1 font-semibold text-slate-100">{car.evjarat}</dd>
             </div>
-            <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+            <div className="rounded-xl border-t border-l border-r border-b border-t-white/15 border-l-white/10 border-r-white/5 border-b-white/5 bg-white/5 p-4">
               <dt className="text-xs uppercase tracking-wide text-slate-400 font-medium">Futásteljesítmény</dt>
               <dd className="mt-1 font-semibold text-slate-100">{car.futasteljesitmeny}</dd>
             </div>
-            <div className="rounded-xl border border-white/10 bg-white/5 p-4 sm:col-span-2">
+            <div className="rounded-xl border-t border-l border-r border-b border-t-white/15 border-l-white/10 border-r-white/5 border-b-white/5 bg-white/5 p-4 sm:col-span-2">
               <dt className="text-xs uppercase tracking-wide text-slate-400 font-medium">Üzemanyag</dt>
               <dd className="mt-1 font-semibold text-slate-100">{car.uzemanyag}</dd>
             </div>
@@ -151,7 +151,7 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
 
           <Link
             href={`/kapcsolat?car=${encodeURIComponent(`${car.marka} ${car.modell}`)}`}
-            className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-cyan-400 px-6 py-3.5 text-sm font-semibold text-[#2B2B2B] shadow-[0_0_24px_rgba(34,211,238,0.35)] transition-all duration-300 hover:bg-cyan-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.5)]"
+            className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_0_24px_rgba(56,189,248,0.35)] transition-all duration-300 hover:bg-sky-400 hover:shadow-[0_0_32px_rgba(56,189,248,0.55)] btn-shimmer hover:scale-[1.02] active:scale-[0.98] transition-transform"
           >
             Kapcsolatfelvétel & Tesztvezetés
           </Link>

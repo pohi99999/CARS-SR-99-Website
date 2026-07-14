@@ -18,7 +18,7 @@ export default function Footer() {
               height={50}
               className="h-auto w-[40px]"
             />
-            <span className="text-xl font-bold text-cyan-400">CARS SR99 Kft.</span>
+            <span className="text-xl font-bold text-sky-400">CARS SR99 Kft.</span>
           </div>
           <p className="mt-4 text-sm leading-6 text-slate-300">
             Megbízható, prémium autókereskedés modern szemlélettel és ügyfélközpontú kiszolgálással.
@@ -34,22 +34,22 @@ export default function Footer() {
           </h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <Link href="/" className="transition-colors duration-200 hover:text-cyan-400">
+              <Link href="/" className="transition-colors duration-200 hover:text-sky-400">
                 Főoldal
               </Link>
             </li>
             <li>
-              <Link href="/kinalat" className="transition-colors duration-200 hover:text-cyan-400">
+              <Link href="/kinalat" className="transition-colors duration-200 hover:text-sky-400">
                 Kínálat
               </Link>
             </li>
             <li>
-              <Link href="/autobeszamitas" className="transition-colors duration-200 hover:text-cyan-400">
+              <Link href="/autobeszamitas" className="transition-colors duration-200 hover:text-sky-400">
                 Autóbeszámítás
               </Link>
             </li>
             <li>
-              <Link href="/kapcsolat" className="transition-colors duration-200 hover:text-cyan-400">
+              <Link href="/kapcsolat" className="transition-colors duration-200 hover:text-sky-400">
                 Kapcsolat
               </Link>
             </li>
@@ -62,27 +62,27 @@ export default function Footer() {
           </h3>
           <ul className="space-y-3 text-sm text-slate-300">
             <li className="flex items-center gap-2">
-              <Phone className="h-4 w-4 shrink-0 text-cyan-400" />
+              <Phone className="h-4 w-4 shrink-0 text-sky-400" />
               <a
                 href="tel:+36709070669"
                 onClick={() => trackContactClick("phone")}
-                className="transition-colors hover:text-cyan-400"
+                className="transition-colors hover:text-sky-400"
               >
                 06-70 907-06-69
               </a>
             </li>
             <li className="flex items-center gap-2">
-              <Mail className="h-4 w-4 shrink-0 text-cyan-400" />
+              <Mail className="h-4 w-4 shrink-0 text-sky-400" />
               <a
                 href="mailto:carssr99@gmail.com"
                 onClick={() => trackContactClick("email")}
-                className="transition-colors hover:text-cyan-400"
+                className="transition-colors hover:text-sky-400"
               >
                 carssr99@gmail.com
               </a>
             </li>
             <li className="flex items-start gap-2">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-cyan-400" />
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-sky-400" />
               <span>8900 Zalaegerszeg, Ságod hrsz. 807/15, Magyarország</span>
             </li>
           </ul>

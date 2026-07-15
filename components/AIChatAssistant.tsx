@@ -2,6 +2,7 @@
 
 import { FormEvent, useRef, useState, useEffect } from "react";
 import { MessageCircle, SendHorizontal, X } from "lucide-react";
+import { inventory } from "@/data/inventory";
 
 type Message = {
   id: string;
@@ -41,19 +42,35 @@ export default function AIChatAssistant() {
     setMessages((prev) => [...prev, userMsg]);
     setInputText("");
 
-    // Generate response based on user query
+    // Generate response based on user query using real inventory data
     setTimeout(() => {
       const lower = trimmed.toLowerCase();
       let reply = "Köszönjük érdeklődését! Munkatársaink készséggel állnak rendelkezésére a 06-70 907-06-69 telefonszámon vagy a Ságodi Iparterületen található telephelyünkön.";
 
-      if (lower.includes("toyota") || lower.includes("kia") || lower.includes("modell") || lower.includes("kínálat") || lower.includes("autó")) {
-        reply = "Kínálatunkban kiemelten ellenőrzött Toyota és Kia modellek találhatók hibrid, benzin és diesel hajtással. Tekintse meg Kínálatunkat a menüpont alatt!";
-      } else if (lower.includes("beszámítás") || lower.includes("cseré") || lower.includes("eladnám")) {
-        reply = "Autóját korrekt piaci értékbecsléssel beszámítjuk! Töltse ki az Autóbeszámítás menüpont alatti űrlapot az előzetes ajánlathoz.";
-      } else if (lower.includes("garancia") || lower.includes("szerviz") || lower.includes("biztosítás")) {
-        reply = "Minden nálunk vásárolt gépjárműhöz 12 hónapos szervizgaranciát biztosítunk a gondtalan használat érdekében. Részletekről érdeklődjön munkatársainknál!";
-      } else if (lower.includes("cím") || lower.includes("hol") || lower.includes("zalaegerszeg") || lower.includes("nyitva")) {
-        reply = "Telephelyünk: 8900 Zalaegerszeg, Ságod hrsz. 807/15. Nyitvatartás: Hétfő-Péntek 09:00-17:00.";
+      // Check if user is asking about a specific vehicle in our stock
+      let foundCar = null;
+      for (const car of inventory) {
+        const markaLower = car.marka.toLowerCase();
+        const modellLower = car.modell.toLowerCase();
+        
+        // Match by brand or model name parts
+        if (lower.includes(markaLower) || lower.includes(modellLower.split(" ")[0].toLowerCase())) {
+          foundCar = car;
+          break;
+        }
+      }
+
+      if (foundCar) {
+        reply = `Kínálatunkban elérhető a keresett ${foundCar.marka} ${foundCar.modell} modell. \n\nFőbb jellemzői:\n• Évjárat: ${foundCar.evjarat}\n• Üzemanyag: ${foundCar.uzemanyag}\n• Futásteljesítmény: ${foundCar.futasteljesitmeny}\n• Vételár: ${foundCar.ar}\n\n${foundCar.leiras ? 'Leírás: ' + foundCar.leiras + '\n\n' : ''}Szeretné személyesen is megtekinteni vagy kipróbálni ezt a járművet? Töltse ki a Kapcsolat oldalon található űrlapot a ságodi tesztvezetés egyeztetéséhez, vagy hívjon minket bizalommal a 06-70 907-06-69 számon!`;
+      } else if (lower.includes("toyota") || lower.includes("kia") || lower.includes("modell") || lower.includes("kínálat") || lower.includes("autó") || lower.includes("kocsi") || lower.includes("jármű") || lower.includes("géppark")) {
+        const carList = inventory.map(car => `• ${car.marka} ${car.modell} (${car.ar})`).join("\n");
+        reply = `Jelenlegi prémium járműkínálatunk:\n${carList}\n\nBármelyik modell felkeltette az érdeklődését? Látogasson el hozzánk Zalaegerszeg-Ságodra egy személyes megtekintésre és tesztvezetésre, vagy kérjen visszahívást a Kapcsolat oldali űrlap segítségével!`;
+      } else if (lower.includes("beszámítás") || lower.includes("cseré") || lower.includes("eladnám") || lower.includes("beszámít")) {
+        reply = "Korrekt és átlátható autóbeszámítást kínálunk! Jelenlegi autóját piaci áron beszámítjuk a nálunk vásárolt jármű vételárába. Kérjük, látogasson el az Autóbeszámítás oldalunkra, és töltse ki az értékbecslési űrlapot az előzetes ajánlathoz, vagy látogasson el hozzánk a ságodi telephelyre személyes felmérésre!";
+      } else if (lower.includes("garancia") || lower.includes("szerviz") || lower.includes("biztosítás") || lower.includes("real garant")) {
+        reply = "Bár a korábbi Real Garant kiterjesztett garanciát jelenleg kivezettük, minden nálunk található gépjármű hivatalos JSZP háttérellenőrzésen esik át, átvizsgált, garantált állapotúak, és telephelyünkön szakértő kollégáinkkal vagy akár saját szerelőjével is részletesen átnézhető vásárlás előtt. Keressen minket a 06-70 907-06-69 számon a részletekért!";
+      } else if (lower.includes("cím") || lower.includes("hol") || lower.includes("zalaegerszeg") || lower.includes("nyitva") || lower.includes("helyileg") || lower.includes("nyitvatartás")) {
+        reply = "Telephelyünk címe: 8900 Zalaegerszeg, Ságod hrsz. 807/15. Nyitvatartásunk: Hétfő-Péntek 09:00-17:00. Szombaton előre egyeztetett időpontban is örömmel fogadjuk Önt. Szeretne megtekintési időpontot egyeztetni? Töltse ki kapcsolatfelvételi űrlapunkat!";
       }
 
       setMessages((prev) => [

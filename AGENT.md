@@ -36,3 +36,4 @@
 | 2026-07-14 | 13. Fázis: Premium Automotive Aesthetics és mikro-interakciók (színpaletta Electric Blue-ra, aszimmetrikus gyémánt-vágott üveg szegélyek és árnyékok, ciklikus shimmer gomb-animációk és finomhangolt tipográfia) | Kész |
 | 2026-07-15 | 14. Fázis: Teljes és végleges gépjárműpark-élesítés valós képekkel, árakkal és professzionálisan javított leírásokkal. | Kész |
 | 2026-07-15 | Route 66 garázsháttér (hatter1.webp) integrálva a Kapcsolat és Autóbeszámítás oldalak háttereként. | Kész |
+| 2026-07-15 | Szerviz garancia eltávolítva, hivatalos Facebook link hozzáadva a lábléchez, és az AI Chat tudásbázisa felvértezve a valós gépjárműpark adataival. | Kész |

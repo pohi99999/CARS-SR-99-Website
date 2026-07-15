@@ -1,6 +1,6 @@
 "use client";
 
-import { ShieldCheck, FileText, Wrench, CreditCard } from "lucide-react";
+import { ShieldCheck, FileText, CreditCard } from "lucide-react";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 
 const badges = [
@@ -13,11 +13,6 @@ const badges = [
     icon: FileText,
     title: "Átlátható dokumentáció",
     description: "Teljes papírok, nulla meglepetés",
-  },
-  {
-    icon: Wrench,
-    title: "Szerviz garancia",
-    description: "12 hónapos szervizgarancia",
   },
   {
     icon: CreditCard,
@@ -37,7 +32,7 @@ export default function TrustBadges() {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {badges.map((badge, idx) => {
             const IconComponent = badge.icon;
             return (

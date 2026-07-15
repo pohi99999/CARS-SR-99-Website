@@ -26,6 +26,29 @@ export default function Footer() {
           <p className="mt-4 text-xs text-slate-400">
             © 2025 CARS SR99 Kft. Minden jog fenntartva.
           </p>
+          <div className="mt-4 flex items-center gap-2">
+            <a
+              href="https://www.facebook.com/profile.php?id=61592011856759"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/5 border border-white/10 text-slate-300 transition hover:border-sky-400 hover:bg-sky-400/10 hover:text-sky-300"
+              aria-label="Kövessen minket a Facebookon"
+            >
+              <svg
+                className="h-4 w-4"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1V12h3v3h-3v6.8c4.56-.93 8-4.96 8-9.8z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </a>
+            <span className="text-xs text-slate-400">Kövessen minket a Facebookon!</span>
+          </div>
         </div>
 
         <div>

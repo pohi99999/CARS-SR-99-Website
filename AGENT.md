@@ -39,3 +39,4 @@
 | 2026-07-15 | Szerviz garancia eltávolítva, hivatalos Facebook link hozzáadva a lábléchez, és az AI Chat tudásbázisa felvértezve a valós gépjárműpark adataival. | Kész |
 | 2026-07-15 | Mobilnézet kép-reszponzivitási hibák javítva, a galériák és borítóképek tökéletesen illeszkednek a mobil kijelzőkhöz. | Kész |
 | 2026-07-15 | Főoldali és layout szintű elavult márkaszövegek aktualizálva az univerzális prémium leírásra, font-light tracking-wide formázással ellátva. | Kész |
+| 2026-07-15 | 15. Fázis: Chrome AI audit alapú akadálymentesítési és prémium vizuális javítások (logó, alt szövegek, explicit form-beállítások és tab-index javítások). | Kész |

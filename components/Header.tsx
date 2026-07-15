@@ -45,13 +45,13 @@ export default function Header() {
             className="h-auto w-[52px] sm:w-[60px]"
             priority
           />
-          <span className="text-sm font-semibold tracking-wider text-white">CARS SR99 Kft.</span>
+          <span className="text-xl sm:text-2xl font-extrabold tracking-[-0.05em] text-white">CARS SR99 Kft.</span>
         </Link>
 
         <button
           type="button"
           className="inline-flex items-center justify-center rounded-md p-3 text-white hover:text-sky-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 md:hidden"
-          aria-label="Navigáció megnyitása"
+          aria-label="Navigációs menü megnyitása és bezárása"
           aria-expanded={isOpen}
           onClick={() => setIsOpen((prev) => !prev)}
         >

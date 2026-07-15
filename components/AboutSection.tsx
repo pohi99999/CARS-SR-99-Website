@@ -14,7 +14,7 @@ export default function AboutSection() {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
       <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-        <div className="relative overflow-hidden rounded-2xl border border-black/10 bg-black/5 shadow-xl backdrop-blur-md transition-all duration-300 dark:border-white/10 dark:bg-white/5 w-full h-64 sm:h-80 md:h-96 lg:h-[450px]">
+        <div className="relative overflow-hidden rounded-xl border border-black/10 bg-black/5 shadow-xl backdrop-blur-md transition-all duration-300 dark:border-white/10 dark:bg-white/5 w-full h-64 sm:h-80 md:h-96 lg:h-[450px]">
           <div className="absolute inset-0 z-10 bg-gradient-to-tr from-[#121212]/70 via-transparent to-sky-500/20" />
           <Image
             src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&w=1600&q=80"

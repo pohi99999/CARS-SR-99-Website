@@ -68,7 +68,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
   return (
     <>
       <div className="space-y-3">
-        <div className="relative overflow-hidden rounded-2xl bg-slate-900">
+        <div className="relative overflow-hidden rounded-xl bg-slate-900">
           <div className="overflow-hidden" ref={mainEmblaRef}>
             <div className="flex">
               {images.map((image, index) => (

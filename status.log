@@ -14,3 +14,4 @@
 [2026-07-15] - Rendszerállapot: Szerviz garancia eltávolítva, hivatalos Facebook link hozzáadva a lábléchez, és az AI Chat tudásbázisa felvértezve a valós gépjárműpark adataival.
 [2026-07-15] - Rendszerállapot: Mobilnézet kép-reszponzivitási hibák javítva, a galériák és borítóképek tökéletesen illeszkednek a mobil kijelzőkhöz.
 [2026-07-15] - Rendszerállapot: Főoldali és layout szintű elavult márkaszövegek aktualizálva az univerzális prémium leírásra, font-light tracking-wide formázással ellátva.
+[2026-07-15] - Rendszerállapot: 15. Fázis: Chrome AI audit alapú akadálymentesítési és prémium vizuális javítások (logó, alt szövegek, explicit form-beállítások és tab-index javítások).

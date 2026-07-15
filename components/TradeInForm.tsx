@@ -249,7 +249,7 @@ export default function TradeInForm() {
           type="submit"
           aria-label="Autóbeszámítási űrlap beküldése"
           disabled={isSubmitting}
-          className="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_0_24px_rgba(56,189,248,0.35)] transition hover:bg-sky-400 hover:shadow-[0_0_32px_rgba(56,189,248,0.55)] btn-shimmer hover:scale-[1.02] active:scale-[0.98] transition-transform"
+          className="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_0_24px_rgba(56,189,248,0.35)] transition-all duration-300 ease-in-out hover:bg-sky-400 hover:shadow-[0_0_32px_rgba(56,189,248,0.55)] btn-shimmer hover:scale-[1.02] active:scale-[0.98]"
         >
           {isSubmitting
             ? "Küldés..."

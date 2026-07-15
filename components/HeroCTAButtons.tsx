@@ -18,14 +18,14 @@ export default function HeroCTAButtons() {
       <Link
         href="/kinalat"
         onClick={handleKinalatClick}
-        className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-sky-500 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_0_24px_rgba(56,189,248,0.35)] transition-all duration-300 hover:bg-sky-400 hover:shadow-[0_0_32px_rgba(56,189,248,0.55)] btn-shimmer hover:scale-[1.02] active:scale-[0.98] transition-transform"
+        className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-sky-500 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_0_24px_rgba(56,189,248,0.35)] transition-all duration-300 ease-in-out hover:bg-sky-400 hover:shadow-[0_0_32px_rgba(56,189,248,0.55)] btn-shimmer hover:scale-[1.02] active:scale-[0.98]"
       >
         Fedezze fel kínálatunkat →
       </Link>
       <Link
         href="/kapcsolat"
         onClick={handleVisszahivasClick}
-        className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border-2 border-sky-400 px-7 py-3.5 text-sm font-semibold text-sky-400 transition-all duration-300 hover:bg-sky-400/10 hover:shadow-[0_0_20px_rgba(56,189,248,0.2)] btn-shimmer hover:scale-[1.02] active:scale-[0.98] transition-transform"
+        className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border-2 border-sky-400 px-7 py-3.5 text-sm font-semibold text-sky-400 transition-all duration-300 ease-in-out hover:bg-sky-400/10 hover:shadow-[0_0_20px_rgba(56,189,248,0.2)] btn-shimmer hover:scale-[1.02] active:scale-[0.98]"
       >
         Kérjen visszahívást
       </Link>

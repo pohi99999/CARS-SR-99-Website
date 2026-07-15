@@ -44,3 +44,5 @@
 | 2026-07-16 | Hero szekció egyedi háttérképet kapott (hatter1.webp), az aloldali overlay rétegek átlátszósága finomítva a jobb háttér-láthatóságért. | Kész |
 | 2026-07-16 | Hero szekció háttérképe (hatter1.webp) kiterjesztve teljes képernyőszélességre asztali nézetben a tökéletes esztétikumért. | Kész |
 | 2026-07-16 | 17. Fázis: Premium Brand Aesthetics overhaul (bg-clip-text címek, belső fénylések, texturált videó overlay és animált scroll indicator). | Kész |
+| 2026-07-16 | A szoftveres képjavítás a zaj felerősödése miatt visszavonva, a korábbi, esztétikusabb WebP képek visszaállítva a fehér BMW-hez. | Kész |
+

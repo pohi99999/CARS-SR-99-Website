@@ -139,6 +139,13 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
             </div>
           </dl>
 
+          {car.leiras && (
+            <div className="mt-6 border-t border-white/10 pt-5">
+              <h3 className="text-xs uppercase tracking-wide text-slate-400 font-medium">Leírás</h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-300 whitespace-pre-line">{car.leiras}</p>
+            </div>
+          )}
+
           <PdfBrochureButton
             carName={carName}
             price={car.ar}

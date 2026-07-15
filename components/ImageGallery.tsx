@@ -67,13 +67,13 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
 
   return (
     <>
-      <div className="space-y-3">
+      <div className="w-full max-w-full overflow-hidden space-y-3">
         <div className="relative overflow-hidden rounded-xl bg-slate-900">
           <div className="overflow-hidden" ref={mainEmblaRef}>
             <div className="flex">
               {images.map((image, index) => (
                 <div key={image} className="min-w-0 shrink-0 grow-0 basis-full">
-                  <div className="relative w-full h-64 sm:h-96 md:h-[500px] max-w-full overflow-hidden">
+                  <div className="relative aspect-[4/3] sm:aspect-[16/10] md:h-[500px] w-full max-w-full overflow-hidden">
                     <Image
                       src={image}
                       alt={`Jármű fotó ${index + 1}`}
@@ -81,7 +81,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                       priority={index === 0}
                       placeholder="blur"
                       blurDataURL={blurDataUrl}
-                      className="object-cover"
+                      className="object-contain bg-slate-950/40"
                     />
                   </div>
                 </div>

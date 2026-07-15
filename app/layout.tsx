@@ -117,9 +117,9 @@ export default function RootLayout({
     <html
       lang="hu"
       suppressHydrationWarning
-      className={`${inter.variable} ${montserrat.variable} h-full antialiased`}
+      className={`${inter.variable} ${montserrat.variable} h-full antialiased max-w-full overflow-x-hidden`}
     >
-      <body className={`${inter.className} relative flex min-h-full flex-col bg-transparent text-foreground`}>
+      <body className={`${inter.className} relative flex min-h-full flex-col bg-transparent text-foreground max-w-full overflow-x-hidden`}>
         <TrackingScripts />
         <script
           type="application/ld+json"
@@ -139,7 +139,7 @@ export default function RootLayout({
           <FomoNotification />
           <Header />
           <EventBanner />
-          <main className="relative z-10 flex-1 bg-transparent">{children}</main>
+          <main className="relative z-10 flex-1 bg-transparent w-full max-w-full overflow-x-hidden">{children}</main>
           <Footer />
           <AIChatAssistant />
           <CompareDock />

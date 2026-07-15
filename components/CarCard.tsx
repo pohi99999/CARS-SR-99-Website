@@ -20,8 +20,8 @@ export default function CarCard({ car }: CarCardProps) {
 
   return (
     <Tilt tiltMaxAngleX={4} tiltMaxAngleY={4} glareEnable glareMaxOpacity={0.08} className="h-full">
-      <article className="flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-[0_20px_50px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.1)] backdrop-blur-xl transition-all duration-300 hover:scale-[1.02] hover:border-sky-500/40 hover:shadow-[inset_0_0_20px_rgba(56,189,248,0.15),0_24px_55px_rgba(0,0,0,0.5)] dark:border-white/10 dark:bg-white/5">
-        <div className="relative w-full h-52 sm:h-56 md:h-64 overflow-hidden bg-slate-900 rounded-t-xl">
+      <article className="flex w-full max-w-full h-full flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-[0_20px_50px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.1)] backdrop-blur-xl transition-all duration-300 hover:scale-[1.02] hover:border-sky-500/40 hover:shadow-[inset_0_0_20px_rgba(56,189,248,0.15),0_24px_55px_rgba(0,0,0,0.5)] dark:border-white/10 dark:bg-white/5">
+        <div className="relative w-full aspect-[16/10] sm:aspect-auto sm:h-56 md:h-64 overflow-hidden bg-slate-900 rounded-t-xl">
           <Image
             src={car.images[0]}
             alt={`${car.marka} ${car.modell} - CARS SR99 Kft. Zalaegerszeg`}

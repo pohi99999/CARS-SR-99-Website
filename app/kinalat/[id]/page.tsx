@@ -89,7 +89,7 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
   };
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-6 py-12 sm:px-6 lg:px-8">
+    <section className="mx-auto w-full max-w-7xl px-6 py-12 sm:px-6 lg:px-8 overflow-hidden">
       <FomoNotification />
       <script
         type="application/ld+json"
@@ -108,7 +108,7 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
         </Link>
       </div>
 
-      <div className="grid gap-8 lg:grid-cols-2">
+      <div className="grid gap-8 lg:grid-cols-2 w-full max-w-full overflow-hidden">
         <ImageGallery images={car.images} />
 
         <div className="rounded-2xl border-t border-l border-r border-b border-t-white/20 border-l-white/10 border-r-white/5 border-b-white/5 bg-black/40 p-6 shadow-[0_20px_45px_rgba(2,8,23,0.45),inset_0_1px_1px_rgba(255,255,255,0.1)] backdrop-blur-lg dark:bg-white/5 sm:p-8">

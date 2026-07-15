@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="relative w-full min-h-screen bg-[url('/hatter1.webp')] bg-cover bg-center bg-no-repeat py-12">
-      {/* Sötét gradiens overlay réteg elmosással */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#121212]/90 via-[#121212]/75 to-[#121212]/95 backdrop-blur-sm pointer-events-none" />
+      {/* Sötét gradiens overlay réteg elmosás nélkül */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#121212]/50 via-[#121212]/30 to-[#121212]/60 pointer-events-none" />
       
       <section className="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-2">

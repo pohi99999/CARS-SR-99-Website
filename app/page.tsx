@@ -71,7 +71,11 @@ export default async function Home({ searchParams }: HomePageProps) {
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-black/90" />
 
         <div className="mx-auto flex min-h-[calc(100vh-10rem)] w-full max-w-7xl items-center px-6 py-20 sm:px-6 lg:px-8">
-          <div className="relative z-10 max-w-3xl">
+          <div className="relative z-10 max-w-3xl rounded-2xl border border-white/10 bg-[#121212]/30 backdrop-blur-md p-8 sm:p-10 shadow-2xl overflow-hidden">
+            <div 
+              className="absolute inset-0 -z-10 bg-cover bg-center opacity-40" 
+              style={{ backgroundImage: "url('/hatter1.webp')" }}
+            />
             <p className="text-sm font-extralight uppercase tracking-[0.25em] text-sky-400">
               CARS SR99 Kft.
             </p>

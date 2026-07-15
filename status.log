@@ -16,3 +16,4 @@
 [2026-07-15] - Rendszerállapot: Főoldali és layout szintű elavult márkaszövegek aktualizálva az univerzális prémium leírásra, font-light tracking-wide formázással ellátva.
 [2026-07-15] - Rendszerállapot: 15. Fázis: Chrome AI audit alapú akadálymentesítési és prémium vizuális javítások (logó, alt szövegek, explicit form-beállítások és tab-index javítások).
 [2026-07-15] - Rendszerállapot: 16. Fázis: Háttérvideó és háttérképek láthatóságának javítása az overlay-ek és a fő konténer áttetszőségének finomhangolásával.
+[2026-07-16] - Rendszerállapot: Hero szekció egyedi háttérképet kapott (hatter1.webp), az aloldali overlay rétegek átlátszósága finomítva a jobb háttér-láthatóságért.

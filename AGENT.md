@@ -37,3 +37,4 @@
 | 2026-07-15 | 14. Fázis: Teljes és végleges gépjárműpark-élesítés valós képekkel, árakkal és professzionálisan javított leírásokkal. | Kész |
 | 2026-07-15 | Route 66 garázsháttér (hatter1.webp) integrálva a Kapcsolat és Autóbeszámítás oldalak háttereként. | Kész |
 | 2026-07-15 | Szerviz garancia eltávolítva, hivatalos Facebook link hozzáadva a lábléchez, és az AI Chat tudásbázisa felvértezve a valós gépjárműpark adataival. | Kész |
+| 2026-07-15 | Mobilnézet kép-reszponzivitási hibák javítva, a galériák és borítóképek tökéletesen illeszkednek a mobil kijelzőkhöz. | Kész |

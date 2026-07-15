@@ -73,7 +73,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
             <div className="flex">
               {images.map((image, index) => (
                 <div key={image} className="min-w-0 shrink-0 grow-0 basis-full">
-                  <div className="relative aspect-[16/10] w-full">
+                  <div className="relative w-full h-64 sm:h-96 md:h-[500px] max-w-full overflow-hidden">
                     <Image
                       src={image}
                       alt={`Jármű fotó ${index + 1}`}
@@ -100,7 +100,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
           </button>
         </div>
 
-        <div className="flex gap-2 overflow-x-auto pb-1">
+        <div className="flex gap-2 overflow-x-auto pb-2 snap-x snap-mandatory scroll-smooth whitespace-nowrap scrollbar-none">
           {images.map((image, index) => {
             const isActive = selectedIndex === index;
             return (
@@ -109,7 +109,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                 type="button"
                 aria-label={`${index + 1}. kép kiválasztása`}
                 onClick={() => scrollToSlide(index)}
-                className={`relative h-16 w-24 shrink-0 overflow-hidden rounded-lg border-2 transition-all duration-300 ${
+                className={`relative h-16 w-24 shrink-0 overflow-hidden rounded-lg border-2 transition-all duration-300 snap-start ${
                   isActive ? "border-sky-400 shadow-[0_0_8px_rgba(56,189,248,0.5)]" : "border-white/20 hover:border-sky-400/50"
                 }`}
               >

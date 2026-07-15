@@ -72,6 +72,14 @@ export default async function Home({ searchParams }: HomePageProps) {
           className="absolute inset-0 bg-cover bg-center opacity-40 pointer-events-none" 
           style={{ backgroundImage: "url('/hatter1.webp')" }}
         />
+        {/* Texturált pontrács overlay */}
+        <div 
+          className="absolute inset-0 opacity-15 pointer-events-none z-10" 
+          style={{ 
+            backgroundImage: "radial-gradient(rgba(255,255,255,0.15) 1px, transparent 0)", 
+            backgroundSize: "4px 4px" 
+          }}
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-[#121212]/40 to-black/90 backdrop-blur-md" />
 
         <div className="mx-auto flex min-h-[calc(100vh-10rem)] w-full max-w-7xl items-center px-6 py-20 sm:px-6 lg:px-8">
@@ -101,6 +109,16 @@ export default async function Home({ searchParams }: HomePageProps) {
                 <p className="mt-1 text-sm font-light tracking-wide text-slate-400">Ügyfélelégedettség</p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Minimalista Scroll Indicator */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 pointer-events-none">
+          <span className="text-[10px] font-extralight uppercase tracking-[0.25em] text-slate-400">
+            Görgessen lejjebb
+          </span>
+          <div className="w-6 h-10 rounded-full border border-white/20 flex justify-center p-1.5">
+            <div className="w-1 h-2 rounded-full bg-sky-400 animate-scroll-bounce" />
           </div>
         </div>
       </section>

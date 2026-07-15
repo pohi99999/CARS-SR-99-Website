@@ -17,14 +17,14 @@ export default function InventorySection({ cars }: InventorySectionProps) {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.55, ease: "easeOut" }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       >
         <div className="mb-8">
           <p className="text-sm font-extralight uppercase tracking-[0.25em] text-sky-400">Kínálatunk</p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-100 sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-slate-100 via-white to-slate-400">
             Kiemelt járművek
           </h2>
-          <p className="mt-3 max-w-2xl text-slate-300">
+          <p className="mt-3 max-w-2xl font-light text-slate-300">
             Válogatott, ellenőrzött állapotú autók, amelyek azonnal elérhetők a CARS SR99 Kft.
             kínálatában.
           </p>

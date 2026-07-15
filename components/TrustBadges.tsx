@@ -26,10 +26,10 @@ export default function TrustBadges() {
     <LazyMotion features={domAnimation}>
       <m.section
         className="bg-[#111827] py-12 text-slate-100 border-y border-slate-800/80"
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       >
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

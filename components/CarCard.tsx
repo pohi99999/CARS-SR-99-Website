@@ -20,7 +20,7 @@ export default function CarCard({ car }: CarCardProps) {
 
   return (
     <Tilt tiltMaxAngleX={4} tiltMaxAngleY={4} glareEnable glareMaxOpacity={0.08} className="h-full">
-      <article className="flex h-full flex-col justify-between overflow-hidden rounded-2xl border-t border-l border-r border-b border-t-white/20 border-l-white/10 border-r-white/5 border-b-white/5 bg-black/40 shadow-[0_20px_45px_rgba(2,8,23,0.45),inset_0_1px_1px_rgba(255,255,255,0.1)] backdrop-blur-lg transition-all duration-300 hover:scale-[1.03] hover:border-sky-500/40 hover:shadow-[0_24px_55px_rgba(56,189,248,0.22)] dark:border-white/10 dark:bg-white/5">
+      <article className="flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-[0_20px_50px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.1)] backdrop-blur-xl transition-all duration-300 hover:scale-[1.02] hover:border-sky-500/40 hover:shadow-[inset_0_0_20px_rgba(56,189,248,0.15),0_24px_55px_rgba(0,0,0,0.5)] dark:border-white/10 dark:bg-white/5">
         <div className="relative w-full h-52 sm:h-56 md:h-64 overflow-hidden bg-slate-900 rounded-t-xl">
           <Image
             src={car.images[0]}
@@ -60,7 +60,7 @@ export default function CarCard({ car }: CarCardProps) {
               </button>
             </div>
 
-            <div className="flex flex-wrap gap-2 text-xs font-medium text-slate-200">
+            <div className="flex flex-wrap gap-2 text-xs font-light text-slate-200">
               <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-slate-300">
                 <CalendarRange size={13} className="text-sky-400" />
                 {car.evjarat}
@@ -78,7 +78,7 @@ export default function CarCard({ car }: CarCardProps) {
 
           <div className="space-y-4 pt-2">
             <div className="flex items-baseline justify-between border-t border-white/10 pt-3">
-              <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">Vételár:</span>
+              <span className="text-xs font-light uppercase tracking-wider text-slate-400">Vételár:</span>
               <p className="text-2xl font-extrabold tracking-tight text-sky-400">{car.ar}</p>
             </div>
 

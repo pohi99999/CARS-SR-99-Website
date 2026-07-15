@@ -179,7 +179,7 @@ export default function CarFilter({ initialMarka, initialUzemanyag, initialMaxPr
 
   return (
     <section className="mx-auto w-full max-w-7xl px-6 pt-8 sm:px-6 lg:px-8">
-      <div className="rounded-2xl border-t border-l border-r border-b border-t-white/20 border-l-white/10 border-r-white/5 border-b-white/5 bg-black/40 p-4 shadow-[0_20px_45px_rgba(2,8,23,0.45),inset_0_1px_1px_rgba(255,255,255,0.1)] backdrop-blur-lg dark:bg-white/5 sm:p-6">
+      <div className="rounded-2xl border border-white/10 bg-black/40 p-4 shadow-[0_20px_50px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.1)] backdrop-blur-xl dark:bg-white/5 sm:p-6">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           <div>
             <label htmlFor="filter-marka" className="mb-1.5 block text-xs font-light uppercase tracking-widest text-sky-400">

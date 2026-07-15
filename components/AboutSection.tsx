@@ -8,10 +8,10 @@ export default function AboutSection() {
     <LazyMotion features={domAnimation}>
       <m.section
         className="mx-auto w-full max-w-7xl px-6 py-16 sm:px-6 lg:px-8"
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       >
       <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
         <div className="relative overflow-hidden rounded-xl border border-black/10 bg-black/5 shadow-xl backdrop-blur-md transition-all duration-300 dark:border-white/10 dark:bg-white/5 w-full h-64 sm:h-80 md:h-96 lg:h-[450px]">
@@ -27,18 +27,18 @@ export default function AboutSection() {
 
         <div className="rounded-2xl border border-black/10 bg-black/5 p-7 shadow-lg backdrop-blur-md transition-all duration-300 dark:border-white/10 dark:bg-white/5">
           <p className="text-sm font-extralight uppercase tracking-[0.25em] text-sky-400">Rólunk</p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-100 sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-slate-100 via-white to-slate-400">
             Szakértelem, transzparencia, modern infrastruktúra
           </h2>
-          <p className="mt-4 leading-7 text-slate-300">
+          <p className="mt-4 leading-7 font-light text-slate-300">
             A CARS SR99 Kft.-nél hiszünk abban, hogy egy prémium autóvásárlási élmény alapja a
             szakmailag felkészült támogatás és a teljes átláthatóság.
           </p>
-          <p className="mt-4 leading-7 text-slate-300">
+          <p className="mt-4 leading-7 font-light text-slate-300">
             Járműveinknél kiemelten kezeljük a JSZP ellenőrzött előéletet, hogy ügyfeleink valós és
             megbízható információk alapján dönthessenek.
           </p>
-          <p className="mt-4 leading-7 text-slate-300">
+          <p className="mt-4 leading-7 font-light text-slate-300">
             A Ságodi Iparterület kiváló infrastruktúrája biztonságos megtekintést, kényelmes
             tesztvezetést és gördülékeny ügyintézést biztosít minden érdeklődőnek.
           </p>

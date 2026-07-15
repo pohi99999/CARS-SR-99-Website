@@ -38,3 +38,4 @@
 | 2026-07-15 | Route 66 garázsháttér (hatter1.webp) integrálva a Kapcsolat és Autóbeszámítás oldalak háttereként. | Kész |
 | 2026-07-15 | Szerviz garancia eltávolítva, hivatalos Facebook link hozzáadva a lábléchez, és az AI Chat tudásbázisa felvértezve a valós gépjárműpark adataival. | Kész |
 | 2026-07-15 | Mobilnézet kép-reszponzivitási hibák javítva, a galériák és borítóképek tökéletesen illeszkednek a mobil kijelzőkhöz. | Kész |
+| 2026-07-15 | Főoldali és layout szintű elavult márkaszövegek aktualizálva az univerzális prémium leírásra, font-light tracking-wide formázással ellátva. | Kész |

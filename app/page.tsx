@@ -78,8 +78,8 @@ export default async function Home({ searchParams }: HomePageProps) {
             <h1 className="mt-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-slate-100">
               Prémium Autók. Megbízható Kereskedés.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-              Toyota és Kia modellek gondosan válogatva – hibrid, benzin és diesel kínálattal, értékálló garanciával.
+            <p className="mt-6 max-w-2xl text-lg leading-8 font-light tracking-wide text-slate-300">
+              Gondosan válogatott, ellenőrzött prémium gépjárművek – megbízható dízel és benzin kínálattal, transzparens előélettel és professzionális lízing konstrukciókkal.
             </p>
             <HeroCTAButtons />
 

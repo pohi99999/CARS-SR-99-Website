@@ -119,7 +119,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${montserrat.variable} h-full antialiased`}
     >
-      <body className={`${inter.className} relative flex min-h-full flex-col bg-background text-foreground`}>
+      <body className={`${inter.className} relative flex min-h-full flex-col bg-transparent text-foreground`}>
         <TrackingScripts />
         <script
           type="application/ld+json"
@@ -130,16 +130,16 @@ export default function RootLayout({
           loop
           muted
           playsInline
-          className="sr99-bg-video pointer-events-none fixed inset-0 -z-50 h-full w-full object-cover opacity-60"
+          className="sr99-bg-video pointer-events-none fixed inset-0 -z-50 h-full w-full object-cover opacity-100"
         >
           <source src="/bg-video.mp4" type="video/mp4" />
         </video>
-        <div className="pointer-events-none fixed inset-0 -z-40 bg-black/20" />
+        <div className="pointer-events-none fixed inset-0 -z-40 bg-black/5" />
         <Providers>
           <FomoNotification />
           <Header />
           <EventBanner />
-          <main className="relative z-10 flex-1 bg-[#121212]/45 backdrop-blur-md">{children}</main>
+          <main className="relative z-10 flex-1 bg-transparent">{children}</main>
           <Footer />
           <AIChatAssistant />
           <CompareDock />

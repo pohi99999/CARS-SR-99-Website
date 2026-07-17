@@ -30,19 +30,18 @@ const baseUrl = "https://cars-sr99.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "CARS SR99 Kft. – Prémium Autókereskedés Zalaegerszeg",
+    default: "CARS SR99 Kft. | Minőségi Autókereskedés Zalaegerszeg",
     template: "%s | CARS SR99 Kft.",
   },
   description:
-    "Gondosan válogatott, ellenőrzött prémium gépjárművek – megbízható dízel és benzin kínálattal, transzparens előélettel és professzionális lízing konstrukciókkal Zalaegerszegen. Ismerje meg prémium autókínálatunkat.",
+    "Megbízható, ellenőrzött prémium használt autók Zalaegerszegen, a Ságodi Iparterületen. Kedvező autóbeszámítás, lízing ügyintézés és transzparens előélet.",
   keywords: [
-    "Prémium használtautó kereskedés Zalaegerszeg",
-    "CARS SR99 Kft.",
-    "Prémium autókínálat",
-    "Autóbeszámítás",
-    "JSZP ellenőrzött járművek",
-    "használtautó Zalaegerszeg",
-    "autó lízing és hitel",
+    "autókereskedés Zalaegerszeg",
+    "használt autó Zalaegerszeg",
+    "CARS SR99",
+    "autó lízing",
+    "autóbeszámítás Zalaegerszeg",
+    "prémium autók",
   ],
   verification: {
     google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
@@ -51,9 +50,9 @@ export const metadata: Metadata = {
     canonical: baseUrl,
   },
   openGraph: {
-    title: "CARS SR99 Kft. – Prémium Autókereskedés Zalaegerszeg",
+    title: "CARS SR99 Kft. | Minőségi Autókereskedés Zalaegerszeg",
     description:
-      "Gondosan válogatott, ellenőrzött prémium gépjárművek – megbízható dízel és benzin kínálattal, transzparens előélettel és professzionális lízing konstrukciókkal. Ismerje meg prémium autókínálatunkat.",
+      "Megbízható, ellenőrzött prémium használt autók Zalaegerszegen, a Ságodi Iparterületen. Kedvező autóbeszámítás, lízing ügyintézés és transzparens előélet.",
     url: baseUrl,
     siteName: "CARS SR99 Kft.",
     locale: "hu_HU",
@@ -69,9 +68,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CARS SR99 Kft. – Prémium Autókereskedés Zalaegerszeg",
+    title: "CARS SR99 Kft. | Minőségi Autókereskedés Zalaegerszeg",
     description:
-      "Gondosan válogatott, ellenőrzött prémium gépjárművek – megbízható dízel és benzin kínálattal, transzparens előélettel és professzionális lízing konstrukciókkal.",
+      "Megbízható, ellenőrzött prémium használt autók Zalaegerszegen, a Ságodi Iparterületen. Kedvező autóbeszámítás, lízing ügyintézés és transzparens előélet.",
     images: [`${baseUrl}/og-image.png`],
   },
 };

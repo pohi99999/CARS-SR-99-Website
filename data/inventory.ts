@@ -84,31 +84,6 @@ export const inventory: Car[] = [
     "leiras": "Elegáns alpesi fehér fényezésű BMW 5-ös sorozat (F11) Touring, a közkedvelt és megbízható N47-es dízelmotorral (218 LE). Kiváló esztétikai és műszaki állapot, tágas és kényelmes utastér jellemzi. Kiváló utazóautó mindennapi használatra vagy hosszabb távokra egyaránt. Rendszáma: BL-969FY."
   },
   {
-    "id": "bmw-f11-xdrive-2011-zold",
-    "marka": "BMW",
-    "modell": "5-ös sorozat (F11) Touring xDrive",
-    "evjarat": 2011,
-    "ar": "4 200 000 Ft",
-    "futasteljesitmeny": "249 000 km",
-    "uzemanyag": "Dízel",
-    "images": [
-      "/geppark/BMW-F11-xDrive-2011-zold-nincs-forgalmi/kepek/fo.webp",
-      "/geppark/BMW-F11-xDrive-2011-zold-nincs-forgalmi/kepek/0c459ba9-c459-4a3a-be4c-275e80d82eff.webp",
-      "/geppark/BMW-F11-xDrive-2011-zold-nincs-forgalmi/kepek/1bcf3656-78aa-4f87-a1aa-88f99e8b0d39.webp",
-      "/geppark/BMW-F11-xDrive-2011-zold-nincs-forgalmi/kepek/2e60c3e9-01ff-4630-8453-6a163a669604.webp",
-      "/geppark/BMW-F11-xDrive-2011-zold-nincs-forgalmi/kepek/2ee2d804-2f73-4b59-86ca-6ebd5555ecdd.webp",
-      "/geppark/BMW-F11-xDrive-2011-zold-nincs-forgalmi/kepek/35637593-6099-4b69-927b-7feaa9485982.webp",
-      "/geppark/BMW-F11-xDrive-2011-zold-nincs-forgalmi/kepek/6760a834-285b-484f-85b4-aee962b8f42b.webp",
-      "/geppark/BMW-F11-xDrive-2011-zold-nincs-forgalmi/kepek/6e0a238a-6971-4621-93ec-87dfc43fb73e.webp",
-      "/geppark/BMW-F11-xDrive-2011-zold-nincs-forgalmi/kepek/7b8838b9-aa39-4bac-ad22-e1157c60c217.webp",
-      "/geppark/BMW-F11-xDrive-2011-zold-nincs-forgalmi/kepek/81b9fea9-0d96-4a65-b955-e835416b0b89.webp",
-      "/geppark/BMW-F11-xDrive-2011-zold-nincs-forgalmi/kepek/a967a5b1-2fda-407f-ab14-48ba2146ea0b.webp",
-      "/geppark/BMW-F11-xDrive-2011-zold-nincs-forgalmi/kepek/b43e3f06-7d9f-438a-8d5a-90de4de8e24c.webp",
-      "/geppark/BMW-F11-xDrive-2011-zold-nincs-forgalmi/kepek/c9c55166-6d09-401c-badc-3944ee285fc7.webp"
-    ],
-    "leiras": "Különleges és rendkívül elegáns mélyzöld fényezésű BMW 5-ös sorozat (F11) Touring xDrive intelligens összkerékhajtással. 249 000 km-es futásteljesítménnyel, kiváló úttartással és prémium kényelmi extrákkal. Tágas csomagtér és kifogástalan vezetési élmény minden időjárási körülmény között."
-  },
-  {
     "id": "citroen-jumpy-spacetourer-2017",
     "marka": "Citroën",
     "modell": "Jumpy Spacetourer (8 személyes)",

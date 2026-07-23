@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import HeroCTAButtons from "@/components/HeroCTAButtons";
 import InventorySection from "@/components/InventorySection";
 import { fetchInventory } from "@/services/inventoryService";
@@ -63,14 +64,16 @@ export default async function Home({ searchParams }: HomePageProps) {
           {...{ fetchPriority: "high" }}
           className="absolute inset-0 h-full w-full object-cover"
         >
-          <source
-            src="https://videos.pexels.com/video-files/3802518/3802518-hd_1920_1080_25fps.mp4"
-            type="video/mp4"
-          />
+          <source src="/bg-video.mp4" type="video/mp4" />
         </video>
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-40 pointer-events-none" 
-          style={{ backgroundImage: "url('/hatter1.webp')" }}
+        <Image
+          src="/hatter1.webp"
+          alt=""
+          fill
+          sizes="100vw"
+          quality={60}
+          className="object-cover opacity-40 pointer-events-none"
+          aria-hidden="true"
         />
         {/* Texturált pontrács overlay */}
         <div 

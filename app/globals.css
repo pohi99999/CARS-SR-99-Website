@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: rgba(34, 211, 238, 0.3);
+  color: #f1f5f9;
+}
+
+:root {
+  --background: #121212;
+  --foreground: #e5e7eb;
+}
+
+.light {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+}
+
+.dark {
+  --background: #121212;
+  --foreground: #e5e7eb;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  position: relative;
+  min-height: 100vh;
+}
+
+h1,
+h2 {
+  font-family: var(--font-montserrat), var(--font-inter), Arial, Helvetica, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-family: var(--font-montserrat), var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+
+h1 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  @apply leading-relaxed;
+}
+
+a,
+button {
+  @apply transition-all duration-300;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(34, 211, 238, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 50% 20%, rgba(34, 211, 238, 0.18), transparent 45%);
+  background-size:
+    48px 48px,
+    48px 48px,
+    100% 100%;
+  opacity: 0.26;
+  animation: sr99-grid-flow 18s linear infinite;
+  z-index: -1;
+}
+
+.light body::before {
+  opacity: 0.18;
+}
+
+@keyframes sr99-grid-flow {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-16px, -24px, 0) scale(1.02);
+  }
+  100% {
+    transform: translate3d(-32px, -48px, 0) scale(1);
+  }
+}
+
+.sr99-bg-video {
+  will-change: transform;
+}
+
+/* Natív Cross-Document View Transitions */
+@view-transition {
+  navigation: auto;
+}
+
+/* Premium Shimmer CTA Gomb */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 30%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  animation: shimmer 6s infinite ease-in-out;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -60%;
+  }
+  30% {
+    left: 140%;
+  }
+  100% {
+    left: 140%;
+  }
+}
+
+@keyframes scroll-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+.animate-scroll-bounce {
+  animation: scroll-bounce 1.5s infinite ease-in-out;
+}
+

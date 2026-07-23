@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { fetchInventory } from "@/services/inventoryService";
 
-const siteUrl = "https://cars-sr99.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cars-sr99.com";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const inventory = await fetchInventory();

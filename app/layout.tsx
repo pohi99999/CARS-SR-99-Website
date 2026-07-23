@@ -15,6 +15,8 @@ import {
 const Footer = dynamic(() => import("@/components/Footer"));
 import "./globals.css";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cars-sr99.com";
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -25,7 +27,7 @@ const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
-const baseUrl = "https://cars-sr99.vercel.app";
+const baseUrl = siteUrl;
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),

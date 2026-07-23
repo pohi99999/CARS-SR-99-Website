@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cars-sr99.com";
+
 export const metadata: Metadata = {
   title: "Összehasonlítás",
   description: "Vesse össze a kiválasztott gépjárművek műszaki adatait és árait egymás mellett.",
   alternates: {
-    canonical: "https://cars-sr99.vercel.app/osszehasonlitas",
+    canonical: `${siteUrl}/osszehasonlitas`,
   },
 };
 

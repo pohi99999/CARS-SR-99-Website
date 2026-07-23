@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import TradeInForm from "@/components/TradeInForm";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cars-sr99.com";
+
 export const metadata: Metadata = {
   title: "Autóbeszámítás",
   description: "Kényelmes, gyors és korrekt autóbeszámítás Zalaegerszegen. Kérjen előzetes értékbecslést a CARS SR99 Kft.-től!",
   alternates: {
-    canonical: "https://cars-sr99.vercel.app/autobeszamitas",
+    canonical: `${siteUrl}/autobeszamitas`,
   },
 };
 

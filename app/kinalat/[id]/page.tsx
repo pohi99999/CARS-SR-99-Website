@@ -16,7 +16,7 @@ type CarDetailsPageProps = {
   }>;
 };
 
-const baseUrl = "https://cars-sr99.vercel.app";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cars-sr99.com";
 
 export async function generateMetadata({ params }: CarDetailsPageProps): Promise<Metadata> {
   const { id } = await params;

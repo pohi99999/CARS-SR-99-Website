@@ -81,7 +81,7 @@ export const inventory: Car[] = [
       "/geppark/BMW-F11-N47-Feher-2011/kepek/b896f66e-349f-4d8a-ae8d-21ba8107ba0a.webp",
       "/geppark/BMW-F11-N47-Feher-2011/kepek/d6337bbb-e8f8-4b6d-8ca0-146cbd275213.webp"
     ],
-    "leiras": "Elegáns alpesi fehér fényezésű BMW 5-ös sorozat (F11) Touring, a közkedvelt és megbízható N47-es dízelmotorral (218 LE). Kiváló esztétikai és műszaki állapot, tágas és kényelmes utastér jellemzi. Kiváló utazóautó mindennapi használatra vagy hosszabb távokra egyaránt. Rendszáma: BL-969FY."
+    "leiras": "Elegáns alpesi fehér fényezésű BMW 5-ös sorozat (F11) Touring, a közkedvelt és megbízható N47-es dízelmotorral (218 LE). Kiváló esztétikai és műszaki állapot, tágas és kényelmes utastér jellemzi. Kiváló utazóautó mindennapi használatra vagy hosszabb távokra egyaránt. A gépjármű érvényes magyar okmányokkal, friss magyar forgalmi engedéllyel és rendszámmal (AO-TM-039) rendelkezik, így azonnal, várakozás és további papírmunka nélkül elvihető."
   },
   {
     "id": "citroen-jumpy-spacetourer-2017",
@@ -183,7 +183,7 @@ export const inventory: Car[] = [
       "/geppark/Skoda-Octavia-2020-DSG/kepek/IMG_0801.webp",
       "/geppark/Skoda-Octavia-2020-DSG/kepek/IMG_0803.webp"
     ],
-    "leiras": "Rendkívül népszerű, modern Skoda Octavia Combi DSG automataváltóval és a rendkívül takarékos 2.0 TDI (150 LE) motorral. 293 600 km-t futott, folyamatosan karbantartott és megbízható állapotú jármű. Tágas, funkcionális belső tér, kiváló ergonómia és gazdag felszereltség jellemzi, amely ideálissá teszi akár üzleti, akár családi használatra. Rendszáma: HO-534CJ."
+    "leiras": "Rendkívül népszerű, modern Skoda Octavia Combi DSG automataváltóval és a rendkívül takarékos 2.0 TDI (150 LE) motorral. 293 600 km-t futott, folyamatosan karbantartott és megbízható állapotú jármű. Tágas, funkcionális belső tér, kiváló ergonómia és gazdag felszereltség jellemzi, amely ideálissá teszi akár üzleti, akár családi használatra. A gépjármű érvényes magyar okmányokkal, friss magyar forgalmi engedéllyel és rendszámmal (AO-TM-038) rendelkezik, így azonnal, várakozás és további papírmunka nélkül elvihető."
   },
   {
     "id": "skoda-octavia-2022-kezi",

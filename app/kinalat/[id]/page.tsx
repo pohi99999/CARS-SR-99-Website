@@ -78,30 +78,6 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
       "@type": "Brand",
       name: car.marka,
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "28",
-      bestRating: "5",
-      worstRating: "1",
-    },
-    review: [
-      {
-        "@type": "Review",
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        author: {
-          "@type": "Person",
-          name: "Megelégedett Ügyfél",
-        },
-        reviewBody:
-          "Kiváló állapotú, gondosan átvizsgált autó a CARS SR99 Kft. kínálatából. Gyors, rugalmas és korrekt ügyintézés.",
-      },
-    ],
     offers: {
       "@type": "Offer",
       priceCurrency: "HUF",

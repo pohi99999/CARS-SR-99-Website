@@ -184,8 +184,8 @@ export const inventory: Car[] = [
     "marka": "BMW",
     "modell": "216d Gran Tourer",
     "evjarat": 2015,
-    "ar": "Ár hamarosan",
-    "futasteljesitmeny": "N/A",
+    "ar": "3 000 000 Ft",
+    "futasteljesitmeny": "279 599 km",
     "uzemanyag": "Dízel",
     "images": [
       "/geppark/BMW-216d-Gran-Tourer-2015/kepek/fo.webp",
@@ -197,7 +197,7 @@ export const inventory: Car[] = [
       "/geppark/BMW-216d-Gran-Tourer-2015/kepek/06.webp",
       "/geppark/BMW-216d-Gran-Tourer-2015/kepek/07.webp"
     ],
-    "leiras": "Letisztult, mélyfekete metálfényezésű BMW 216d Gran Tourer, a kompakt egyterűek egyik legpraktikusabb tagja. Rugalmas és rendkívül gazdaságos 1.5 literes dízelmotorral (85 kW / 116 LE), tágas, jól variálható utastérrel és nagy csomagtartóval. Ápolt, karcmentes karosszéria, tetősínek, ülésfűtés és modern multimédia jellemzi. Kiváló választás családoknak vagy sokat utazóknak, akiknek fontos a kompakt méret melletti belső tágasság. Érvényes magyar rendszámmal (AOQH-403) és rendben lévő magyar okmányokkal kerül értékesítésre."
+    "leiras": "Letisztult, mélyfekete metálfényezésű BMW 216d Gran Tourer, a kompakt egyterűek egyik legpraktikusabb tagja. Rugalmas és rendkívül gazdaságos 1.5 literes dízelmotorral (85 kW / 116 LE), tágas, jól variálható utastérrel és nagy csomagtartóval. Ápolt, karcmentes karosszéria, tetősínek, ülésfűtés és modern multimédia jellemzi. Garantált, leinformálható 279 599 km-es futásteljesítmény. Kiváló választás családoknak vagy sokat utazóknak, akiknek fontos a kompakt méret melletti belső tágasság. Érvényes magyar rendszámmal (AOQH-403), magyar forgalomba helyezve, rendben lévő magyar okmányokkal kerül értékesítésre."
   },
   {
     "id": "bmw-x6-xdrive40d-2012",
@@ -205,7 +205,7 @@ export const inventory: Car[] = [
     "modell": "X6 xDrive40d",
     "evjarat": 2012,
     "ar": "5 000 000 Ft",
-    "futasteljesitmeny": "325 000 km",
+    "futasteljesitmeny": "259 000 km",
     "uzemanyag": "Dízel",
     "images": [
       "/geppark/BMW-X6-xDrive40d-2012/kepek/fo.webp",
@@ -233,7 +233,7 @@ export const inventory: Car[] = [
       "/geppark/BMW-X6-xDrive40d-2012/kepek/22.webp",
       "/geppark/BMW-X6-xDrive40d-2012/kepek/23.webp"
     ],
-    "leiras": "Lenyűgöző megjelenésű, mélyfekete BMW X6 xDrive40d, krómozott oldalsó lépcsőkkel, könnyűfém felnikkel és krémszínű, prémium bőrbelsővel. Erőteljes, 3.0 literes biturbó dízelmotorral (225 kW / 306 LE), precíz ZF nyolcfokozatú automataváltóval és állandó xDrive összkerékhajtással szerelve — igazi luxus-crossover, amely a terepjáró magabiztosságát ötvözi a sportkupé eleganciájával. Érvényes magyar rendszámmal (AORA-792) és rendezett magyar okmányokkal kerül átadásra."
+    "leiras": "Lenyűgöző megjelenésű, mélyfekete BMW X6 xDrive40d, krómozott oldalsó lépcsőkkel, könnyűfém felnikkel és krémszínű, prémium bőrbelsővel. Erőteljes, 3.0 literes biturbó dízelmotorral (225 kW / 306 LE), precíz ZF nyolcfokozatú automataváltóval és állandó xDrive összkerékhajtással szerelve — igazi luxus-crossover, amely a terepjáró magabiztosságát ötvözi a sportkupé eleganciájával. 259 000 km-es futásteljesítménnyel. Érvényes magyar rendszámmal (AORA-792), magyar forgalomba helyezve, rendezett magyar okmányokkal kerül átadásra."
   },
   {
     "id": "subaru-xv-2012",
@@ -255,6 +255,31 @@ export const inventory: Car[] = [
       "/geppark/Subaru-XV-2012/kepek/08.webp"
     ],
     "leiras": "Praktikus, ezüst színű Subaru XV crossover, a márkára jellemző szimmetrikus, állandó összkerékhajtással (Symmetrical AWD) és megbízható, gazdaságos 2.0 literes dízelmotorral (80 kW / 109 LE). Magasított terepjáró alapon, robusztus küszöb- és sárvédőidomokkal, könnyűfém felnikkel — kiváló választás mindenes, időjárástól független napi használatra. Garantált, leinformálható 237 170 km-es futásteljesítmény. Érvényes magyar rendszámmal (AOTM-241) és teljes, rendezett magyar okmányokkal, azonnal, várakozás nélkül elvihető."
+  },
+  {
+    "id": "bmw-530d-xdrive-2011",
+    "marka": "BMW",
+    "modell": "530d xDrive Touring (F11)",
+    "evjarat": 2011,
+    "ar": "4 200 000 Ft",
+    "futasteljesitmeny": "249 000 km",
+    "uzemanyag": "Dízel",
+    "images": [
+      "/geppark/BMW-F11-530d-xDrive-2011-zold/kepek/fo.webp",
+      "/geppark/BMW-F11-530d-xDrive-2011-zold/kepek/0c459ba9-c459-4a3a-be4c-275e80d82eff.webp",
+      "/geppark/BMW-F11-530d-xDrive-2011-zold/kepek/1bcf3656-78aa-4f87-a1aa-88f99e8b0d39.webp",
+      "/geppark/BMW-F11-530d-xDrive-2011-zold/kepek/2e60c3e9-01ff-4630-8453-6a163a669604.webp",
+      "/geppark/BMW-F11-530d-xDrive-2011-zold/kepek/2ee2d804-2f73-4b59-86ca-6ebd5555ecdd.webp",
+      "/geppark/BMW-F11-530d-xDrive-2011-zold/kepek/35637593-6099-4b69-927b-7feaa9485982.webp",
+      "/geppark/BMW-F11-530d-xDrive-2011-zold/kepek/6760a834-285b-484f-85b4-aee962b8f42b.webp",
+      "/geppark/BMW-F11-530d-xDrive-2011-zold/kepek/6e0a238a-6971-4621-93ec-87dfc43fb73e.webp",
+      "/geppark/BMW-F11-530d-xDrive-2011-zold/kepek/7b8838b9-aa39-4bac-ad22-e1157c60c217.webp",
+      "/geppark/BMW-F11-530d-xDrive-2011-zold/kepek/81b9fea9-0d96-4a65-b955-e835416b0b89.webp",
+      "/geppark/BMW-F11-530d-xDrive-2011-zold/kepek/a967a5b1-2fda-407f-ab14-48ba2146ea0b.webp",
+      "/geppark/BMW-F11-530d-xDrive-2011-zold/kepek/b43e3f06-7d9f-438a-8d5a-90de4de8e24c.webp",
+      "/geppark/BMW-F11-530d-xDrive-2011-zold/kepek/c9c55166-6d09-401c-badc-3944ee285fc7.webp"
+    ],
+    "leiras": "Ritkaságszámba menő, zöld metálfényezésű BMW 530d xDrive Touring (F11), a sorozat legerősebb és legjobban felszerelt dízel-összkerekes változata. Erőteljes, 3.0 literes dízelmotorral (190 kW / 258 LE) és állandó xDrive összkerékhajtással szerelve, amely minden évszakban biztos tapadást és magabiztos vezetést garantál. 249 000 km-es futásteljesítmény. Érvényes magyar rendszámmal (AORA-931), magyar forgalomba helyezve, rendben lévő magyar okmányokkal kerül értékesítésre."
   }
 ];
 

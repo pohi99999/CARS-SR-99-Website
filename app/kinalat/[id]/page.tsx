@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: CarDetailsPageProps): Promise
       type: "article",
       images: [
         {
-          url: car.images[0],
+          url: `${baseUrl}${car.images[0]}`,
           alt: carName,
         },
       ],
@@ -71,7 +71,7 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
     "@type": "Product",
     name: carName,
     model: car.modell,
-    image: car.images,
+    image: car.images.map((image) => `${baseUrl}${image}`),
     description: carDescription,
     category: "Vehicle",
     brand: {

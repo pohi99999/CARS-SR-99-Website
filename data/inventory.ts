@@ -32,32 +32,6 @@ export const inventory: Car[] = [
     "leiras": "Kifogástalan esztétikai és műszaki állapotban lévő, mélykék metálfényezésű Audi A4 Avant Design. A megbízható és rendkívül dinamikus, 190 lóerős 2.0 TDI erőforrással és a precíz S-tronic hétfokozatú automataváltóval szerelve. Garantált, leinformálható 187 143 km-es futásteljesítmény. Az autó karcmentes, újszerű állapotú, külföldi okmányokkal rendelkezik, a vételár pedig a magyarországi forgalomba helyezés teljes költségét tartalmazza."
   },
   {
-    "id": "bmw-f11-525d-2011",
-    "marka": "BMW",
-    "modell": "525d Touring",
-    "evjarat": 2011,
-    "ar": "3 000 000 Ft",
-    "futasteljesitmeny": "328 000 km",
-    "uzemanyag": "Dízel",
-    "images": [
-      "/geppark/BMW-F11-525d-2011-kész/kepek/fo.webp",
-      "/geppark/BMW-F11-525d-2011-kész/kepek/700625924_26848240874831794_5695255001336472459_n.webp",
-      "/geppark/BMW-F11-525d-2011-kész/kepek/701003993_26848240658165149_5815972029683789885_n.webp",
-      "/geppark/BMW-F11-525d-2011-kész/kepek/701850818_26848240854831796_2671052156454726575_n.webp",
-      "/geppark/BMW-F11-525d-2011-kész/kepek/701889714_26848240728165142_7969451141186142584_n.webp",
-      "/geppark/BMW-F11-525d-2011-kész/kepek/701895417_26848240964831785_2913644564449440468_n.webp",
-      "/geppark/BMW-F11-525d-2011-kész/kepek/701986575_26848240891498459_1566550878782385993_n.webp",
-      "/geppark/BMW-F11-525d-2011-kész/kepek/702259456_26848240951498453_5406929959027904741_n.webp",
-      "/geppark/BMW-F11-525d-2011-kész/kepek/702621220_26848240804831801_2868227109319465196_n.webp",
-      "/geppark/BMW-F11-525d-2011-kész/kepek/702931012_26848240698165145_1724074620596642309_n.webp",
-      "/geppark/BMW-F11-525d-2011-kész/kepek/703249970_26848240934831788_8489188074172428599_n.webp",
-      "/geppark/BMW-F11-525d-2011-kész/kepek/703281106_26848240968165118_5780817796379390668_n.webp",
-      "/geppark/BMW-F11-525d-2011-kész/kepek/703394592_26848240824831799_8332901136968105059_n.webp",
-      "/geppark/BMW-F11-525d-2011-kész/kepek/703433759_26848240678165147_4509699988442771353_n.webp"
-    ],
-    "leiras": "Megkímélt állapotú, elegáns BMW 525d Touring (F11), kényelmes panorámatetővel és sportos, ültetett futóművel szerelve. Hatfokozatú manuális váltóval rendelkező, megbízható 2.0 literes dízel (1995 ccm) változat. A járművön nemrégiben elvégzésre került a hajtókar- és főtengelycsapágyak, valamint a vezérműlánc cseréje, így műszakilag teljesen megbízható. Korának megfelelő, gyönyörű külső és belső állapot. Érvényes magyar okmányokkal rendelkezik, a forgalomba helyezésben teljes körű segítséget nyújtunk."
-  },
-  {
     "id": "bmw-f11-n47-feher-2011",
     "marka": "BMW",
     "modell": "5-ös sorozat (F11) Touring (N47)",
@@ -123,7 +97,7 @@ export const inventory: Car[] = [
       "/geppark/Ford-Kuga-Titanium-2011/kepek/28180655.webp",
       "/geppark/Ford-Kuga-Titanium-2011/kepek/28180668.webp"
     ],
-    "leiras": "Megkímélt állapotú, elegáns fekete metálfényezésű Ford Kuga a legmagasabb Titanium felszereltséggel és intelligens 4WD összkerékhajtással. A megbízható 2.0 TDCi (140 LE) motorral és kényelmes Powershift automataváltóval szerelve. Rendszeresen karbantartott, rozsdamentes karosszéria, esztétikai apróbb használati nyomokkal. Kulcs nélküli indítás, kétzónás digitális klíma, navigáció, tempomat és tolatóradar jellemzi. Költségmentes, megbízható crossover, érvényes magyar okmányokkal és 2028-ig tartó műszaki vizsgával."
+    "leiras": "Megkímélt állapotú, elegáns fekete metálfényezésű Ford Kuga a legmagasabb Titanium felszereltséggel és intelligens 4WD összkerékhajtással. A megbízható 2.0 TDCi (140 LE) motorral és kényelmes Powershift automataváltóval szerelve. Rendszeresen karbantartott, rozsdamentes karosszéria, esztétikai apróbb használati nyomokkal. Kulcs nélküli indítás, kétzónás digitális klíma, navigáció, tempomat és tolatóradar jellemzi. Költségmentes, megbízható crossover, érvényes magyar rendszámmal (AOTM-051) és okmányokkal, 2028-ig tartó műszaki vizsgával, azonnal elvihető."
   },
   {
     "id": "jaguar-f-pace-2017",
@@ -204,6 +178,83 @@ export const inventory: Car[] = [
       "/geppark/Skoda-Octavia-2022-Kezi/kepek/747536807_2152638612338568_324321531159673310_n.webp"
     ],
     "leiras": "Gyönyörű, újszerű esztétikai és műszaki állapotban lévő Skoda Octavia Combi kézi sebességváltóval. Kívül-belül karcmentes, szinte új autó benyomását kelti. 217 700 km-es futással, gazdaságos dízel hajtáslánccal. A vételár a magyarországi forgalomba helyezés és a friss műszaki vizsga költségeit már tartalmazza. Megtekinthető Zalaegerszegen."
+  },
+  {
+    "id": "bmw-216d-gran-tourer-2015",
+    "marka": "BMW",
+    "modell": "216d Gran Tourer",
+    "evjarat": 2015,
+    "ar": "Ár hamarosan",
+    "futasteljesitmeny": "N/A",
+    "uzemanyag": "Dízel",
+    "images": [
+      "/geppark/BMW-216d-Gran-Tourer-2015/kepek/fo.webp",
+      "/geppark/BMW-216d-Gran-Tourer-2015/kepek/01.webp",
+      "/geppark/BMW-216d-Gran-Tourer-2015/kepek/02.webp",
+      "/geppark/BMW-216d-Gran-Tourer-2015/kepek/03.webp",
+      "/geppark/BMW-216d-Gran-Tourer-2015/kepek/04.webp",
+      "/geppark/BMW-216d-Gran-Tourer-2015/kepek/05.webp",
+      "/geppark/BMW-216d-Gran-Tourer-2015/kepek/06.webp",
+      "/geppark/BMW-216d-Gran-Tourer-2015/kepek/07.webp"
+    ],
+    "leiras": "Letisztult, mélyfekete metálfényezésű BMW 216d Gran Tourer, a kompakt egyterűek egyik legpraktikusabb tagja. Rugalmas és rendkívül gazdaságos 1.5 literes dízelmotorral (85 kW / 116 LE), tágas, jól variálható utastérrel és nagy csomagtartóval. Ápolt, karcmentes karosszéria, tetősínek, ülésfűtés és modern multimédia jellemzi. Kiváló választás családoknak vagy sokat utazóknak, akiknek fontos a kompakt méret melletti belső tágasság. Érvényes magyar rendszámmal (AOQH-403) és rendben lévő magyar okmányokkal kerül értékesítésre."
+  },
+  {
+    "id": "bmw-x6-xdrive40d-2012",
+    "marka": "BMW",
+    "modell": "X6 xDrive40d",
+    "evjarat": 2012,
+    "ar": "5 000 000 Ft",
+    "futasteljesitmeny": "325 000 km",
+    "uzemanyag": "Dízel",
+    "images": [
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/fo.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/01.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/02.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/03.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/04.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/05.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/06.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/07.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/08.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/09.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/10.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/11.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/12.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/13.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/14.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/15.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/16.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/17.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/18.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/19.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/20.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/21.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/22.webp",
+      "/geppark/BMW-X6-xDrive40d-2012/kepek/23.webp"
+    ],
+    "leiras": "Lenyűgöző megjelenésű, mélyfekete BMW X6 xDrive40d, krómozott oldalsó lépcsőkkel, könnyűfém felnikkel és krémszínű, prémium bőrbelsővel. Erőteljes, 3.0 literes biturbó dízelmotorral (225 kW / 306 LE), precíz ZF nyolcfokozatú automataváltóval és állandó xDrive összkerékhajtással szerelve — igazi luxus-crossover, amely a terepjáró magabiztosságát ötvözi a sportkupé eleganciájával. Érvényes magyar rendszámmal (AORA-792) és rendezett magyar okmányokkal kerül átadásra."
+  },
+  {
+    "id": "subaru-xv-2012",
+    "marka": "Subaru",
+    "modell": "XV",
+    "evjarat": 2012,
+    "ar": "2 000 000 Ft",
+    "futasteljesitmeny": "237 170 km",
+    "uzemanyag": "Dízel",
+    "images": [
+      "/geppark/Subaru-XV-2012/kepek/fo.webp",
+      "/geppark/Subaru-XV-2012/kepek/01.webp",
+      "/geppark/Subaru-XV-2012/kepek/02.webp",
+      "/geppark/Subaru-XV-2012/kepek/03.webp",
+      "/geppark/Subaru-XV-2012/kepek/04.webp",
+      "/geppark/Subaru-XV-2012/kepek/05.webp",
+      "/geppark/Subaru-XV-2012/kepek/06.webp",
+      "/geppark/Subaru-XV-2012/kepek/07.webp",
+      "/geppark/Subaru-XV-2012/kepek/08.webp"
+    ],
+    "leiras": "Praktikus, ezüst színű Subaru XV crossover, a márkára jellemző szimmetrikus, állandó összkerékhajtással (Symmetrical AWD) és megbízható, gazdaságos 2.0 literes dízelmotorral (80 kW / 109 LE). Magasított terepjáró alapon, robusztus küszöb- és sárvédőidomokkal, könnyűfém felnikkel — kiváló választás mindenes, időjárástól független napi használatra. Garantált, leinformálható 237 170 km-es futásteljesítmény. Érvényes magyar rendszámmal (AOTM-241) és teljes, rendezett magyar okmányokkal, azonnal, várakozás nélkül elvihető."
   }
 ];
 

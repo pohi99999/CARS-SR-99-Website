@@ -78,6 +78,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                       src={image}
                       alt={`Jármű fotó ${index + 1}`}
                       fill
+                      sizes="(max-width: 1023px) 100vw, 50vw"
                       priority={index === 0}
                       placeholder="blur"
                       blurDataURL={blurDataUrl}
@@ -117,6 +118,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                   src={image}
                   alt=""
                   fill
+                  sizes="96px"
                   placeholder="blur"
                   blurDataURL={blurDataUrl}
                   className="object-cover"
@@ -157,6 +159,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                         src={image}
                         alt={`Nagyított jármű fotó ${index + 1}`}
                         fill
+                        sizes="100vw"
                         placeholder="blur"
                         blurDataURL={blurDataUrl}
                         className="object-contain"

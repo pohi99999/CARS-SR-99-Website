@@ -27,6 +27,7 @@ export default function CarCard({ car }: CarCardProps) {
             alt={`${car.marka} ${car.modell} - CARS SR99 Kft. Zalaegerszeg`}
             width={1200}
             height={800}
+            sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 25vw"
             placeholder="blur"
             blurDataURL={blurDataUrl}
             className="h-full w-full object-cover transition-transform duration-700 ease-out hover:scale-110"

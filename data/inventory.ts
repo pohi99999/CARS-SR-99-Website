@@ -180,26 +180,6 @@ export const inventory: Car[] = [
     "leiras": "Gyönyörű, újszerű esztétikai és műszaki állapotban lévő Skoda Octavia Combi kézi sebességváltóval. Kívül-belül karcmentes, szinte új autó benyomását kelti. 217 700 km-es futással, gazdaságos dízel hajtáslánccal. A vételár a magyarországi forgalomba helyezés és a friss műszaki vizsga költségeit már tartalmazza. Megtekinthető Zalaegerszegen."
   },
   {
-    "id": "bmw-216d-gran-tourer-2015",
-    "marka": "BMW",
-    "modell": "216d Gran Tourer",
-    "evjarat": 2015,
-    "ar": "3 000 000 Ft",
-    "futasteljesitmeny": "279 599 km",
-    "uzemanyag": "Dízel",
-    "images": [
-      "/geppark/BMW-216d-Gran-Tourer-2015/kepek/fo.webp",
-      "/geppark/BMW-216d-Gran-Tourer-2015/kepek/01.webp",
-      "/geppark/BMW-216d-Gran-Tourer-2015/kepek/02.webp",
-      "/geppark/BMW-216d-Gran-Tourer-2015/kepek/03.webp",
-      "/geppark/BMW-216d-Gran-Tourer-2015/kepek/04.webp",
-      "/geppark/BMW-216d-Gran-Tourer-2015/kepek/05.webp",
-      "/geppark/BMW-216d-Gran-Tourer-2015/kepek/06.webp",
-      "/geppark/BMW-216d-Gran-Tourer-2015/kepek/07.webp"
-    ],
-    "leiras": "Letisztult, mélyfekete metálfényezésű BMW 216d Gran Tourer, a kompakt egyterűek egyik legpraktikusabb tagja. Rugalmas és rendkívül gazdaságos 1.5 literes dízelmotorral (85 kW / 116 LE), tágas, jól variálható utastérrel és nagy csomagtartóval. Ápolt, karcmentes karosszéria, tetősínek, ülésfűtés és modern multimédia jellemzi. Garantált, leinformálható 279 599 km-es futásteljesítmény. Kiváló választás családoknak vagy sokat utazóknak, akiknek fontos a kompakt méret melletti belső tágasság. Érvényes magyar rendszámmal (AOQH-403), magyar forgalomba helyezve, rendben lévő magyar okmányokkal kerül értékesítésre."
-  },
-  {
     "id": "bmw-x6-xdrive40d-2012",
     "marka": "BMW",
     "modell": "X6 xDrive40d",

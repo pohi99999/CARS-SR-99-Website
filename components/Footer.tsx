@@ -72,6 +72,11 @@ export default function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/autoberles" className="transition-colors duration-200 hover:text-sky-400">
+                Autóbérlés
+              </Link>
+            </li>
+            <li>
               <Link href="/kapcsolat" className="transition-colors duration-200 hover:text-sky-400">
                 Kapcsolat
               </Link>

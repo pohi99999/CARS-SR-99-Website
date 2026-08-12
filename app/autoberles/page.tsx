@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { MessagesSquare, ClipboardCheck, KeyRound } from "lucide-react";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cars-sr99.com";
 
@@ -12,9 +13,57 @@ export const metadata: Metadata = {
   },
 };
 
+const steps = [
+  {
+    icon: MessagesSquare,
+    title: "Kapcsolatfelvétel",
+    description: "Jelezze bérlési igényét telefonon vagy a kapcsolati űrlapon.",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Egyeztetés",
+    description: "Közösen kialakítjuk az Önnek megfelelő időtartamot és napi díjat.",
+  },
+  {
+    icon: KeyRound,
+    title: "Átvétel",
+    description: "A ságodi telephelyünkön átveheti a kiválasztott, ellenőrzött állapotú autót.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Autóbérlés",
+  name: "CARS SR99 Autóbérlés",
+  description:
+    "Prémium kategóriás Toyota és Kia modellek bérlése Zalaegerszegen, egyedi megegyezés és napi díjas konstrukció alapján.",
+  provider: {
+    "@type": "AutoDealer",
+    name: "CARS SR99 Kft.",
+    telephone: "+36-70-907-0669",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Ságod hrsz. 807/15",
+      addressLocality: "Zalaegerszeg",
+      postalCode: "8900",
+      addressCountry: "HU",
+    },
+  },
+  areaServed: {
+    "@type": "City",
+    name: "Zalaegerszeg",
+  },
+  url: `${siteUrl}/autoberles`,
+};
+
 export default function CarRentalPage() {
   return (
-    <div className="relative w-full min-h-screen bg-[url('/hatter2.jpeg')] bg-cover bg-center bg-no-repeat py-12">
+    <div className="relative w-full min-h-screen bg-[url('/hero-poster.webp')] bg-cover bg-center bg-no-repeat py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Sötét gradiens overlay réteg elmosás nélkül */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#121212]/50 via-[#121212]/30 to-[#121212]/60 pointer-events-none" />
 
@@ -48,6 +97,32 @@ export default function CarRentalPage() {
                 A bérelhető autók ugyanabból a gondosan válogatott, ellenőrzött kártörténetű
                 kínálatból kerülnek ki, amelyet értékesítésre is kínálunk.
               </p>
+            </div>
+          </div>
+
+          <div className="mt-10">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
+              Hogyan működik?
+            </h2>
+            <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-3">
+              {steps.map((step, idx) => {
+                const IconComponent = step.icon;
+                return (
+                  <div
+                    key={step.title}
+                    className="relative rounded-xl border-t border-l border-r border-b border-t-white/15 border-l-white/10 border-r-white/5 border-b-white/5 bg-white/5 p-5"
+                  >
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-sky-500/10 text-sky-400">
+                      <IconComponent className="h-5 w-5" />
+                    </div>
+                    <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-sky-400">
+                      {idx + 1}. lépés
+                    </p>
+                    <h3 className="mt-1 font-semibold text-white">{step.title}</h3>
+                    <p className="mt-1.5 text-sm leading-6 text-slate-300">{step.description}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
 

@@ -7,6 +7,7 @@ import ImageGallery from "@/components/ImageGallery";
 import LeasingCalculator from "@/components/LeasingCalculator";
 import PdfBrochureButton from "@/components/PdfBrochureButton";
 import Vehicle360Viewer from "@/components/Vehicle360Viewer";
+import VehicleViewTracker from "@/components/VehicleViewTracker";
 import { parsePriceToNumber } from "@/data/inventory";
 import { getCarByIdAsync } from "@/services/inventoryService";
 
@@ -127,6 +128,13 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
   return (
     <section className="mx-auto w-full max-w-7xl px-6 py-12 sm:px-6 lg:px-8 overflow-hidden">
       <FomoNotification />
+      <VehicleViewTracker
+        carId={car.id}
+        marka={car.marka}
+        modell={car.modell}
+        evjarat={car.evjarat}
+        price={numericPrice}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -193,7 +201,7 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
           <Vehicle360Viewer imageUrl={car.images[0]} carName={carName} />
 
           <Link
-            href={`/kapcsolat?car=${encodeURIComponent(`${car.marka} ${car.modell}`)}`}
+            href={`/kapcsolat?car=${encodeURIComponent(`${car.marka} ${car.modell}`)}&carId=${encodeURIComponent(car.id)}`}
             className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_0_24px_rgba(56,189,248,0.35)] transition-all duration-300 hover:bg-sky-400 hover:shadow-[0_0_32px_rgba(56,189,248,0.55)] btn-shimmer hover:scale-[1.02] active:scale-[0.98] transition-transform"
           >
             Kapcsolatfelvétel & Tesztvezetés

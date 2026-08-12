@@ -6,7 +6,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cars-sr99.com";
 
 export const metadata: Metadata = {
   title: "Kínálatunk",
-  description: "Fedezze fel a CARS SR99 Kft. teljes, JSZP-ellenőrzött Toyota és Kia kínálatát Zalaegerszegen!",
+  description: "Fedezze fel a CARS SR99 Kft. teljes, JSZP-ellenőrzött prémium autókínálatát Zalaegerszegen!",
   alternates: {
     canonical: `${siteUrl}/kinalat`,
   },

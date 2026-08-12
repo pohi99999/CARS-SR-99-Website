@@ -226,7 +226,7 @@ export default function CarFilter({ initialMarka, initialUzemanyag, initialMaxPr
             <p className="mt-1.5 text-xs text-slate-400">
               {voiceSupported
                 ? isListening
-                  ? "Hallgatás... mondja ki a márkát (pl. Toyota)."
+                  ? "Hallgatás... mondja ki a márkát (pl. BMW)."
                   : "Tipp: kattintson a mikrofonra a hangalapú kereséshez."
                 : "Hangalapú keresés ezen az eszköszön nem elérhető."}
             </p>

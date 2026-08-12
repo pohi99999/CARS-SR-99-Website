@@ -50,8 +50,10 @@ export default function ContactForm() {
 
     try {
       // 1. Fire GA4 & Meta Pixel Lead event
+      const carId = searchParams.get("carId");
       trackFormSubmission("kapcsolat", {
         car_interest: submissionData.carInterest,
+        ...(carId ? { content_type: "vehicle", content_ids: [carId] } : {}),
       });
 
       // 2. Parallel Lead Webhook call (with automatic retry)

@@ -111,7 +111,7 @@ export default function TradeInForm() {
               name="brand"
               type="text"
               required
-              placeholder="pl. Toyota"
+              placeholder="pl. BMW"
               value={formData.brand}
               onChange={(event) => setField("brand", event.target.value)}
               className="w-full rounded-xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-400/30"

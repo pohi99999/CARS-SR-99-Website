@@ -37,7 +37,7 @@ const jsonLd = {
   serviceType: "Autóbérlés",
   name: "CARS SR99 Autóbérlés",
   description:
-    "Prémium kategóriás Toyota és Kia modellek bérlése Zalaegerszegen, egyedi megegyezés és napi díjas konstrukció alapján.",
+    "Prémium kategóriás autók bérlése Zalaegerszegen a CARS SR99 Kft. válogatott kínálatából, egyedi megegyezés és napi díjas konstrukció alapján.",
   provider: {
     "@type": "AutoDealer",
     name: "CARS SR99 Kft.",
@@ -76,10 +76,10 @@ export default function CarRentalPage() {
             Prémium autók bérlése Zalaegerszegen
           </h1>
           <p className="mt-6 leading-7 text-slate-300">
-            A CARS SR99 Kft. kínálatában szereplő prémium kategóriás Toyota és Kia modellek egyedi
-            megegyezés alapján, napi díjas konstrukcióban is bérelhetők. Legyen szó üzleti útról,
-            különleges alkalomról vagy átmeneti autóigényről, kollégáink rugalmas feltételekkel és
-            személyre szabott ajánlattal állnak rendelkezésére.
+            A CARS SR99 Kft. válogatott kínálatában szereplő prémium autók egyedi megegyezés
+            alapján, napi díjas konstrukcióban is bérelhetők. Legyen szó üzleti útról, különleges
+            alkalomról vagy átmeneti autóigényről, kollégáink rugalmas feltételekkel és személyre
+            szabott ajánlattal állnak rendelkezésére.
           </p>
 
           <div className="mt-8 space-y-4 text-sm text-slate-300">

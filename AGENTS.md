@@ -38,6 +38,7 @@ A weboldal feladata a CARS SR99 Kft. (Zalaegerszeg) megbízható, értékesítet
   - Cyan glow hover effektusok (`hover:shadow-[0_24px_55px_rgba(34,211,238,0.22)]`).
 - **Sötét Üveghatási Dizájn Az Összes Aloldalon:**
   - `/autobeszamitas` & [TradeInForm.tsx](file:///Z:/001_Workspace/CARS%20SR99%20KFT/CARS%20SR99%20KFT%20-%20Weboldal/components/TradeInForm.tsx): Sötét üvegkártyás űrlap, reszponzív mezőkkel.
+  - `/autoberles` (`app/autoberles/page.tsx`): Új aloldal a kínálatban szereplő autók egyedi megegyezés/napi díj alapú bérléséhez. Hero szekció, glass kártyás leírás, CTA gombok a `/kinalat` és `/kapcsolat` oldalakra. Saját `metadata` export (title/description), felvéve a `Header.tsx` főmenübe és a `sitemap.ts`-be.
   - `/kapcsolat` & [ContactForm.tsx](file:///Z:/001_Workspace/CARS%20SR99%20KFT/CARS%20SR99%20KFT%20-%20Weboldal/components/ContactForm.tsx): Bizalomépítő 24 órás garantált válaszidővel.
   - `/garancia` & `/osszehasonlitas`: Zökkenőmentes összehasonlító dock LocalStorage állapottal.
   - `/kinalat/[id]`: Jármű adatlap 360°-os forgatható nézegetővel (touch pointer capture támogatással) és lízing kalkulátorral (`LeasingCalculator.tsx`).

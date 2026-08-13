@@ -43,6 +43,16 @@ A weboldal feladata a CARS SR99 Kft. (Zalaegerszeg) megbízható, értékesítet
   - `/garancia` & `/osszehasonlitas`: Zökkenőmentes összehasonlító dock LocalStorage állapottal.
   - `/kinalat/[id]`: Jármű adatlap 360°-os forgatható nézegetővel (touch pointer capture támogatással) és lízing kalkulátorral (`LeasingCalculator.tsx`).
 
+### 🛞 Kerékcsere & Gumicsere Szolgáltatás (Új Tevékenység, 2026.08.13)
+- **Cél:** A CARS SR99 Kft. új beruházású kerék- és gumiszerviz eszközparkkal bővíti szolgáltatásait. Az engedélyeztetés lezárásáig (~1 hét) az oldal **"Hamarosan indul"** jelzéssel él, hogy a Google mielőbb indexelje a "kerékcsere Zalaegerszeg" / "gumicsere Zalaegerszeg" kulcsszavakat.
+- **`/kerekcsere` aloldal** (`app/kerekcsere/page.tsx`): Az `/autoberles` mintáját követő glass-card hero, "Hamarosan indul" badge, 4 szolgáltatáskártya (szezonális gumicsere, kiegyensúlyozás, defektjavítás, gumihotel), 3 lépéses "Hogyan fog működni?" folyamatábra, Service JSON-LD schema, egyedi OpenGraph metaadatok. CTA-k: "Érdeklődöm / Értesítést kérek" (`/kapcsolat`) és követett telefonhívás gomb (`components/KerekcsereCTAButtons.tsx`, `trackContactClick("phone")`).
+- **Főoldali kiemelő** (`components/TireChangeTeaser.tsx`): A `CarRentalTeaser.tsx` mintájára, "Hamarosan" jelvénnyel, a főoldalon az Autóbérlés kiemelő után.
+- **Menü, lábléc, sitemap, SEO kulcsszavak:** Felvéve a `Header.tsx` főmenübe és a `Footer.tsx` "Gyors linkek" listájába, `app/sitemap.ts`-be (`priority: 0.8`, `weekly`), valamint a globális `app/layout.tsx` `keywords` tömbjébe.
+- **Header reszponzivitás javítás:** A 6. menüelem hozzáadásakor a desktop navigáció 768px-en (tablet) csonkolódott — a töréspont `md:` → `lg:`-re módosítva (`Header.tsx`, hamburger gomb + desktop nav + mobil lenyíló egyaránt).
+- **Google Search Console:** `/kerekcsere` URL indexelése manuálisan kérve, sitemap regisztrálva (`cars-sr99.com` domain property).
+- **Google Cégprofil:** "Kerékcsere és gumicsere" egyéni szolgáltatás felvéve az Autókereskedés kategória alá (Google felülvizsgálatra vár).
+- **Későbbi teendő:** kb. 1 hét múlva, az engedélyek megérkezésekor a "Hamarosan indul" szövegezés frissítése élő szolgáltatásra (4 helyen: hero badge, szekciócím, CTA szöveg, főoldali teaser badge) — lásd `docs/superpowers/specs/2026-08-13-kerekcsere-service-page-design.md` 6. szakasz.
+
 ### ⚡ Audit & Teljesítmény Optimalizálás
 - **Szerver Oldali Késleltetések Eltávolítása:** Eltávolítva a mesterséges 800 ms-os várakoztatás az `inventoryService.ts`-ből. A statikus oldalak generálása **2.2s-ról 634ms-ra gyorsult (3.5x gyorsulás)**.
 - **AI Chat Assistant (`components/AIChatAssistant.tsx`):** Bekötve az üzenetkezelés, autógörgetés és automatikus válaszok (kínálat, beszámítás, nyitvatartás).
@@ -96,3 +106,4 @@ A felületen a következők vannak felkészítve:
 - `525045e` - `feat: wire form events and tracking into components`
 - `59dbd80` - `fix: move HubSpot submission to secure server-side API route`
 - `design: implement Premium Automotive Aesthetics and micro-interactions` - Kivezetve az összes cyan és yellow szín, megvalósítva az új Electric Blue dizájnpaletta, aszimmetrikus gyémánt-vágott üveghatású kártya szegélyek és belső árnyékok, ciklikus shimmer fénycsík gombanimációk és finomított tracking-tight tipográfia.
+- `31c5fd3`…`58ea24f` (2026.08.13) - Kerékcsere & Gumicsere szolgáltatás: új `/kerekcsere` aloldal, `TireChangeTeaser` főoldali kiemelő, menü/lábléc/sitemap/SEO kulcsszó bővítés, header töréspont javítás, telefon CTA analitikai követés, egyedi OpenGraph metaadatok. Terv és design spec: `docs/superpowers/specs/2026-08-13-kerekcsere-service-page-design.md`, `docs/superpowers/plans/2026-08-13-kerekcsere-service-page.md`.

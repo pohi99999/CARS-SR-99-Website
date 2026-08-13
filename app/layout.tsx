@@ -44,6 +44,9 @@ export const metadata: Metadata = {
     "autó lízing",
     "autóbeszámítás Zalaegerszeg",
     "prémium autók",
+    "kerékcsere Zalaegerszeg",
+    "gumicsere Zalaegerszeg",
+    "gumiszerviz Zalaegerszeg",
   ],
   verification: {
     google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,

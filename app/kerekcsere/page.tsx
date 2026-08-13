@@ -1,15 +1,32 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { RefreshCw, Gauge, Wrench, Warehouse, CalendarClock, CheckCircle2, Clock } from "lucide-react";
+import KerekcsereCTAButtons from "@/components/KerekcsereCTAButtons";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cars-sr99.com";
 
 export const metadata: Metadata = {
-  title: "Kerékcsere és Gumicsere Zalaegerszeg | CARS SR99 Kft.",
+  title: "Kerékcsere és Gumicsere Zalaegerszeg",
   description:
     "Hamarosan induló kerékcsere és gumicsere szolgáltatásunk Zalaegerszegen: szezonális gumicsere, kiegyensúlyozás, defektjavítás és gumihotel a CARS SR99 Kft. ságodi telephelyén.",
   alternates: {
     canonical: `${siteUrl}/kerekcsere`,
+  },
+  openGraph: {
+    title: "Kerékcsere és Gumicsere Zalaegerszeg | CARS SR99 Kft.",
+    description:
+      "Hamarosan induló kerékcsere és gumicsere szolgáltatásunk Zalaegerszegen: szezonális gumicsere, kiegyensúlyozás, defektjavítás és gumihotel a CARS SR99 Kft. ságodi telephelyén.",
+    url: `${siteUrl}/kerekcsere`,
+    siteName: "CARS SR99 Kft.",
+    locale: "hu_HU",
+    type: "website",
+    images: [
+      {
+        url: `${siteUrl}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: "CARS SR99 Kft. - Kerékcsere és Gumicsere",
+      },
+    ],
   },
 };
 
@@ -177,20 +194,7 @@ export default function KerekcserePage() {
             </div>
           </div>
 
-          <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/kapcsolat"
-              className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-sky-500 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_0_24px_rgba(56,189,248,0.35)] transition-all duration-300 ease-in-out hover:bg-sky-400 hover:shadow-[0_0_32px_rgba(56,189,248,0.55)] btn-shimmer hover:scale-[1.02] active:scale-[0.98]"
-            >
-              Érdeklődöm / Értesítést kérek →
-            </Link>
-            <a
-              href="tel:+36709070669"
-              className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border-2 border-sky-400 px-7 py-3.5 text-sm font-semibold text-sky-400 transition-all duration-300 ease-in-out hover:bg-sky-400/10 hover:shadow-[0_0_20px_rgba(56,189,248,0.2)] btn-shimmer hover:scale-[1.02] active:scale-[0.98]"
-            >
-              Hívjon minket: +36 70 907-0669
-            </a>
-          </div>
+          <KerekcsereCTAButtons />
         </div>
       </section>
     </div>

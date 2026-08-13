@@ -52,7 +52,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-3 text-white hover:text-sky-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 md:hidden"
+          className="inline-flex items-center justify-center rounded-md p-3 text-white hover:text-sky-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 lg:hidden"
           aria-label="Navigációs menü megnyitása és bezárása"
           aria-expanded={isOpen}
           onClick={() => setIsOpen((prev) => !prev)}
@@ -78,7 +78,7 @@ export default function Header() {
           </svg>
         </button>
 
-        <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
+        <nav className="hidden items-center gap-6 text-sm font-medium lg:flex">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -98,7 +98,7 @@ export default function Header() {
       </div>
 
       {isOpen && (
-        <nav className="border-t border-white/10 px-6 pb-4 md:hidden sm:px-6 bg-black/60 backdrop-blur-md border-b border-white/10">
+        <nav className="border-t border-white/10 px-6 pb-4 lg:hidden sm:px-6 bg-black/60 backdrop-blur-md border-b border-white/10">
           <div className="flex flex-col gap-3 pt-4 text-sm font-medium">
             {navItems.map((item) => {
               const isActive = pathname === item.href;

@@ -50,8 +50,10 @@ function inferBodyStyle(modell: string): string {
   return "SEDAN";
 }
 
-// Best-effort color detection from the free-text description (required field, no color data in inventory.ts yet).
-function inferExteriorColor(leiras: string | undefined): string {
+// Prefers the structured `szin` field (sourced from the per-car adatlap.md) when known;
+// falls back to best-effort keyword detection in the free-text description otherwise.
+function inferExteriorColor(szin: string | undefined, leiras: string | undefined): string {
+  if (szin && szin.trim()) return szin.trim();
   const text = (leiras ?? "").toLowerCase();
   if (text.includes("mélykék") || text.includes("kék")) return "Kék";
   if (text.includes("fehér")) return "Fehér";
@@ -69,9 +71,13 @@ function inferTransmission(modell: string, leiras: string | undefined): string {
   return "Automatic";
 }
 
+// Meta Automotive Inventory Ads drivetrain enum: 4X2, 4X4, AWD, FWD, RWD, Other.
+// xDrive/quattro are marketed as always-on AWD systems; "4WD" denotes a distinct
+// (typically switchable, transfer-case based) system and maps to 4X4 instead.
 function inferDrivetrain(modell: string, leiras: string | undefined): string | null {
   const text = `${modell} ${leiras ?? ""}`.toLowerCase();
-  if (text.includes("xdrive") || text.includes("awd") || text.includes("4wd") || text.includes("quattro")) return "AWD";
+  if (text.includes("xdrive") || text.includes("awd") || text.includes("quattro")) return "AWD";
+  if (text.includes("4wd") || text.includes("4x4")) return "4X4";
   return null;
 }
 
@@ -110,7 +116,7 @@ ${imageTags}
     <transmission>${inferTransmission(car.modell, car.leiras)}</transmission>
 ${drivetrain ? `    <drivetrain>${drivetrain}</drivetrain>` : ""}
     <price>${priceValue !== null ? priceValue : 0} HUF</price>
-    <exterior_color>${escapeXml(inferExteriorColor(car.leiras))}</exterior_color>
+    <exterior_color>${escapeXml(inferExteriorColor(car.szin, car.leiras))}</exterior_color>
     <state_of_vehicle>Used</state_of_vehicle>
     <availability>available</availability>
     <vehicle_type>car_truck</vehicle_type>
@@ -129,7 +135,14 @@ ${drivetrain ? `    <drivetrain>${drivetrain}</drivetrain>` : ""}
 export async function GET() {
   const inventory = await fetchInventory();
 
-  const listings = inventory.map(buildListingXml).join("\n");
+  // price and image[0] are required fields for Meta Automotive Inventory Ads —
+  // skip listings that can't satisfy them rather than emitting misleading data
+  // (e.g. a fabricated "0 HUF" price for a future "Kérjen ajánlatot" car).
+  const listable = inventory.filter(
+    (car) => parseNumber(car.ar) !== null && car.images.length > 0
+  );
+
+  const listings = listable.map(buildListingXml).join("\n");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <listings>

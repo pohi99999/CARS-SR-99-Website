@@ -8,6 +8,8 @@ export interface Car {
   uzemanyag: string;
   images: string[];
   leiras?: string;
+  /** Karosszéria színe (forgalmi/adatlap alapján), ha ismert. Ld. public/geppark/{id}/adatlap.md. */
+  szin?: string;
 }
 
 export const inventory: Car[] = [
@@ -65,6 +67,7 @@ export const inventory: Car[] = [
     "ar": "7 600 000 Ft",
     "futasteljesitmeny": "154 000 km",
     "uzemanyag": "Dízel",
+    "szin": "Fekete",
     "images": [
       "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/fo.webp",
       "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/744274759_1593426068810512_62443435036008230_n.webp",

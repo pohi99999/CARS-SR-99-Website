@@ -50,6 +50,9 @@ export const metadata: Metadata = {
   ],
   verification: {
     google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
+    other: {
+      "facebook-domain-verification": "5kz83ci65r1i338w8p5o3hzkgh415o",
+    },
   },
   alternates: {
     canonical: baseUrl,

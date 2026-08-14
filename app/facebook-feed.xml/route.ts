@@ -45,7 +45,7 @@ function toFuelType(uzemanyag: string): string {
 function inferBodyStyle(modell: string): string {
   const normalized = modell.toLowerCase();
   if (normalized.includes("touring") || normalized.includes("avant") || normalized.includes("combi") || normalized.includes("kombi")) return "WAGON";
-  if (normalized.includes("spacetourer") || normalized.includes("alhambra")) return "MINIVAN";
+  if (normalized.includes("spacetourer") || normalized.includes("alhambra") || normalized.includes("verso")) return "MINIVAN";
   if (normalized.includes("f-pace") || normalized.includes("x6") || normalized.includes("kuga") || normalized.includes("xv")) return "SUV";
   return "SEDAN";
 }

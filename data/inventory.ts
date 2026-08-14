@@ -263,6 +263,30 @@ export const inventory: Car[] = [
       "/geppark/BMW-F11-530d-xDrive-2011-zold/kepek/c9c55166-6d09-401c-badc-3944ee285fc7.webp"
     ],
     "leiras": "Ritkaságszámba menő, zöld metálfényezésű BMW 530d xDrive Touring (F11), a sorozat legerősebb és legjobban felszerelt dízel-összkerekes változata. Erőteljes, 3.0 literes dízelmotorral (190 kW / 258 LE) és állandó xDrive összkerékhajtással szerelve, amely minden évszakban biztos tapadást és magabiztos vezetést garantál. 249 000 km-es futásteljesítmény. Érvényes magyar rendszámmal (AORA-931), magyar forgalomba helyezve, rendben lévő magyar okmányokkal kerül értékesítésre."
+  },
+  {
+    "id": "toyota-corolla-verso-2006",
+    "marka": "Toyota",
+    "modell": "Corolla Verso (7 személyes)",
+    "evjarat": 2006,
+    "ar": "1 000 000 Ft",
+    "futasteljesitmeny": "307 000 km",
+    "uzemanyag": "Benzin",
+    "szin": "Fekete",
+    "images": [
+      "/geppark/Toyota-Corolla-Verso-2006/kepek/fo.webp",
+      "/geppark/Toyota-Corolla-Verso-2006/kepek/72e91290-7bc5-4f09-b4d8-e1eca833cde6.webp",
+      "/geppark/Toyota-Corolla-Verso-2006/kepek/9798a9c5-ae3c-4fe1-bf19-22ec6f9e28ac.webp",
+      "/geppark/Toyota-Corolla-Verso-2006/kepek/abc21677-33df-4c5e-b512-5bb457410fb8.webp",
+      "/geppark/Toyota-Corolla-Verso-2006/kepek/b40df4a0-8021-42b8-b2a7-75916d0b7cfb.webp",
+      "/geppark/Toyota-Corolla-Verso-2006/kepek/b6a1b31b-0b6e-4ec7-8d05-794331bcf1d5.webp",
+      "/geppark/Toyota-Corolla-Verso-2006/kepek/b7572f01-c496-4aa2-be8f-f2f3e71b9df9.webp",
+      "/geppark/Toyota-Corolla-Verso-2006/kepek/c2f91325-e9d0-40f3-9a97-4d9b54d97755.webp",
+      "/geppark/Toyota-Corolla-Verso-2006/kepek/cc344956-1e89-4e5d-a42f-2ed4ffc98ed5.webp",
+      "/geppark/Toyota-Corolla-Verso-2006/kepek/d4c63007-5fd7-4768-9f8c-b52fc1d12033.webp",
+      "/geppark/Toyota-Corolla-Verso-2006/kepek/d8de9615-fc48-42d1-8db8-baf8e58f3672.webp"
+    ],
+    "leiras": "Praktikus, fekete Toyota Corolla Verso, amely 7 üléssel kínál helyet nagycsaládosoknak vagy céges flottába egyaránt. Megbízható, 1.8 literes benzinmotorral (95 kW / 129 LE) és kényelmes automataváltóval szerelve. Tetősínekkel, könnyűfém felnikkel és vonóhoroggal felszerelve, tágas és rugalmasan alakítható utastérrel. 307 000 km-es futásteljesítmény. Érvényes magyar rendszámmal (NXW-409) és rendezett magyar okmányokkal, azonnal, várakozás nélkül elvihető."
   }
 ];
 

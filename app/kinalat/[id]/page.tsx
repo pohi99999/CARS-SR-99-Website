@@ -23,11 +23,11 @@ export async function generateMetadata({ params }: CarDetailsPageProps): Promise
   const { id } = await params;
   const car = await getCarByIdAsync(id);
 
+  // Fontos: itt is notFound()-ot hívunk, nem csak a page komponensben.
+  // Ha csak ott tennénk, a Next.js már elküldené a 200-as státuszt a metaadatokkal
+  // együtt, és a Google "soft 404"-ként értékelné a már eladott járművek oldalát.
   if (!car) {
-    return {
-      title: "Jármű nem található",
-      description: "A keresett jármű nem érhető el a CARS SR99 Kft. kínálatában.",
-    };
+    notFound();
   }
 
   const carName = `${car.marka} ${car.modell}`;

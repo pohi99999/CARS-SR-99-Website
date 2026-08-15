@@ -30,6 +30,7 @@ export default function TrackingScripts() {
   }, []);
 
   const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "2450407318783573";
+  const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-2YGHS313GC";
 
   if (consent !== "accepted") {
     // GDPR ENFORCEMENT: Do NOT load any tracking script unless explicit consent is given
@@ -38,6 +39,25 @@ export default function TrackingScripts() {
 
   return (
     <>
+      {/* Google Analytics 4 */}
+      {gaMeasurementId ? (
+        <>
+          <Script
+            id="ga4-src"
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+          />
+          <Script id="ga4-init" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${gaMeasurementId}');
+            `}
+          </Script>
+        </>
+      ) : null}
+
       {/* Meta (Facebook) Pixel */}
       {pixelId ? (
         <>

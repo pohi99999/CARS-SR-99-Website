@@ -30,7 +30,7 @@ export default async function KinalatPage() {
       <div className="mx-auto mb-6 w-full max-w-7xl px-6 sm:px-6 lg:px-8">
         <p className="text-sm font-extralight uppercase tracking-[0.25em] text-sky-400">Kínálatunk</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-100 sm:text-4xl">
-          Teljes gépjármű kínálat
+          Használt autók Zalaegerszegen
         </h1>
         <p className="mt-3 max-w-2xl text-sm text-slate-300">
           Böngéssze a CARS SR99 Kft. ellenőrzött, prémium használt autóinak teljes választékát.

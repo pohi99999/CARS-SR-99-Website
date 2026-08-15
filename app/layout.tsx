@@ -126,20 +126,11 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${montserrat.variable} h-full antialiased max-w-full overflow-x-hidden`}
     >
-      <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2YGHS313GC" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'G-2YGHS313GC');
-            `,
-          }}
-        />
-      </head>
+      {/*
+        A Google Analytics és a Meta Pixel betöltése szándékosan NEM itt történik.
+        GDPR: minden mérőkód a <TrackingScripts /> komponensben él, amely csak
+        a süti banner kifejezett elfogadása után tölti be őket.
+      */}
       <body className={`${inter.className} relative flex min-h-full flex-col bg-transparent text-foreground max-w-full overflow-x-hidden`}>
         <TrackingScripts />
         <script

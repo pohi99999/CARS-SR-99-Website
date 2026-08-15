@@ -54,6 +54,12 @@ export async function generateMetadata({ params }: CarDetailsPageProps): Promise
         },
       ],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: socialTitle,
+      description,
+      images: [`${baseUrl}${car.images[0]}`],
+    },
   };
 }
 
@@ -157,8 +163,12 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
         <ImageGallery images={car.images} />
 
         <div className="rounded-2xl border-t border-l border-r border-b border-t-white/20 border-l-white/10 border-r-white/5 border-b-white/5 bg-black/40 p-6 shadow-[0_20px_45px_rgba(2,8,23,0.45),inset_0_1px_1px_rgba(255,255,255,0.1)] backdrop-blur-lg dark:bg-white/5 sm:p-8">
-          <p className="text-sm font-extralight uppercase tracking-[0.25em] text-sky-400">{car.marka}</p>
-          <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-100">{car.modell}</h1>
+          <p className="text-sm font-extralight uppercase tracking-[0.25em] text-sky-400">
+            Eladó · Zalaegerszeg
+          </p>
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-100">
+            {car.marka} {car.modell}
+          </h1>
           <p className="mt-3 text-3xl font-extrabold text-sky-400">{car.ar}</p>
 
           <dl className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">

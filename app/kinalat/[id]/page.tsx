@@ -9,7 +9,7 @@ import PdfBrochureButton from "@/components/PdfBrochureButton";
 import Vehicle360Viewer from "@/components/Vehicle360Viewer";
 import VehicleViewTracker from "@/components/VehicleViewTracker";
 import { parsePriceToNumber } from "@/data/inventory";
-import { getCarByIdAsync } from "@/services/inventoryService";
+import { fetchInventory, getCarByIdAsync } from "@/services/inventoryService";
 
 type CarDetailsPageProps = {
   params: Promise<{
@@ -18,6 +18,17 @@ type CarDetailsPageProps = {
 };
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cars-sr99.com";
+
+// A kínálatban szereplő járművek oldalai előre, statikusan generálódnak.
+// A dynamicParams = false miatt minden más azonosító valódi 404-et kap –
+// enélkül a már eladott autók URL-jei 200-as státusszal válaszolnának, amit a
+// Google soft 404-ként büntet. Mellékhatásként az adatlapok gyorsabbak is.
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const cars = await fetchInventory();
+  return cars.map((car) => ({ id: car.id }));
+}
 
 export async function generateMetadata({ params }: CarDetailsPageProps): Promise<Metadata> {
   const { id } = await params;

@@ -5,11 +5,20 @@ import { MessagesSquare, ClipboardCheck, KeyRound } from "lucide-react";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cars-sr99.com";
 
 export const metadata: Metadata = {
-  title: "Autóbérlés Zalaegerszeg | Prémium autók bérbeadása - CARS SR99",
+  title: "Autóbérlés Zalaegerszeg | Prémium autók bérbeadása",
   description:
     "Prémium kategóriás autók bérlése Zalaegerszegen a CARS SR99 Kft.-től. Rugalmas feltételek, napi díjas konstrukciók megegyezés szerint. Tekintse meg kínálatunkat!",
   alternates: {
     canonical: `${siteUrl}/autoberles`,
+  },
+  openGraph: {
+    title: "Autóbérlés Zalaegerszeg | Prémium autók bérbeadása - CARS SR99 Kft.",
+    description:
+      "Prémium kategóriás autók bérlése Zalaegerszegen a CARS SR99 Kft.-től. Rugalmas feltételek, napi díjas konstrukciók megegyezés szerint. Tekintse meg kínálatunkat!",
+    url: `${siteUrl}/autoberles`,
+    siteName: "CARS SR99 Kft.",
+    locale: "hu_HU",
+    type: "website",
   },
 };
 

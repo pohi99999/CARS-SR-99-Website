@@ -5,10 +5,20 @@ import { fetchInventory } from "@/services/inventoryService";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cars-sr99.com";
 
 export const metadata: Metadata = {
-  title: "Kínálatunk",
-  description: "Fedezze fel a CARS SR99 Kft. teljes, JSZP-ellenőrzött prémium autókínálatát Zalaegerszegen!",
+  title: "Használt autók Zalaegerszegen – Teljes kínálat",
+  description:
+    "Eladó használt autók Zalaegerszegen: BMW, Audi, Skoda, Toyota és további JSZP-ellenőrzött járművek a CARS SR99 Kft. kínálatában. Beszámítás és lízing ügyintézés helyben.",
   alternates: {
     canonical: `${siteUrl}/kinalat`,
+  },
+  openGraph: {
+    title: "Használt autók Zalaegerszegen – CARS SR99 Kft. kínálata",
+    description:
+      "Eladó használt autók Zalaegerszegen: BMW, Audi, Skoda, Toyota és további JSZP-ellenőrzött járművek a CARS SR99 Kft. kínálatában.",
+    url: `${siteUrl}/kinalat`,
+    siteName: "CARS SR99 Kft.",
+    locale: "hu_HU",
+    type: "website",
   },
 };
 

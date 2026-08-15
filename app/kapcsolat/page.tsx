@@ -6,7 +6,7 @@ import { Clock, ShieldCheck, MapPin, Phone, Mail } from "lucide-react";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cars-sr99.com";
 
 export const metadata: Metadata = {
-  title: "Kapcsolat",
+  title: "Kapcsolat – Autókereskedés Zalaegerszeg",
   description: "Lépjen kapcsolatba a CARS SR99 Kft. csapatával! Telephelyünk Zalaegerszeg Ságod hrsz. 807/15 alatt található.",
   alternates: {
     canonical: `${siteUrl}/kapcsolat`,

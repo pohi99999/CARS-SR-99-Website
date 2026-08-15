@@ -4,7 +4,7 @@ import TradeInForm from "@/components/TradeInForm";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cars-sr99.com";
 
 export const metadata: Metadata = {
-  title: "Autóbeszámítás",
+  title: "Autóbeszámítás Zalaegerszeg – Autófelvásárlás",
   description: "Kényelmes, gyors és korrekt autóbeszámítás Zalaegerszegen. Kérjen előzetes értékbecslést a CARS SR99 Kft.-től!",
   alternates: {
     canonical: `${siteUrl}/autobeszamitas`,

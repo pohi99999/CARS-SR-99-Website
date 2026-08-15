@@ -31,7 +31,8 @@ export async function generateMetadata({ params }: CarDetailsPageProps): Promise
   }
 
   const carName = `${car.marka} ${car.modell}`;
-  const title = `Eladó ${carName} - CARS SR99 Kft.`;
+  const title = `Eladó ${carName} – Zalaegerszeg`;
+  const socialTitle = `Eladó ${carName} – Zalaegerszeg | CARS SR99 Kft.`;
   const description = `${car.evjarat}-es ${carName}, ${car.futasteljesitmeny} futásteljesítménnyel, ${car.uzemanyag} hajtással. JSZP ellenőrzött jármű a CARS SR99 Kft. kínálatában Zalaegerszegen.`;
   const pageUrl = `${baseUrl}/kinalat/${car.id}`;
 
@@ -42,7 +43,7 @@ export async function generateMetadata({ params }: CarDetailsPageProps): Promise
       canonical: pageUrl,
     },
     openGraph: {
-      title,
+      title: socialTitle,
       description,
       url: pageUrl,
       type: "article",

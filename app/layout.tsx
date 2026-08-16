@@ -158,6 +158,10 @@ const jsonLdSchema = {
       },
     ],
   },
+  // Ennek egyeznie kell a Google Cégprofillal és a Kapcsolat oldallal – az eltérő
+  // nyitvatartás gyengíti a Google bizalmát a cégadatokban. A szombati, előre
+  // egyeztetett fogadás szándékosan nem szerepel itt: a strukturált adat csak a
+  // fix nyitvatartást hirdetheti, különben olyan időpontot ígérne, amit nem tartunk.
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",

@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import ContactForm from "@/components/ContactForm";
 import { Clock, ShieldCheck, MapPin, Phone, Mail } from "lucide-react";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cars-sr99.com";
+import { siteUrl } from "@/utils/site";
 
 export const metadata: Metadata = {
   title: "Kapcsolat – Autókereskedés Zalaegerszeg",

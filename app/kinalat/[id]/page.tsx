@@ -6,10 +6,12 @@ import FomoNotification from "@/components/FomoNotification";
 import ImageGallery from "@/components/ImageGallery";
 import LeasingCalculator from "@/components/LeasingCalculator";
 import PdfBrochureButton from "@/components/PdfBrochureButton";
+import RelatedCars from "@/components/RelatedCars";
 import Vehicle360Viewer from "@/components/Vehicle360Viewer";
 import VehicleViewTracker from "@/components/VehicleViewTracker";
-import { parsePriceToNumber } from "@/data/inventory";
+import { parseMileageToNumber, parsePriceToNumber } from "@/data/inventory";
 import { fetchInventory, getCarByIdAsync } from "@/services/inventoryService";
+import { absoluteUrl, businessId, siteUrl } from "@/utils/site";
 
 type CarDetailsPageProps = {
   params: Promise<{
@@ -17,7 +19,7 @@ type CarDetailsPageProps = {
   }>;
 };
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cars-sr99.com";
+const baseUrl = siteUrl;
 
 // A kínálatban szereplő járművek oldalai előre, statikusan generálódnak.
 // A dynamicParams = false miatt minden más azonosító valódi 404-et kap –
@@ -76,7 +78,7 @@ export async function generateMetadata({ params }: CarDetailsPageProps): Promise
 
 export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
   const { id } = await params;
-  const car = await getCarByIdAsync(id);
+  const [car, inventory] = await Promise.all([getCarByIdAsync(id), fetchInventory()]);
 
   if (!car) {
     notFound();
@@ -85,18 +87,46 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
   const numericPrice = parsePriceToNumber(car.ar);
   const carName = `${car.marka} ${car.modell}`;
   const carDescription = `${car.evjarat}-es ${carName}, ${car.futasteljesitmeny} futásteljesítménnyel, ${car.uzemanyag} hajtással. JSZP ellenőrzött jármű a CARS SR99 Kft. kínálatában.`;
+  const mileage = parseMileageToNumber(car.futasteljesitmeny);
+
+  // A schema.org "Car" típusa a Product leszármazottja, ezért mindent tud, amit a
+  // korábbi Product séma, de ezen felül a Google jármű-hirdetési (vehicle listing)
+  // rich resultjaira is jogosult. A jármű-specifikus mezők – évjárat,
+  // futásteljesítmény, üzemanyag, szín – nélkül a kereső csak egy általános
+  // "termékként" látta az autókat, és nem tudta összevetni őket a felhasználó
+  // jármű-keresési szándékával.
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Car",
     name: carName,
     model: car.modell,
-    image: car.images.map((image) => `${baseUrl}${image}`),
+    image: car.images.map((image) => absoluteUrl(image)),
     description: carDescription,
-    category: "Vehicle",
     brand: {
       "@type": "Brand",
       name: car.marka,
     },
+    manufacturer: {
+      "@type": "Organization",
+      name: car.marka,
+    },
+    // Az évjáratot a modellév mezőben adjuk meg (ISO dátumként a Google így várja).
+    vehicleModelDate: String(car.evjarat),
+    productionDate: String(car.evjarat),
+    fuelType: car.uzemanyag,
+    ...(car.modell.toLowerCase().includes("kézi") ? { vehicleTransmission: "Kézi" } : {}),
+    ...(car.szin ? { color: car.szin } : {}),
+    // Csak akkor kerül be, ha valós adatunk van rá (több autónál "N/A").
+    ...(mileage !== null
+      ? {
+          mileageFromOdometer: {
+            "@type": "QuantitativeValue",
+            value: mileage,
+            unitCode: "KMT",
+          },
+        }
+      : {}),
+    itemCondition: "https://schema.org/UsedCondition",
     offers: {
       "@type": "Offer",
       priceCurrency: "HUF",
@@ -104,6 +134,10 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
       availability: "https://schema.org/InStock",
       itemCondition: "https://schema.org/UsedCondition",
       url: `${baseUrl}/kinalat/${car.id}`,
+      // Az eladót a főoldali AutoDealer entitásra hivatkoztatjuk (@id), így a
+      // Google minden hirdetést ugyanahhoz a zalaegerszegi telephelyhez köt.
+      seller: { "@id": businessId },
+      availableAtOrFrom: { "@id": businessId },
       availableDeliveryMethod: "https://schema.org/DeliveryModePickUp",
       shippingDetails: {
         "@type": "OfferShippingDetails",
@@ -250,6 +284,8 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
           <LeasingCalculator price={numericPrice} />
         </div>
       </div>
+
+      <RelatedCars currentCar={car} inventory={inventory} />
     </section>
   );
 }

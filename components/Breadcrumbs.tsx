@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { siteUrl } from "@/utils/site";
 
 type BreadcrumbItem = {
   name: string;
@@ -9,8 +10,6 @@ type BreadcrumbsProps = {
   items: BreadcrumbItem[];
 };
 
-const siteUrl = "https://cars-sr99-website.vercel.app";
-
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -19,7 +18,11 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: `${siteUrl}${item.href ?? ""}`,
+      // Az utolsó morzsa (az aktuális oldal) szándékosan `item` nélkül marad,
+      // ahogy a schema.org előírja. Korábban a href nélküli elemekre a puszta
+      // siteUrl került, vagyis minden adatlap morzsamenüje a főoldalt jelölte
+      // meg önmagaként – ez ellentmondásos jelzés volt a Google felé.
+      ...(item.href ? { item: `${siteUrl}${item.href}` } : {}),
     })),
   };
 

@@ -23,3 +23,11 @@
 [2026-07-16] - Rendszerállapot: Képek és galériák mobil viewport-hoz való igazítása radikális overflow-védelemmel és aspect-ratio alapú méretezéssel javítva.
 
 
+[2026-08-16] - Rendszerállapot: Teljes SEO-audit (weboldal + Search Console + Cégprofil + Vercel). Megállapítás: a technikai alapok rendben, az oldal a "autókereskedés zalaegerszeg" kulcsszóra átlagosan 4,4. pozíción áll (111 megjelenés / 11 kattintás). A fő korlát az oldal kora (a GSC-adatok 2026-07-22-től vannak) és a Cégprofil egyetlen kategóriája.
+[2026-08-16] - Hibajavítás: components/Breadcrumbs.tsx egy nem létező domainre ("cars-sr99-website.vercel.app") hivatkozott, ezért minden aloldal BreadcrumbList strukturált adata halott URL-eket hirdetett. A siteUrl egyetlen forrásba (utils/site.ts) került, a duplikált definíciók 8 fájlból eltávolítva.
+[2026-08-16] - Hibajavítás: az ékezetes képmappa (/geppark/Audi-A4-Avant-2017-kész/) miatt a JSON-LD nyers, kódolatlan képcímeket hirdetett, amelyek élesben 404-et adtak. Bevezetve az absoluteUrl() segédfüggvény (utils/site.ts).
+[2026-08-16] - SEO: A jármű adatlapok sémája Product-ról a jármű-specifikus Car típusra váltott (vehicleModelDate, mileageFromOdometer, fuelType, color, vehicleTransmission), az eladó az AutoDealer @id-jére hivatkozik.
+[2026-08-16] - SEO: A /kinalat oldal ItemList sémát kapott mind a 12 járművel; a főoldali AutoDealer séma sameAs, areaServed, hasOfferCatalog mezőkkel bővült; új WebSite séma. Az aggregateRating szándékosan kimaradt (a saját magunkról közölt értékelés sérti a Google irányelveit).
+[2026-08-16] - SEO: Új components/RelatedCars.tsx – minden adatlap 3 másik adatlapra hivatkozik, megszüntetve a zsákutca-szerkezetet (12 db "Felfedezve – jelenleg nincs indexelve" állapotú oldal).
+[2026-08-16] - Biztonság: A public/CARS-SR99-Akcioterv.html belső értékesítési dokumentum nyilvánosan elérhető az éles domainen. Ideiglenes mitigáció: X-Robots-Tag noindex fejléc (next.config.ts). A fájl eltávolítása ügyfél-döntést igényel.
+[2026-08-16] - SEO: A régi, gyökér szintű jármű-URL-ek (pl. /skoda-octavia-2022-kezi) 308-as átirányítást kaptak a /kinalat/... címekre, mert a Google indexében még szerepelnek a vercel.app korszakból.

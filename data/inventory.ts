@@ -299,3 +299,17 @@ export function parsePriceToNumber(price: string): number {
   if (!normalized) return 0;
   return Number.parseInt(normalized, 10);
 }
+
+/**
+ * A "187 143 km" alakú futásteljesítményt számmá alakítja a strukturált adathoz.
+ *
+ * A Google jármű-hirdetés sémája a `mileageFromOdometer` mezőben tiszta számot
+ * vár, mértékegységgel külön megadva. Ahol az adat "N/A", ott `null`-t adunk
+ * vissza, és a mezőt egyszerűen kihagyjuk a sémából – a hiányzó mező sokkal
+ * jobb, mint egy kitalált vagy nullás érték.
+ */
+export function parseMileageToNumber(mileage: string): number | null {
+  const normalized = mileage.replace(/[^\d]/g, "");
+  if (!normalized) return null;
+  return Number.parseInt(normalized, 10);
+}

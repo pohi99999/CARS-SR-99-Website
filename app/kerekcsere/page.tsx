@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { RefreshCw, Gauge, Wrench, Warehouse, CalendarClock, CheckCircle2, Clock } from "lucide-react";
 import KerekcsereCTAButtons from "@/components/KerekcsereCTAButtons";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cars-sr99.com";
+import { siteUrl } from "@/utils/site";
 
 export const metadata: Metadata = {
   title: "Kerékcsere és Gumicsere Zalaegerszeg",

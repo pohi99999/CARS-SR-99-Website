@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { MessagesSquare, ClipboardCheck, KeyRound } from "lucide-react";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cars-sr99.com";
+import { siteUrl } from "@/utils/site";
 
 export const metadata: Metadata = {
   title: "Autóbérlés Zalaegerszeg | Prémium autók bérbeadása",

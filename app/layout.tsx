@@ -11,11 +11,10 @@ import {
   CookieBanner,
   FomoNotification,
 } from "@/components/DynamicClientComponents";
+import { businessId, siteUrl, websiteId } from "@/utils/site";
 
 const Footer = dynamic(() => import("@/components/Footer"));
 import "./globals.css";
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cars-sr99.com";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -86,16 +85,25 @@ export const metadata: Metadata = {
 const jsonLdSchema = {
   "@context": "https://schema.org",
   "@type": "AutoDealer",
+  "@id": businessId,
   name: "CARS SR99 Kft.",
+  legalName: "CARS SR99 Kft.",
+  description:
+    "Ellenőrzött előéletű prémium használt autók értékesítése, beszámítás, autóbérlés, valamint kerék- és gumiszerviz Zalaegerszegen, a ságodi telephelyen.",
   image: `${baseUrl}/og-image.png`,
   logo: `${baseUrl}/logo.png`,
   url: baseUrl,
   telephone: "+36-70-907-0669",
   email: "carssr99@gmail.com",
+  // A sameAs köti össze a weboldalt a cég többi hiteles profiljával. Ez az egyik
+  // legfontosabb jelzés a Google-nak arról, hogy a weboldal és a Cégprofil
+  // ugyanaz a valós vállalkozás.
+  sameAs: ["https://www.facebook.com/profile.php?id=61592011856759"],
   address: {
     "@type": "PostalAddress",
     streetAddress: "Ságod hrsz. 807/15",
     addressLocality: "Zalaegerszeg",
+    addressRegion: "Zala",
     postalCode: "8900",
     addressCountry: "HU",
   },
@@ -103,6 +111,52 @@ const jsonLdSchema = {
     "@type": "GeoCoordinates",
     latitude: 46.862,
     longitude: 16.835,
+  },
+  // Milyen földrajzi területet szolgálunk ki – segít a környékbeli keresésekben.
+  areaServed: [
+    { "@type": "City", name: "Zalaegerszeg" },
+    { "@type": "AdministrativeArea", name: "Zala vármegye" },
+  ],
+  // A szolgáltatáskatalógus explicit módon megmondja a Google-nak, hogy nem csak
+  // autót adunk el: bérlés és gumiszerviz is van. Enélkül a kereső csak az
+  // autókereskedés tevékenységet társítja a céghez.
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "CARS SR99 szolgáltatások",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Használt autó értékesítés",
+          areaServed: { "@type": "City", name: "Zalaegerszeg" },
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Autóbeszámítás és autófelvásárlás",
+          areaServed: { "@type": "City", name: "Zalaegerszeg" },
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Autóbérlés",
+          areaServed: { "@type": "City", name: "Zalaegerszeg" },
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Kerékcsere és gumicsere",
+          areaServed: { "@type": "City", name: "Zalaegerszeg" },
+        },
+      },
+    ],
   },
   openingHoursSpecification: [
     {
@@ -112,7 +166,21 @@ const jsonLdSchema = {
       closes: "17:00",
     },
   ],
-  priceRange: "$$$",
+  currenciesAccepted: "HUF",
+  paymentAccepted: "Készpénz, Átutalás, Bankkártya, Lízing",
+  priceRange: "$$",
+};
+
+// Külön WebSite entitás. Ez mondja meg a Google-nak, hogy a "CARS SR99" nevű
+// weboldal melyik céghez tartozik – ez erősíti a márkanévre indított kereséseket.
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": websiteId,
+  url: baseUrl,
+  name: "CARS SR99 Kft.",
+  inLanguage: "hu-HU",
+  publisher: { "@id": businessId },
 };
 
 export default function RootLayout({
@@ -136,6 +204,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         <video
           autoPlay

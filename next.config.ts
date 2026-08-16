@@ -15,20 +15,6 @@ const nextConfig: NextConfig = {
     ],
   },
 
-  async headers() {
-    return [
-      {
-        // A public/ mappában lévő belső értékesítési akcióterv nyilvánosan
-        // elérhető az éles domainen. A fájl eltávolítása üzleti döntés, de amíg
-        // ott van, legalább ne kerüljön be a Google indexébe.
-        // (Robots.txt-vel NEM tiltjuk: az maga is nyilvános, és csak felhívná
-        // a figyelmet az útvonalra – a noindex fejléc a helyes eszköz.)
-        source: "/CARS-SR99-Akcioterv.html",
-        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
-      },
-    ];
-  },
-
   async redirects() {
     // A weboldal korábban a cars-sr99.vercel.app címen élt, és az adatlapok a
     // gyökérben voltak (pl. /skoda-octavia-2022-kezi) a mai /kinalat/... helyett.

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Wrench, Clock } from "lucide-react";
+import { Wrench } from "lucide-react";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 
 export default function TireChangeTeaser() {
@@ -22,13 +22,9 @@ export default function TireChangeTeaser() {
             <div>
               <div className="flex flex-wrap items-center gap-2">
                 <h2 className="text-lg font-semibold text-white">Kerékcsere és gumicsere</h2>
-                <span className="inline-flex items-center gap-1 rounded-full border border-sky-400/40 bg-sky-400/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-sky-300">
-                  <Clock className="h-3 w-3" />
-                  Hamarosan
-                </span>
               </div>
               <p className="mt-1 text-sm text-slate-400">
-                Új szolgáltatásunk hamarosan indul: szezonális gumicsere, kiegyensúlyozás és gumiszerviz
+                Új szolgáltatásunk elérhető: szezonális gumicsere, kiegyensúlyozás és gumiszerviz
                 a ságodi telephelyen.
               </p>
             </div>

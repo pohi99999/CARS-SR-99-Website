@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { RefreshCw, Gauge, Wrench, Warehouse, CalendarClock, CheckCircle2, Clock } from "lucide-react";
+import { RefreshCw, Gauge, Wrench, Warehouse, CalendarClock, CheckCircle2 } from "lucide-react";
 import KerekcsereCTAButtons from "@/components/KerekcsereCTAButtons";
 
 import { siteUrl } from "@/utils/site";
@@ -7,14 +7,14 @@ import { siteUrl } from "@/utils/site";
 export const metadata: Metadata = {
   title: "Kerékcsere és Gumicsere Zalaegerszeg",
   description:
-    "Hamarosan induló kerékcsere és gumicsere szolgáltatásunk Zalaegerszegen: szezonális gumicsere, kiegyensúlyozás, defektjavítás és gumihotel a CARS SR99 Kft. ságodi telephelyén.",
+    "Kerékcsere és gumicsere szolgáltatásunk Zalaegerszegen: szezonális gumicsere, kiegyensúlyozás, defektjavítás és gumihotel a CARS SR99 Kft. ságodi telephelyén.",
   alternates: {
     canonical: `${siteUrl}/kerekcsere`,
   },
   openGraph: {
     title: "Kerékcsere és Gumicsere Zalaegerszeg | CARS SR99 Kft.",
     description:
-      "Hamarosan induló kerékcsere és gumicsere szolgáltatásunk Zalaegerszegen: szezonális gumicsere, kiegyensúlyozás, defektjavítás és gumihotel a CARS SR99 Kft. ságodi telephelyén.",
+      "Kerékcsere és gumicsere szolgáltatásunk Zalaegerszegen: szezonális gumicsere, kiegyensúlyozás, defektjavítás és gumihotel a CARS SR99 Kft. ságodi telephelyén.",
     url: `${siteUrl}/kerekcsere`,
     siteName: "CARS SR99 Kft.",
     locale: "hu_HU",
@@ -56,8 +56,8 @@ const services = [
 const steps = [
   {
     icon: CalendarClock,
-    title: "Érdeklődés",
-    description: "Jelezze igényét telefonon vagy a kapcsolati űrlapon, és elsők között értesítjük az induláskor.",
+    title: "Időpontkérés",
+    description: "Jelezze igényét telefonon vagy a kapcsolati űrlapon, és egyeztetünk egy Önnek megfelelő időpontot.",
   },
   {
     icon: Wrench,
@@ -77,7 +77,7 @@ const jsonLd = {
   serviceType: "Kerékcsere és gumicsere",
   name: "CARS SR99 Kerékcsere és Gumicsere",
   description:
-    "Szezonális gumicsere, kiegyensúlyozás, defektjavítás és gumihotel szolgáltatás Zalaegerszegen, hamarosan induló CARS SR99 kerék- és gumiszervizben.",
+    "Szezonális gumicsere, kiegyensúlyozás, defektjavítás és gumihotel szolgáltatás Zalaegerszegen, a CARS SR99 Kft. kerék- és gumiszervizében.",
   provider: {
     "@type": "AutoDealer",
     name: "CARS SR99 Kft.",
@@ -113,18 +113,14 @@ export default function KerekcserePage() {
             <p className="text-sm font-extralight uppercase tracking-[0.25em] text-sky-400">
               Új szolgáltatás
             </p>
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-sky-400/40 bg-sky-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-sky-300">
-              <Clock className="h-3.5 w-3.5" />
-              Hamarosan indul
-            </span>
           </div>
           <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-100 sm:text-4xl lg:text-5xl">
             Kerékcsere és Gumicsere Zalaegerszegen
           </h1>
           <p className="mt-6 leading-7 text-slate-300">
-            A CARS SR99 Kft. új beruházású kerék- és gumiszerviz eszközparkkal bővíti szolgáltatásait.
-            Hamarosan Öntől is várjuk autóját szezonális gumicserére, kiegyensúlyozásra és gumiszervizre
-            – ugyanazon a megbízható, ságodi telephelyen, ahol autóját is megvásárolta vagy vásárolná.
+            A CARS SR99 Kft. új beruházású kerék- és gumiszerviz eszközparkkal bővítette szolgáltatásait.
+            Várjuk autóját szezonális gumicserére, kiegyensúlyozásra és gumiszervizre – ugyanazon a
+            megbízható, ságodi telephelyen, ahol autóját is megvásárolta vagy vásárolná.
           </p>
 
           <div className="mt-8 space-y-4 text-sm text-slate-300">
@@ -139,7 +135,7 @@ export default function KerekcserePage() {
             <div className="rounded-xl border-t border-l border-r border-b border-t-white/15 border-l-white/10 border-r-white/5 border-b-white/5 bg-white/5 p-5">
               <h2 className="font-semibold text-sky-300">Ismert, megbízható telephely</h2>
               <p className="mt-2 leading-6 text-slate-300">
-                A szolgáltatás a ságodi telephelyünkön érhető majd el, ugyanott, ahol autókereskedési
+                A szolgáltatás a ságodi telephelyünkön érhető el, ugyanott, ahol autókereskedési
                 és autóbeszámítási tevékenységünket is folytatjuk.
               </p>
             </div>
@@ -147,7 +143,7 @@ export default function KerekcserePage() {
 
           <div className="mt-10">
             <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
-              Szolgáltatásaink (hamarosan elérhető)
+              Szolgáltatásaink
             </h2>
             <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {services.map((service) => {

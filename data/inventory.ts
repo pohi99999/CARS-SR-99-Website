@@ -183,40 +183,40 @@ export const inventory: Car[] = [
     "leiras": "Gyönyörű, újszerű esztétikai és műszaki állapotban lévő Skoda Octavia Combi kézi sebességváltóval. Kívül-belül karcmentes, szinte új autó benyomását kelti. 217 700 km-es futással, gazdaságos dízel hajtáslánccal. A vételár a magyarországi forgalomba helyezés és a friss műszaki vizsga költségeit már tartalmazza. Megtekinthető Zalaegerszegen."
   },
   {
-    "id": "bmw-x6-xdrive40d-2012",
+    "id": "bmw-x6-xdrive30d-2012",
     "marka": "BMW",
-    "modell": "X6 xDrive40d",
+    "modell": "X6 xDrive30d",
     "evjarat": 2012,
     "ar": "5 000 000 Ft",
     "futasteljesitmeny": "259 000 km",
     "uzemanyag": "Dízel",
     "images": [
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/fo.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/01.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/02.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/03.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/04.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/05.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/06.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/07.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/08.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/09.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/10.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/11.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/12.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/13.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/14.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/15.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/16.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/17.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/18.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/19.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/20.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/21.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/22.webp",
-      "/geppark/BMW-X6-xDrive40d-2012/kepek/23.webp"
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/fo.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/01.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/02.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/03.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/04.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/05.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/06.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/07.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/08.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/09.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/10.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/11.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/12.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/13.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/14.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/15.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/16.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/17.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/18.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/19.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/20.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/21.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/22.webp",
+      "/geppark/BMW-X6-xDrive30d-2012/kepek/23.webp"
     ],
-    "leiras": "Lenyűgöző megjelenésű, mélyfekete BMW X6 xDrive40d, krómozott oldalsó lépcsőkkel, könnyűfém felnikkel és krémszínű, prémium bőrbelsővel. Erőteljes, 3.0 literes biturbó dízelmotorral (225 kW / 306 LE), precíz ZF nyolcfokozatú automataváltóval és állandó xDrive összkerékhajtással szerelve — igazi luxus-crossover, amely a terepjáró magabiztosságát ötvözi a sportkupé eleganciájával. 259 000 km-es futásteljesítménnyel. Érvényes magyar rendszámmal (AORA-792), magyar forgalomba helyezve, rendezett magyar okmányokkal kerül átadásra."
+    "leiras": "Lenyűgöző megjelenésű, mélyfekete BMW X6 xDrive30d, krómozott oldalsó lépcsőkkel, könnyűfém felnikkel és krémszínű, prémium bőrbelsővel. Erőteljes, 3.0 literes biturbó dízelmotorral (225 kW / 306 LE), precíz ZF nyolcfokozatú automataváltóval és állandó xDrive összkerékhajtással szerelve — igazi luxus-crossover, amely a terepjáró magabiztosságát ötvözi a sportkupé eleganciájával. 259 000 km-es futásteljesítménnyel. Érvényes magyar rendszámmal (AORA-792), magyar forgalomba helyezve, rendezett magyar okmányokkal kerül átadásra."
   },
   {
     "id": "subaru-xv-2012",
@@ -263,30 +263,6 @@ export const inventory: Car[] = [
       "/geppark/BMW-F11-530d-xDrive-2011-zold/kepek/c9c55166-6d09-401c-badc-3944ee285fc7.webp"
     ],
     "leiras": "Ritkaságszámba menő, zöld metálfényezésű BMW 530d xDrive Touring (F11), a sorozat legerősebb és legjobban felszerelt dízel-összkerekes változata. Erőteljes, 3.0 literes dízelmotorral (190 kW / 258 LE) és állandó xDrive összkerékhajtással szerelve, amely minden évszakban biztos tapadást és magabiztos vezetést garantál. 249 000 km-es futásteljesítmény. Érvényes magyar rendszámmal (AORA-931), magyar forgalomba helyezve, rendben lévő magyar okmányokkal kerül értékesítésre."
-  },
-  {
-    "id": "toyota-corolla-verso-2006",
-    "marka": "Toyota",
-    "modell": "Corolla Verso (7 személyes)",
-    "evjarat": 2006,
-    "ar": "1 000 000 Ft",
-    "futasteljesitmeny": "307 000 km",
-    "uzemanyag": "Benzin",
-    "szin": "Fekete",
-    "images": [
-      "/geppark/Toyota-Corolla-Verso-2006/kepek/fo.webp",
-      "/geppark/Toyota-Corolla-Verso-2006/kepek/72e91290-7bc5-4f09-b4d8-e1eca833cde6.webp",
-      "/geppark/Toyota-Corolla-Verso-2006/kepek/9798a9c5-ae3c-4fe1-bf19-22ec6f9e28ac.webp",
-      "/geppark/Toyota-Corolla-Verso-2006/kepek/abc21677-33df-4c5e-b512-5bb457410fb8.webp",
-      "/geppark/Toyota-Corolla-Verso-2006/kepek/b40df4a0-8021-42b8-b2a7-75916d0b7cfb.webp",
-      "/geppark/Toyota-Corolla-Verso-2006/kepek/b6a1b31b-0b6e-4ec7-8d05-794331bcf1d5.webp",
-      "/geppark/Toyota-Corolla-Verso-2006/kepek/b7572f01-c496-4aa2-be8f-f2f3e71b9df9.webp",
-      "/geppark/Toyota-Corolla-Verso-2006/kepek/c2f91325-e9d0-40f3-9a97-4d9b54d97755.webp",
-      "/geppark/Toyota-Corolla-Verso-2006/kepek/cc344956-1e89-4e5d-a42f-2ed4ffc98ed5.webp",
-      "/geppark/Toyota-Corolla-Verso-2006/kepek/d4c63007-5fd7-4768-9f8c-b52fc1d12033.webp",
-      "/geppark/Toyota-Corolla-Verso-2006/kepek/d8de9615-fc48-42d1-8db8-baf8e58f3672.webp"
-    ],
-    "leiras": "Praktikus, fekete Toyota Corolla Verso, amely 7 üléssel kínál helyet nagycsaládosoknak vagy céges flottába egyaránt. Megbízható, 1.8 literes benzinmotorral (95 kW / 129 LE) és kényelmes automataváltóval szerelve. Tetősínekkel, könnyűfém felnikkel és vonóhoroggal felszerelve, tágas és rugalmasan alakítható utastérrel. 307 000 km-es futásteljesítmény. Érvényes magyar rendszámmal (NXW-409) és rendezett magyar okmányokkal, azonnal, várakozás nélkül elvihető."
   }
 ];
 

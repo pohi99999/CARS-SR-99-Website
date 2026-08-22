@@ -89,7 +89,7 @@ const jsonLdSchema = {
   name: "CARS SR99 Kft.",
   legalName: "CARS SR99 Kft.",
   description:
-    "Ellenőrzött előéletű prémium használt autók értékesítése, beszámítás, autóbérlés, valamint kerék- és gumiszerviz Zalaegerszegen, a ságodi telephelyen.",
+    "Ellenőrzött előéletű prémium használt autók értékesítése, beszámítás, valamint kerék- és gumiszerviz Zalaegerszegen, a ságodi telephelyen.",
   image: `${baseUrl}/og-image.png`,
   logo: `${baseUrl}/logo.png`,
   url: baseUrl,
@@ -137,14 +137,6 @@ const jsonLdSchema = {
         itemOffered: {
           "@type": "Service",
           name: "Autóbeszámítás és autófelvásárlás",
-          areaServed: { "@type": "City", name: "Zalaegerszeg" },
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Autóbérlés",
           areaServed: { "@type": "City", name: "Zalaegerszeg" },
         },
       },

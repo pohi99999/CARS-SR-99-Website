@@ -8,7 +8,6 @@ import { parsePriceToNumber } from "@/data/inventory";
 const CarFilter = dynamic(() => import("@/components/CarFilter"));
 const AboutSection = dynamic(() => import("@/components/AboutSection"));
 const TrustBadges = dynamic(() => import("@/components/TrustBadges"));
-const CarRentalTeaser = dynamic(() => import("@/components/CarRentalTeaser"));
 const TireChangeTeaser = dynamic(() => import("@/components/TireChangeTeaser"));
 const SocialProofWall = dynamic(() => import("@/components/SocialProofWall"));
 const Testimonials = dynamic(() => import("@/components/Testimonials"));
@@ -131,7 +130,6 @@ export default async function Home({ searchParams }: HomePageProps) {
       <CarFilter initialMarka={selectedMarka} initialUzemanyag={selectedUzemanyag} initialMaxPrice={maxPriceParam} />
       <InventorySection cars={filteredCars} />
       <TrustBadges />
-      <CarRentalTeaser />
       <TireChangeTeaser />
       <AboutSection />
       <SocialProofWall />

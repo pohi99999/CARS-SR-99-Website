@@ -38,7 +38,6 @@ A weboldal feladata a CARS SR99 Kft. (Zalaegerszeg) megbízható, értékesítet
   - Cyan glow hover effektusok (`hover:shadow-[0_24px_55px_rgba(34,211,238,0.22)]`).
 - **Sötét Üveghatási Dizájn Az Összes Aloldalon:**
   - `/autobeszamitas` & [TradeInForm.tsx](file:///Z:/001_Workspace/CARS%20SR99%20KFT/CARS%20SR99%20KFT%20-%20Weboldal/components/TradeInForm.tsx): Sötét üvegkártyás űrlap, reszponzív mezőkkel.
-  - `/autoberles` (`app/autoberles/page.tsx`): Új aloldal a kínálatban szereplő autók egyedi megegyezés/napi díj alapú bérléséhez. Hero szekció, glass kártyás leírás, CTA gombok a `/kinalat` és `/kapcsolat` oldalakra. Saját `metadata` export (title/description), felvéve a `Header.tsx` főmenübe és a `sitemap.ts`-be.
   - `/kapcsolat` & [ContactForm.tsx](file:///Z:/001_Workspace/CARS%20SR99%20KFT/CARS%20SR99%20KFT%20-%20Weboldal/components/ContactForm.tsx): Bizalomépítő 24 órás garantált válaszidővel.
   - `/garancia` & `/osszehasonlitas`: Zökkenőmentes összehasonlító dock LocalStorage állapottal.
   - `/kinalat/[id]`: Jármű adatlap 360°-os forgatható nézegetővel (touch pointer capture támogatással) és lízing kalkulátorral (`LeasingCalculator.tsx`).
@@ -46,12 +45,17 @@ A weboldal feladata a CARS SR99 Kft. (Zalaegerszeg) megbízható, értékesítet
 ### 🛞 Kerékcsere & Gumicsere Szolgáltatás (Új Tevékenység, 2026.08.13)
 - **Cél:** A CARS SR99 Kft. új beruházású kerék- és gumiszerviz eszközparkkal bővíti szolgáltatásait. Az engedélyeztetés lezárásáig (~1 hét) az oldal **"Hamarosan indul"** jelzéssel él, hogy a Google mielőbb indexelje a "kerékcsere Zalaegerszeg" / "gumicsere Zalaegerszeg" kulcsszavakat.
 - **`/kerekcsere` aloldal** (`app/kerekcsere/page.tsx`): Az `/autoberles` mintáját követő glass-card hero, "Hamarosan indul" badge, 4 szolgáltatáskártya (szezonális gumicsere, kiegyensúlyozás, defektjavítás, gumihotel), 3 lépéses "Hogyan fog működni?" folyamatábra, Service JSON-LD schema, egyedi OpenGraph metaadatok. CTA-k: "Érdeklődöm / Értesítést kérek" (`/kapcsolat`) és követett telefonhívás gomb (`components/KerekcsereCTAButtons.tsx`, `trackContactClick("phone")`).
-- **Főoldali kiemelő** (`components/TireChangeTeaser.tsx`): A `CarRentalTeaser.tsx` mintájára, "Hamarosan" jelvénnyel, a főoldalon az Autóbérlés kiemelő után.
+- **Főoldali kiemelő** (`components/TireChangeTeaser.tsx`): eredetileg a `CarRentalTeaser.tsx` mintájára készült, a főoldalon az akkori Autóbérlés kiemelő után (ez a komponens 2026.08.22-én törlésre került, lásd lent).
 - **Menü, lábléc, sitemap, SEO kulcsszavak:** Felvéve a `Header.tsx` főmenübe és a `Footer.tsx` "Gyors linkek" listájába, `app/sitemap.ts`-be (`priority: 0.8`, `weekly`), valamint a globális `app/layout.tsx` `keywords` tömbjébe.
 - **Header reszponzivitás javítás:** A 6. menüelem hozzáadásakor a desktop navigáció 768px-en (tablet) csonkolódott — a töréspont `md:` → `lg:`-re módosítva (`Header.tsx`, hamburger gomb + desktop nav + mobil lenyíló egyaránt).
 - **Google Search Console:** `/kerekcsere` URL indexelése manuálisan kérve, sitemap regisztrálva (`cars-sr99.com` domain property).
 - **Google Cégprofil:** "Kerékcsere és gumicsere" egyéni szolgáltatás felvéve az Autókereskedés kategória alá (Google felülvizsgálatra vár).
 - **Későbbi teendő:** kb. 1 hét múlva, az engedélyek megérkezésekor a "Hamarosan indul" szövegezés frissítése élő szolgáltatásra (4 helyen: hero badge, szekciócím, CTA szöveg, főoldali teaser badge) — lásd `docs/superpowers/specs/2026-08-13-kerekcsere-service-page-design.md` 6. szakasz.
+
+### 🗑️ Autóbérlés Szolgáltatás Kivezetése & Adatjavítások (2026.08.22)
+- **Autóbérlés teljes kivezetése:** a szolgáltatás megszűnt, ezért törölve `app/autoberles/page.tsx` és `components/CarRentalTeaser.tsx`, kivéve a `Header.tsx` főmenüből, a `Footer.tsx` "Gyors linkek" listájából, az `app/sitemap.ts`-ből, az `app/page.tsx` főoldali szekciólistából, valamint az `app/layout.tsx` `AutoDealer` sémájának `hasOfferCatalog` listájából és leírásából. A már indexelt `/autoberles` URL 308-cal a `/kinalat` oldalra irányít (`next.config.ts`), és a Search Console-ban kézi eltávolítás/újraindexelés is megtörtént.
+- **BMW X6 névjavítás:** az azonosító és a modellnév `bmw-x6-xdrive40d-2012` / "X6 xDrive40d" → `bmw-x6-xdrive30d-2012` / "X6 xDrive30d"-re változott (`data/inventory.ts`), összhangban a leírásban szereplő 3.0 literes biturbó motorral. A képmappa (`public/geppark/`) átnevezve, a régi URL 308-cal az újra irányít.
+- **Eladott jármű eltávolítása:** a Toyota Corolla Verso (7 személyes) törölve a `data/inventory.ts`-ből és a képmappája is törölve; a `dynamicParams = false` mechanizmus miatt a régi URL valódi 404-et ad.
 
 ### ⚡ Audit & Teljesítmény Optimalizálás
 - **Szerver Oldali Késleltetések Eltávolítása:** Eltávolítva a mesterséges 800 ms-os várakoztatás az `inventoryService.ts`-ből. A statikus oldalak generálása **2.2s-ról 634ms-ra gyorsult (3.5x gyorsulás)**.

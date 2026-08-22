@@ -44,9 +44,9 @@ export async function generateMetadata({ params }: CarDetailsPageProps): Promise
   }
 
   const carName = `${car.marka} ${car.modell}`;
-  const title = `Eladó ${carName} – Zalaegerszeg`;
-  const socialTitle = `Eladó ${carName} – Zalaegerszeg | CARS SR99 Kft.`;
-  const description = `${car.evjarat}-es ${carName}, ${car.futasteljesitmeny} futásteljesítménnyel, ${car.uzemanyag} hajtással. JSZP ellenőrzött jármű a CARS SR99 Kft. kínálatában Zalaegerszegen.`;
+  const title = `Eladó használt ${carName} – Zalaegerszeg`;
+  const socialTitle = `Eladó használt ${carName} – Zalaegerszeg | CARS SR99 Kft.`;
+  const description = `Használt ${carName} eladó Zalaegerszegen: ${car.evjarat}-es évjárat, ${car.futasteljesitmeny} futásteljesítmény, ${car.uzemanyag} hajtás. JSZP ellenőrzött jármű a CARS SR99 Kft. kínálatában.`;
   const pageUrl = `${baseUrl}/kinalat/${car.id}`;
 
   return {
@@ -205,11 +205,11 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
       </div>
 
       <div className="grid gap-8 lg:grid-cols-2 w-full max-w-full overflow-hidden">
-        <ImageGallery images={car.images} />
+        <ImageGallery images={car.images} carName={carName} />
 
         <div className="rounded-2xl border-t border-l border-r border-b border-t-white/20 border-l-white/10 border-r-white/5 border-b-white/5 bg-black/40 p-6 shadow-[0_20px_45px_rgba(2,8,23,0.45),inset_0_1px_1px_rgba(255,255,255,0.1)] backdrop-blur-lg dark:bg-white/5 sm:p-8">
           <p className="text-sm font-extralight uppercase tracking-[0.25em] text-sky-400">
-            Eladó · Zalaegerszeg
+            Eladó használt autó · Zalaegerszeg
           </p>
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-100">
             {car.marka} {car.modell}

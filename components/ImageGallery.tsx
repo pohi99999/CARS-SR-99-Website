@@ -7,12 +7,13 @@ import Image from "next/image";
 
 type ImageGalleryProps = {
   images: string[];
+  carName: string;
 };
 
 const blurDataUrl =
   "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxMCI+PHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjEwIiBmaWxsPSIjMGYxNzJhIi8+PC9zdmc+";
 
-export default function ImageGallery({ images }: ImageGalleryProps) {
+export default function ImageGallery({ images, carName }: ImageGalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isFullscreenOpen, setIsFullscreenOpen] = useState(false);
   const [mainEmblaRef, mainEmblaApi] = useEmblaCarousel({ loop: true });
@@ -76,7 +77,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                   <div className="relative aspect-[4/3] sm:aspect-[16/10] md:h-[500px] w-full max-w-full overflow-hidden">
                     <Image
                       src={image}
-                      alt={`Jármű fotó ${index + 1}`}
+                      alt={`Használt ${carName} eladó Zalaegerszegen – fotó ${index + 1}`}
                       fill
                       sizes="(max-width: 1023px) 100vw, 50vw"
                       priority={index === 0}
@@ -116,7 +117,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
               >
                 <Image
                   src={image}
-                  alt=""
+                  alt={`${carName} bélyegkép ${index + 1}`}
                   fill
                   sizes="96px"
                   placeholder="blur"
@@ -157,7 +158,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                     <div className="relative aspect-[16/9] w-full">
                       <Image
                         src={image}
-                        alt={`Nagyított jármű fotó ${index + 1}`}
+                        alt={`Használt ${carName} – nagyított fotó ${index + 1}`}
                         fill
                         sizes="100vw"
                         placeholder="blur"

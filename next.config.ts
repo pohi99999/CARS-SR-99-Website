@@ -28,6 +28,18 @@ const nextConfig: NextConfig = {
     }));
 
     return [
+      // A cars-sr99.vercel.app alapértelmezett Vercel-domain a saját domainnel
+      // párhuzamosan, ugyanazzal a tartalommal is elérhető marad, és a Google ezt
+      // önállóan indexelte (pl. a régi, lapos /skoda-octavia-2022-kezi URL-t) – ez
+      // a saját domainnel versengő duplikált tartalom, ami megosztja a rangsorolási
+      // jelzéseket. Minden kérést 308-cal a kanonikus www.cars-sr99.com domainre
+      // irányítunk, hogy a Google fokozatosan kivezesse a vercel.app URL-eket.
+      {
+        source: "/:path*",
+        has: [{ type: "host" as const, value: "cars-sr99.vercel.app" }],
+        destination: "https://www.cars-sr99.com/:path*",
+        permanent: true,
+      },
       ...legacyFlatUrls,
       // Az autóbérlés szolgáltatás megszűnt, az oldal 2026.08.22-én kikerült a
       // kínálatból. A már indexelt URL-t a kínálati listára irányítjuk, hogy a

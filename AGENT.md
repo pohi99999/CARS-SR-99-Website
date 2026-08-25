@@ -46,5 +46,6 @@
 | 2026-07-16 | 17. Fázis: Premium Brand Aesthetics overhaul (bg-clip-text címek, belső fénylések, texturált videó overlay és animált scroll indicator). | Kész |
 | 2026-07-16 | A szoftveres képjavítás a zaj felerősödése miatt visszavonva, a korábbi, esztétikusabb WebP képek visszaállítva a fehér BMW-hez. | Kész |
 | 2026-07-16 | Képek és galériák mobil viewport-hoz való igazítása radikális overflow-védelemmel és aspect-ratio alapú méretezéssel javítva. | Kész |
+| 2026-08-25 | Teljes SEO/GEO audit: Search Console, Google Cégprofil, Facebook oldal, kód átvizsgálva; cars-sr99.vercel.app duplikált domain 308-cal a kanonikus domainre irányítva; 5 ragadt jármű-/aloldalra manuális újraindexelés kérve. Részletek: AGENTS.md. | Kész |
 
 

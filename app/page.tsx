@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import FeaturedPicksToday from "@/components/FeaturedPicksToday";
 import HeroCTAButtons from "@/components/HeroCTAButtons";
 import InventorySection from "@/components/InventorySection";
 import { fetchInventory } from "@/services/inventoryService";
@@ -127,6 +128,7 @@ export default async function Home({ searchParams }: HomePageProps) {
         </div>
       </section>
 
+      <FeaturedPicksToday inventory={inventory} />
       <CarFilter initialMarka={selectedMarka} initialUzemanyag={selectedUzemanyag} initialMaxPrice={maxPriceParam} />
       <InventorySection cars={filteredCars} />
       <TrustBadges />

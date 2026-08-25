@@ -71,6 +71,42 @@ const steps = [
   },
 ];
 
+// A GYIK a hosszú, informatív kereséseket célozza ("mikor kell téli gumit
+// cserélni", "mennyi ideig tart egy kerékcsere"), amelyekre a Search Console
+// szerint ma még egyáltalán nem jelenünk meg – a szolgáltatásoldal eddig csak
+// a rövid, tranzakciós kulcsszavakra ("kerékcsere zalaegerszeg") volt írva.
+const faqs = [
+  {
+    q: "Mikor kell nyári-téli gumit cserélni Magyarországon?",
+    a: "A magyar KRESZ nem ír elő fix naptári határidőt, de hóban, jégen vagy ónos esőben kötelező a téli gumi vagy hólánc használata. A gyakorlatban a legtöbb autós október és április között vált téli gumira, az aktuális időjáráshoz igazodva – erre az időszakra érdemes időben, a szezoncsúcs előtt időpontot foglalni.",
+  },
+  {
+    q: "Mennyi ideig tart egy kerékcsere?",
+    a: "Egy szokásos, négykerekes gumi- vagy kerékcsere és kiegyensúlyozás időpontfoglalással jellemzően fél-egy órát vesz igénybe, várakozás nélkül.",
+  },
+  {
+    q: "Kell-e előre időpontot foglalni?",
+    a: "Igen, javasoljuk – különösen ősszel és tavasszal, a szezoncsúcsban –, hogy telefonon vagy a kapcsolati űrlapon egyeztessünk Önnek megfelelő időpontot.",
+  },
+  {
+    q: "Csak a náluk vásárolt autókra vehető igénybe a szolgáltatás?",
+    a: "Nem, a kerékcsere, gumicsere és gumihotel szolgáltatásunk minden ügyfelünk számára elérhető, függetlenül attól, hogy nálunk vásárolta-e az autóját.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
+};
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -103,6 +139,10 @@ export default function KerekcserePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       {/* Sötét gradiens overlay réteg elmosás nélkül */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#121212]/50 via-[#121212]/30 to-[#121212]/60 pointer-events-none" />
@@ -187,6 +227,23 @@ export default function KerekcserePage() {
                   </div>
                 );
               })}
+            </div>
+          </div>
+
+          <div className="mt-10">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
+              Gyakori kérdések
+            </h2>
+            <div className="mt-5 space-y-4">
+              {faqs.map((item) => (
+                <div
+                  key={item.q}
+                  className="rounded-xl border-t border-l border-r border-b border-t-white/15 border-l-white/10 border-r-white/5 border-b-white/5 bg-white/5 p-5"
+                >
+                  <h3 className="font-semibold text-white">{item.q}</h3>
+                  <p className="mt-1.5 text-sm leading-6 text-slate-300">{item.a}</p>
+                </div>
+              ))}
             </div>
           </div>
 

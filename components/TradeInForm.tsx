@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { submitToHubSpot } from "@/services/hubspotService";
 import { sendLeadWebhook } from "@/services/webhookService";
+import { sendContactEmail } from "@/services/contactEmailService";
 import { trackFormSubmission } from "@/utils/analytics";
 
 type TradeInFormData = {
@@ -31,6 +32,7 @@ export default function TradeInForm() {
   const [formData, setFormData] = useState<TradeInFormData>(initialFormData);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [sendFailed, setSendFailed] = useState(false);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -78,9 +80,28 @@ export default function TradeInForm() {
         }).catch(() => {});
       }
 
-      setIsSubmitted(true);
+      // 4. E-mail a kereskedesnek. EZ a donto ag: a visszajelzes ennek az
+      // eredmenyet koveti, mert a masik ket ut kulso konfiguraciotol fugg.
+      const emailSent = await sendContactEmail({
+        formType: "beszamitas",
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        extra: {
+          "Márka": formData.brand,
+          "Modell": formData.model,
+          "Évjárat": formData.year,
+          "Futásteljesítmény": formData.mileage,
+          "Állapot": formData.condition,
+        },
+      });
+
+      setSendFailed(!emailSent);
+      setIsSubmitted(emailSent);
     } catch (error) {
       console.error("[SR99 TradeInForm] Form submit error:", error);
+      setSendFailed(true);
+      setIsSubmitted(false);
     } finally {
       setIsSubmitting(false);
     }
@@ -89,6 +110,7 @@ export default function TradeInForm() {
   function setField<K extends keyof TradeInFormData>(field: K, value: TradeInFormData[K]) {
     setFormData((prev) => ({ ...prev, [field]: value }));
     setIsSubmitted(false);
+    setSendFailed(false);
   }
 
   return (
@@ -261,7 +283,21 @@ export default function TradeInForm() {
 
       {isSubmitted && (
         <p className="mt-4 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-sm font-medium text-emerald-300">
-          Köszönjük! Hamarosan visszajelzünk az előzetes értékbecsléssel.
+          Köszönjük! Megkaptuk az adatokat, hamarosan visszajelzünk az előzetes értékbecsléssel.
+        </p>
+      )}
+
+      {sendFailed && (
+        <p className="mt-4 rounded-xl border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-sm font-medium text-amber-200">
+          A beküldés most nem sikerült. Kérjük, hívjon minket a{" "}
+          <a href="tel:+36709070669" className="underline hover:text-amber-100">
+            06-70 907-06-69
+          </a>{" "}
+          számon, vagy írjon a{" "}
+          <a href="mailto:carssr99@gmail.com" className="underline hover:text-amber-100">
+            carssr99@gmail.com
+          </a>{" "}
+          címre.
         </p>
       )}
     </section>

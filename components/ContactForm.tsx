@@ -4,6 +4,7 @@ import { FormEvent, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { submitToHubSpot } from "@/services/hubspotService";
 import { sendLeadWebhook } from "@/services/webhookService";
+import { sendContactEmail } from "@/services/contactEmailService";
 import { trackFormSubmission } from "@/utils/analytics";
 
 type ContactFormData = {
@@ -25,6 +26,7 @@ export default function ContactForm() {
   const [formData, setFormData] = useState<ContactFormData>(initialFormData);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [sendFailed, setSendFailed] = useState(false);
 
   const prefilledMessage = useMemo(() => {
     const carName = searchParams.get("car");
@@ -86,9 +88,23 @@ export default function ContactForm() {
         }).catch(() => {});
       }
 
-      setIsSubmitted(true);
+      // 4. E-mail a kereskedesnek. EZ a donto ag: a visszajelzes ennek az
+      // eredmenyet koveti, mert a masik ket ut kulso konfiguraciotol fugg.
+      const emailSent = await sendContactEmail({
+        formType: "kapcsolat",
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message,
+        carInterest: submissionData.carInterest,
+      });
+
+      setSendFailed(!emailSent);
+      setIsSubmitted(emailSent);
     } catch (error) {
       console.error("[SR99 ContactForm] Form submit error:", error);
+      setSendFailed(true);
+      setIsSubmitted(false);
     } finally {
       setIsSubmitting(false);
     }
@@ -100,6 +116,7 @@ export default function ContactForm() {
       [field]: value,
     }));
     setIsSubmitted(false);
+    setSendFailed(false);
   }
 
   return (
@@ -186,7 +203,21 @@ export default function ContactForm() {
 
       {isSubmitted && (
         <p className="mt-4 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-sm font-medium text-emerald-300">
-          Köszönjük! Üzenetét rögzítettük, hamarosan jelentkezünk.
+          Köszönjük! Üzenetét megkaptuk, munkanapokon 24 órán belül jelentkezünk.
+        </p>
+      )}
+
+      {sendFailed && (
+        <p className="mt-4 rounded-xl border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-sm font-medium text-amber-200">
+          Az üzenetet most nem sikerült elküldeni. Kérjük, hívjon minket a{" "}
+          <a href="tel:+36709070669" className="underline hover:text-amber-100">
+            06-70 907-06-69
+          </a>{" "}
+          számon, vagy írjon a{" "}
+          <a href="mailto:carssr99@gmail.com" className="underline hover:text-amber-100">
+            carssr99@gmail.com
+          </a>{" "}
+          címre.
         </p>
       )}
     </section>

@@ -243,7 +243,7 @@ export const inventory: Car[] = [
     "marka": "Citroën",
     "modell": "Jumper 2.2 HDi zárt furgon (N1)",
     "evjarat": 2008,
-    "ar": "Kérjen ajánlatot",
+    "ar": "1 090 000 Ft",
     "futasteljesitmeny": "352 588 km",
     "uzemanyag": "Dízel",
     "szin": "Fehér",

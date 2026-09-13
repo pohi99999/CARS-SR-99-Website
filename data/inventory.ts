@@ -141,7 +141,7 @@ export const inventory: Car[] = [
     "marka": "Skoda",
     "modell": "Octavia Combi 2.0 TDI DSG",
     "evjarat": 2020,
-    "ar": "5 000 000 Ft",
+    "ar": "4 500 000 Ft",
     "futasteljesitmeny": "293 600 km",
     "uzemanyag": "Dízel",
     "images": [

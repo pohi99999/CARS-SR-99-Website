@@ -66,16 +66,17 @@ export const inventory: Car[] = [
     "uzemanyag": "Dízel",
     "szin": "Fekete",
     "images": [
+      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/2026-09-13-elol-1.webp",
+      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/2026-09-13-hatul.webp",
+      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/2026-09-13-elol-2.webp",
+      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/2026-09-13-elol-3.webp",
       "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/fo.webp",
+      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/748175729_893242940503310_2539838661510690519_n.webp",
       "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/744274759_1593426068810512_62443435036008230_n.webp",
-      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/744819797_1576311977490537_6194933287690889823_n.webp",
       "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/745235798_2283580042475077_553780261190129874_n.webp",
-      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/746528250_2109653139955940_1460504853168810034_n.webp",
-      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/746648590_1019200844153373_5272462772383059265_n.webp",
       "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/747962051_2224654521666863_4862507255607421810_n.webp",
       "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/748043639_2726650611065975_1477736940090135847_n.webp",
-      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/748175729_1036167785527219_2049127727718372007_n.webp",
-      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/748175729_893242940503310_2539838661510690519_n.webp"
+      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/748175729_1036167785527219_2049127727718372007_n.webp"
     ],
     "leiras": "Luxus felszereltségű, 8 személyes Citroën Jumpy Spacetourer kiváló esztétikai és műszaki állapotban. Megbízható és dinamikus 2.0 BlueHDi motorral (150 LE), 154 000 km-es garantált futásteljesítménnyel. Gazdag extrafelszereltség: prémium teljes bőrbelső, panorámatető, valamint elektromosan és távirányítással is működtethető tolóajtók. Az autó esztétikailag és műszakilag is hibátlan, minden létező extra tökéletesen funkcionál. A vételár a magyarországi forgalomba helyezés és rendszámozás teljes költségét tartalmazza."
   },

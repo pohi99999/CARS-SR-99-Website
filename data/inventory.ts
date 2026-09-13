@@ -85,7 +85,7 @@ export const inventory: Car[] = [
     "marka": "Ford",
     "modell": "Kuga 2.0 TDCi Titanium 4WD",
     "evjarat": 2011,
-    "ar": "2 549 000 Ft",
+    "ar": "2 400 000 Ft",
     "futasteljesitmeny": "237 965 km",
     "uzemanyag": "Dízel",
     "images": [

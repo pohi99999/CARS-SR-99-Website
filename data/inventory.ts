@@ -197,7 +197,7 @@ export const inventory: Car[] = [
     "marka": "Subaru",
     "modell": "XV",
     "evjarat": 2012,
-    "ar": "2 000 000 Ft",
+    "ar": "1 500 000 Ft",
     "futasteljesitmeny": "237 170 km",
     "uzemanyag": "Dízel",
     "images": [

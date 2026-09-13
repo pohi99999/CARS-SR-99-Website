@@ -157,7 +157,7 @@ export const inventory: Car[] = [
     "marka": "Skoda",
     "modell": "Octavia Combi (kézi váltó)",
     "evjarat": 2022,
-    "ar": "5 300 000 Ft",
+    "ar": "4 800 000 Ft",
     "futasteljesitmeny": "217 700 km",
     "uzemanyag": "Dízel",
     "images": [

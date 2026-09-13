@@ -174,7 +174,7 @@ export const inventory: Car[] = [
     "marka": "BMW",
     "modell": "X6 xDrive30d",
     "evjarat": 2011,
-    "ar": "5 000 000 Ft",
+    "ar": "4 500 000 Ft",
     "futasteljesitmeny": "259 000 km",
     "uzemanyag": "Dízel",
     "images": [

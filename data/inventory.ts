@@ -218,7 +218,7 @@ export const inventory: Car[] = [
     "marka": "BMW",
     "modell": "530d xDrive Touring (F11)",
     "evjarat": 2011,
-    "ar": "4 200 000 Ft",
+    "ar": "3 200 000 Ft",
     "futasteljesitmeny": "249 000 km",
     "uzemanyag": "Dízel",
     "images": [

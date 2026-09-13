@@ -123,7 +123,7 @@ export const inventory: Car[] = [
     "marka": "Seat",
     "modell": "Alhambra 2.0 TDI S&S",
     "evjarat": 2015,
-    "ar": "2 999 999 Ft",
+    "ar": "2 799 000 Ft",
     "futasteljesitmeny": "290 000 km",
     "uzemanyag": "Dízel",
     "images": [

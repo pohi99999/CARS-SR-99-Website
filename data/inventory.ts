@@ -190,7 +190,7 @@ export const inventory: Car[] = [
       "/geppark/BMW-X6-xDrive30d-2012/kepek/2026-09-13-motor-1.webp",
       "/geppark/BMW-X6-xDrive30d-2012/kepek/2026-09-13-motor-2.webp"
     ],
-    "leiras": "Lenyűgöző megjelenésű, mélyfekete BMW X6 xDrive30d, krómozott oldalsó lépcsőkkel, könnyűfém felnikkel és krémszínű, prémium bőrbelsővel. Erőteljes, 3.0 literes biturbó dízelmotorral (225 kW / 306 LE), precíz ZF nyolcfokozatú automataváltóval és állandó xDrive összkerékhajtással szerelve — igazi luxus-crossover, amely a terepjáró magabiztosságát ötvözi a sportkupé eleganciájával. 259 000 km-es futásteljesítménnyel. Érvényes magyar rendszámmal (AORA-792), magyar forgalomba helyezve, rendezett magyar okmányokkal kerül átadásra."
+    "leiras": "Lenyűgöző megjelenésű, mélyfekete BMW X6 xDrive30d, krómozott oldalsó lépcsőkkel, könnyűfém felnikkel és krémszínű, prémium bőrbelsővel. Erőteljes, 3.0 literes biturbó dízelmotorral (225 kW / 306 LE), precíz ZF nyolcfokozatú automataváltóval és állandó xDrive összkerékhajtással szerelve — igazi luxus-crossover, amely a terepjáró magabiztosságát ötvözi a sportkupé eleganciájával. 259 000 km-es futásteljesítménnyel. Érvényes magyar rendszámmal (AE-EJ-566), magyar forgalomba helyezve, rendezett magyar okmányokkal kerül átadásra."
   },
   {
     "id": "subaru-xv-2012",

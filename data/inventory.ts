@@ -237,6 +237,27 @@ export const inventory: Car[] = [
       "/geppark/BMW-F11-530d-xDrive-2011-zold/kepek/c9c55166-6d09-401c-badc-3944ee285fc7.webp"
     ],
     "leiras": "Ritkaságszámba menő, zöld metálfényezésű BMW 530d xDrive Touring (F11), a sorozat legerősebb és legjobban felszerelt dízel-összkerekes változata. Erőteljes, 3.0 literes dízelmotorral (190 kW / 258 LE) és állandó xDrive összkerékhajtással szerelve, amely minden évszakban biztos tapadást és magabiztos vezetést garantál. 249 000 km-es futásteljesítmény. Érvényes magyar rendszámmal (AORA-931), magyar forgalomba helyezve, rendben lévő magyar okmányokkal kerül értékesítésre."
+  },
+  {
+    "id": "citroen-jumper-2008",
+    "marka": "Citroën",
+    "modell": "Jumper 2.2 HDi zárt furgon (N1)",
+    "evjarat": 2008,
+    "ar": "Kérjen ajánlatot",
+    "futasteljesitmeny": "352 588 km",
+    "uzemanyag": "Dízel",
+    "szin": "Fehér",
+    "images": [
+      "/geppark/Citroen-Jumper-2008/kepek/2026-09-13-elol-1.webp",
+      "/geppark/Citroen-Jumper-2008/kepek/2026-09-13-elol-2.webp",
+      "/geppark/Citroen-Jumper-2008/kepek/2026-09-13-elol-3.webp",
+      "/geppark/Citroen-Jumper-2008/kepek/2026-09-13-oldal.webp",
+      "/geppark/Citroen-Jumper-2008/kepek/2026-09-13-hatul.webp",
+      "/geppark/Citroen-Jumper-2008/kepek/2026-09-13-rakter.webp",
+      "/geppark/Citroen-Jumper-2008/kepek/2026-09-13-muszerfal.webp",
+      "/geppark/Citroen-Jumper-2008/kepek/2026-09-13-belso.webp"
+    ],
+    "leiras": "Fehér Citroën Jumper zárt rakterű kisteherautó (N1), 2008-as évjárat, 2.2 HDi dízelmotorral (2198 cm³, 74 kW / 100 LE), kézi váltóval, 3 személyes vezetőfülkével. Megengedett össztömeg 3000 kg, vontatható tömeg fékezett utánfutóval 2000 kg. 352 588 km futásteljesítmény. Vállalkozásoknak, szállításhoz, költöztetéshez ideális munkás furgon. Érvényes magyar rendszámmal (SBL-016) és rendezett magyar okmányokkal, azonnal elvihető. Megtekinthető Zalaegerszegen."
   }
 ];
 

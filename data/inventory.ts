@@ -102,7 +102,7 @@ export const inventory: Car[] = [
     "marka": "Jaguar",
     "modell": "F-Pace 20d AWD",
     "evjarat": 2017,
-    "ar": "6 999 999 Ft",
+    "ar": "6 499 000 Ft",
     "futasteljesitmeny": "87 800 km",
     "uzemanyag": "Dízel",
     "images": [

@@ -88,14 +88,11 @@ export const inventory: Car[] = [
     "futasteljesitmeny": "237 965 km",
     "uzemanyag": "Dízel",
     "images": [
-      "/geppark/Ford-Kuga-Titanium-2011/kepek/fo.webp",
-      "/geppark/Ford-Kuga-Titanium-2011/kepek/28180567.webp",
-      "/geppark/Ford-Kuga-Titanium-2011/kepek/28180568.webp",
-      "/geppark/Ford-Kuga-Titanium-2011/kepek/28180569.webp",
-      "/geppark/Ford-Kuga-Titanium-2011/kepek/28180646.webp",
+      "/geppark/Ford-Kuga-Titanium-2011/kepek/2026-09-13-elol-1.webp",
+      "/geppark/Ford-Kuga-Titanium-2011/kepek/2026-09-13-elol-2.webp",
+      "/geppark/Ford-Kuga-Titanium-2011/kepek/28180668.webp",
       "/geppark/Ford-Kuga-Titanium-2011/kepek/28180649.webp",
-      "/geppark/Ford-Kuga-Titanium-2011/kepek/28180655.webp",
-      "/geppark/Ford-Kuga-Titanium-2011/kepek/28180668.webp"
+      "/geppark/Ford-Kuga-Titanium-2011/kepek/28180646.webp"
     ],
     "leiras": "Megkímélt állapotú, elegáns fekete metálfényezésű Ford Kuga a legmagasabb Titanium felszereltséggel és intelligens 4WD összkerékhajtással. A megbízható 2.0 TDCi (140 LE) motorral és kényelmes Powershift automataváltóval szerelve. Rendszeresen karbantartott, rozsdamentes karosszéria, esztétikai apróbb használati nyomokkal. Kulcs nélküli indítás, kétzónás digitális klíma, navigáció, tempomat és tolatóradar jellemzi. Költségmentes, megbízható crossover, érvényes magyar rendszámmal (AOTM-051) és okmányokkal, 2028-ig tartó műszaki vizsgával, azonnal elvihető."
   },

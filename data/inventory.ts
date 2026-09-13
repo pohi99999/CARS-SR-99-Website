@@ -144,15 +144,10 @@ export const inventory: Car[] = [
     "futasteljesitmeny": "293 600 km",
     "uzemanyag": "Dízel",
     "images": [
-      "/geppark/Skoda-Octavia-2020-DSG/kepek/fo.webp",
-      "/geppark/Skoda-Octavia-2020-DSG/kepek/IMG_0795.webp",
-      "/geppark/Skoda-Octavia-2020-DSG/kepek/IMG_0796.webp",
+      "/geppark/Skoda-Octavia-2020-DSG/kepek/2026-09-13-elol.webp",
       "/geppark/Skoda-Octavia-2020-DSG/kepek/IMG_0797.webp",
-      "/geppark/Skoda-Octavia-2020-DSG/kepek/IMG_0798.webp",
-      "/geppark/Skoda-Octavia-2020-DSG/kepek/IMG_0799.webp",
-      "/geppark/Skoda-Octavia-2020-DSG/kepek/IMG_0800.webp",
-      "/geppark/Skoda-Octavia-2020-DSG/kepek/IMG_0801.webp",
-      "/geppark/Skoda-Octavia-2020-DSG/kepek/IMG_0803.webp"
+      "/geppark/Skoda-Octavia-2020-DSG/kepek/IMG_0795.webp",
+      "/geppark/Skoda-Octavia-2020-DSG/kepek/IMG_0796.webp"
     ],
     "leiras": "Rendkívül népszerű, modern Skoda Octavia Combi DSG automataváltóval és a rendkívül takarékos 2.0 TDI (150 LE) motorral. 293 600 km-t futott, folyamatosan karbantartott és megbízható állapotú jármű. Tágas, funkcionális belső tér, kiváló ergonómia és gazdag felszereltség jellemzi, amely ideálissá teszi akár üzleti, akár családi használatra. A gépjármű érvényes magyar okmányokkal, friss magyar forgalmi engedéllyel és rendszámmal (AO-TM-038) rendelkezik, így azonnal, várakozás és további papírmunka nélkül elvihető."
   },
@@ -165,14 +160,11 @@ export const inventory: Car[] = [
     "futasteljesitmeny": "217 700 km",
     "uzemanyag": "Dízel",
     "images": [
-      "/geppark/Skoda-Octavia-2022-Kezi/kepek/fo.webp",
+      "/geppark/Skoda-Octavia-2022-Kezi/kepek/2026-09-13-elol.webp",
+      "/geppark/Skoda-Octavia-2022-Kezi/kepek/746908930_4309277012719718_6901980217075200397_n.webp",
       "/geppark/Skoda-Octavia-2022-Kezi/kepek/742147578_1306771008107610_8851609630085681517_n.webp",
       "/geppark/Skoda-Octavia-2022-Kezi/kepek/742730650_2189113575270620_4843642439006249235_n.webp",
-      "/geppark/Skoda-Octavia-2022-Kezi/kepek/743341629_1356634383103017_6112546118821989826_n.webp",
-      "/geppark/Skoda-Octavia-2022-Kezi/kepek/746908930_4309277012719718_6901980217075200397_n.webp",
-      "/geppark/Skoda-Octavia-2022-Kezi/kepek/747450760_1026014679918281_2426737065883425569_n.webp",
-      "/geppark/Skoda-Octavia-2022-Kezi/kepek/747513017_1724935181876612_3556337482417964153_n.webp",
-      "/geppark/Skoda-Octavia-2022-Kezi/kepek/747536807_2152638612338568_324321531159673310_n.webp"
+      "/geppark/Skoda-Octavia-2022-Kezi/kepek/747450760_1026014679918281_2426737065883425569_n.webp"
     ],
     "leiras": "Gyönyörű, újszerű esztétikai és műszaki állapotban lévő Skoda Octavia Combi kézi sebességváltóval. Kívül-belül karcmentes, szinte új autó benyomását kelti. 217 700 km-es futással, gazdaságos dízel hajtáslánccal. A vételár a magyarországi forgalomba helyezés és a friss műszaki vizsga költségeit már tartalmazza. Megtekinthető Zalaegerszegen."
   },

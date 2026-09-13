@@ -173,7 +173,7 @@ export const inventory: Car[] = [
     "id": "bmw-x6-xdrive30d-2012",
     "marka": "BMW",
     "modell": "X6 xDrive30d",
-    "evjarat": 2012,
+    "evjarat": 2011,
     "ar": "5 000 000 Ft",
     "futasteljesitmeny": "259 000 km",
     "uzemanyag": "Dízel",
@@ -190,7 +190,7 @@ export const inventory: Car[] = [
       "/geppark/BMW-X6-xDrive30d-2012/kepek/2026-09-13-motor-1.webp",
       "/geppark/BMW-X6-xDrive30d-2012/kepek/2026-09-13-motor-2.webp"
     ],
-    "leiras": "Lenyűgöző megjelenésű, mélyfekete BMW X6 xDrive30d, krómozott oldalsó lépcsőkkel, könnyűfém felnikkel és krémszínű, prémium bőrbelsővel. Erőteljes, 3.0 literes biturbó dízelmotorral (225 kW / 306 LE), precíz ZF nyolcfokozatú automataváltóval és állandó xDrive összkerékhajtással szerelve — igazi luxus-crossover, amely a terepjáró magabiztosságát ötvözi a sportkupé eleganciájával. 259 000 km-es futásteljesítménnyel. Érvényes magyar rendszámmal (AE-EJ-566), magyar forgalomba helyezve, rendezett magyar okmányokkal kerül átadásra."
+    "leiras": "Lenyűgöző megjelenésű, fekete BMW X6 xDrive30d, krómozott oldalsó lépcsőkkel, könnyűfém felnikkel és krémszínű, prémium bőrbelsővel. Erőteljes, 3.0 literes, hathengeres N57 dízelmotorral (2993 cm³, 180 kW / 245 LE), precíz ZF nyolcfokozatú automataváltóval és állandó xDrive összkerékhajtással szerelve. 2011-es évjárat, 4 személyes kivitel, 259 000 km-es futásteljesítménnyel. Igazi luxus-crossover, amely a terepjáró magabiztosságát ötvözi a sportkupé eleganciájával. Érvényes magyar rendszámmal (AE-EJ-566) és rendezett magyar okmányokkal kerül átadásra."
   },
   {
     "id": "subaru-xv-2012",

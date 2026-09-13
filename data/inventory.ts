@@ -61,7 +61,7 @@ export const inventory: Car[] = [
     "marka": "Citroën",
     "modell": "Jumpy Spacetourer (8 személyes)",
     "evjarat": 2017,
-    "ar": "7 600 000 Ft",
+    "ar": "6 999 000 Ft",
     "futasteljesitmeny": "154 000 km",
     "uzemanyag": "Dízel",
     "szin": "Fekete",

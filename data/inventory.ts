@@ -38,7 +38,7 @@ export const inventory: Car[] = [
     "marka": "BMW",
     "modell": "5-ös sorozat (F11) Touring (N47)",
     "evjarat": 2011,
-    "ar": "3 599 999 Ft",
+    "ar": "2 800 000 Ft",
     "futasteljesitmeny": "259 955 km",
     "uzemanyag": "Dízel",
     "images": [

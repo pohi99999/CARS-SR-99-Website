@@ -132,11 +132,11 @@ export const inventory: Car[] = [
     "futasteljesitmeny": "290 000 km",
     "uzemanyag": "Dízel",
     "images": [
+      "/geppark/Seat-Alhambra-2015/kepek/2026-09-13-elol-1.webp",
+      "/geppark/Seat-Alhambra-2015/kepek/2026-09-13-elol-2.webp",
       "/geppark/Seat-Alhambra-2015/kepek/fo.webp",
       "/geppark/Seat-Alhambra-2015/kepek/743282710_1751326392853702_6377459396269776274_n.webp",
-      "/geppark/Seat-Alhambra-2015/kepek/747505217_1565056614972752_4266052568904685950_n.webp",
       "/geppark/Seat-Alhambra-2015/kepek/747530660_2579782709115349_1032856940276771584_n.webp",
-      "/geppark/Seat-Alhambra-2015/kepek/747536084_1478636474301092_5683994041271014871_n.webp",
       "/geppark/Seat-Alhambra-2015/kepek/747561659_1475935837883010_4697401629169117369_n.webp"
     ],
     "leiras": "Kiváló állapotban lévő, gondosan karbantartott Seat Alhambra, amely tökéletes választás nagycsaládosoknak. Praktikus, dupla tolóajtós kialakítással, tágas 5 személyes utastérrel, nagy navigációs rendszerrel és tolatókamerával szerelve. Motorikusan és esztétikailag is szép, megkímélt állapot. A vételár a magyarországi forgalomba helyezés költségeit már tartalmazza. Megtekinthető Zalaegerszegen."

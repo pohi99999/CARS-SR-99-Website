@@ -18,7 +18,7 @@ export const inventory: Car[] = [
     "marka": "Audi",
     "modell": "A4 Avant Design S-tronic",
     "evjarat": 2017,
-    "ar": "5 300 000 Ft",
+    "ar": "4 800 000 Ft",
     "futasteljesitmeny": "187 143 km",
     "uzemanyag": "Dízel",
     "images": [

@@ -42,20 +42,17 @@ export const inventory: Car[] = [
     "futasteljesitmeny": "N/A",
     "uzemanyag": "Dízel",
     "images": [
-      "/geppark/BMW-F11-N47-Feher-2011/kepek/fo.webp",
+      "/geppark/BMW-F11-N47-Feher-2011/kepek/2026-09-13-elol.webp",
+      "/geppark/BMW-F11-N47-Feher-2011/kepek/2026-09-13-hatul.webp",
+      "/geppark/BMW-F11-N47-Feher-2011/kepek/486863d9-af06-4edb-82fe-a06a75294ab9.webp",
       "/geppark/BMW-F11-N47-Feher-2011/kepek/0d1fcf53-cb73-4842-ae69-03f0b3cf2d04.webp",
       "/geppark/BMW-F11-N47-Feher-2011/kepek/27bfa191-74dc-4f2a-a8d8-b525a3cc12e9.webp",
       "/geppark/BMW-F11-N47-Feher-2011/kepek/2a365b6a-9750-4c3a-938c-7fc71be2423f.webp",
       "/geppark/BMW-F11-N47-Feher-2011/kepek/3fa07d3e-8846-4b88-b519-a4dfd6f5c7f2.webp",
-      "/geppark/BMW-F11-N47-Feher-2011/kepek/486863d9-af06-4edb-82fe-a06a75294ab9.webp",
-      "/geppark/BMW-F11-N47-Feher-2011/kepek/54da2283-f742-44ec-9f9b-7d3d1ca2281c.webp",
       "/geppark/BMW-F11-N47-Feher-2011/kepek/6933a1f3-cbde-4103-9fac-7322b84d7fec.webp",
       "/geppark/BMW-F11-N47-Feher-2011/kepek/76694ad0-2d52-4243-ae59-73cd476e00ba.webp",
       "/geppark/BMW-F11-N47-Feher-2011/kepek/7763b2c0-67a1-4b16-ad42-5e75d9f5370f.webp",
-      "/geppark/BMW-F11-N47-Feher-2011/kepek/78e09fc5-bd26-49b4-a0ab-4cc66eda867a.webp",
-      "/geppark/BMW-F11-N47-Feher-2011/kepek/947e9655-c492-4946-817d-5349519a4505.webp",
-      "/geppark/BMW-F11-N47-Feher-2011/kepek/b896f66e-349f-4d8a-ae8d-21ba8107ba0a.webp",
-      "/geppark/BMW-F11-N47-Feher-2011/kepek/d6337bbb-e8f8-4b6d-8ca0-146cbd275213.webp"
+      "/geppark/BMW-F11-N47-Feher-2011/kepek/b896f66e-349f-4d8a-ae8d-21ba8107ba0a.webp"
     ],
     "leiras": "Elegáns alpesi fehér fényezésű BMW 5-ös sorozat (F11) Touring, a közkedvelt és megbízható N47-es dízelmotorral (218 LE). Kiváló esztétikai és műszaki állapot, tágas és kényelmes utastér jellemzi. Kiváló utazóautó mindennapi használatra vagy hosszabb távokra egyaránt. A gépjármű érvényes magyar okmányokkal, friss magyar forgalmi engedéllyel és rendszámmal (AO-TM-039) rendelkezik, így azonnal, várakozás és további papírmunka nélkül elvihető."
   },

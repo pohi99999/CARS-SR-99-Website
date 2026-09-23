@@ -81,23 +81,6 @@ export const inventory: Car[] = [
     "leiras": "Luxus felszereltségű, 8 személyes Citroën Jumpy Spacetourer kiváló esztétikai és műszaki állapotban. Megbízható és dinamikus 2.0 BlueHDi motorral (150 LE), 154 000 km-es garantált futásteljesítménnyel. Gazdag extrafelszereltség: prémium teljes bőrbelső, panorámatető, valamint elektromosan és távirányítással is működtethető tolóajtók. Az autó esztétikailag és műszakilag is hibátlan, minden létező extra tökéletesen funkcionál. A vételár a magyarországi forgalomba helyezés és rendszámozás teljes költségét tartalmazza."
   },
   {
-    "id": "ford-kuga-titanium-2011",
-    "marka": "Ford",
-    "modell": "Kuga 2.0 TDCi Titanium 4WD",
-    "evjarat": 2011,
-    "ar": "2 400 000 Ft",
-    "futasteljesitmeny": "237 965 km",
-    "uzemanyag": "Dízel",
-    "images": [
-      "/geppark/Ford-Kuga-Titanium-2011/kepek/2026-09-13-elol-1.webp",
-      "/geppark/Ford-Kuga-Titanium-2011/kepek/2026-09-13-elol-2.webp",
-      "/geppark/Ford-Kuga-Titanium-2011/kepek/28180668.webp",
-      "/geppark/Ford-Kuga-Titanium-2011/kepek/28180649.webp",
-      "/geppark/Ford-Kuga-Titanium-2011/kepek/28180646.webp"
-    ],
-    "leiras": "Megkímélt állapotú, elegáns fekete metálfényezésű Ford Kuga a legmagasabb Titanium felszereltséggel és intelligens 4WD összkerékhajtással. A megbízható 2.0 TDCi (140 LE) motorral és kényelmes Powershift automataváltóval szerelve. Rendszeresen karbantartott, rozsdamentes karosszéria, esztétikai apróbb használati nyomokkal. Kulcs nélküli indítás, kétzónás digitális klíma, navigáció, tempomat és tolatóradar jellemzi. Költségmentes, megbízható crossover, érvényes magyar rendszámmal (AOTM-051) és okmányokkal, 2028-ig tartó műszaki vizsgával, azonnal elvihető."
-  },
-  {
     "id": "jaguar-f-pace-2017",
     "marka": "Jaguar",
     "modell": "F-Pace 20d AWD",
@@ -237,27 +220,6 @@ export const inventory: Car[] = [
       "/geppark/BMW-F11-530d-xDrive-2011-zold/kepek/c9c55166-6d09-401c-badc-3944ee285fc7.webp"
     ],
     "leiras": "Ritkaságszámba menő, zöld metálfényezésű BMW 530d xDrive Touring (F11), a sorozat legerősebb és legjobban felszerelt dízel-összkerekes változata. Erőteljes, 3.0 literes dízelmotorral (190 kW / 258 LE) és állandó xDrive összkerékhajtással szerelve, amely minden évszakban biztos tapadást és magabiztos vezetést garantál. 249 000 km-es futásteljesítmény. Érvényes magyar rendszámmal (AORA-931), magyar forgalomba helyezve, rendben lévő magyar okmányokkal kerül értékesítésre."
-  },
-  {
-    "id": "citroen-jumper-2008",
-    "marka": "Citroën",
-    "modell": "Jumper 2.2 HDi zárt furgon (N1)",
-    "evjarat": 2008,
-    "ar": "1 090 000 Ft",
-    "futasteljesitmeny": "352 588 km",
-    "uzemanyag": "Dízel",
-    "szin": "Fehér",
-    "images": [
-      "/geppark/Citroen-Jumper-2008/kepek/2026-09-13-elol-1.webp",
-      "/geppark/Citroen-Jumper-2008/kepek/2026-09-13-elol-2.webp",
-      "/geppark/Citroen-Jumper-2008/kepek/2026-09-13-elol-3.webp",
-      "/geppark/Citroen-Jumper-2008/kepek/2026-09-13-oldal.webp",
-      "/geppark/Citroen-Jumper-2008/kepek/2026-09-13-hatul.webp",
-      "/geppark/Citroen-Jumper-2008/kepek/2026-09-13-rakter.webp",
-      "/geppark/Citroen-Jumper-2008/kepek/2026-09-13-muszerfal.webp",
-      "/geppark/Citroen-Jumper-2008/kepek/2026-09-13-belso.webp"
-    ],
-    "leiras": "Fehér Citroën Jumper zárt rakterű kisteherautó (N1), 2008-as évjárat, 2.2 HDi dízelmotorral (2198 cm³, 74 kW / 100 LE), kézi váltóval, 3 személyes vezetőfülkével. Megengedett össztömeg 3000 kg, vontatható tömeg fékezett utánfutóval 2000 kg. 352 588 km futásteljesítmény. Vállalkozásoknak, szállításhoz, költöztetéshez ideális munkás furgon. Érvényes magyar rendszámmal (SBL-016) és rendezett magyar okmányokkal, azonnal elvihető. Megtekinthető Zalaegerszegen."
   }
 ];
 

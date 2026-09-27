@@ -8,14 +8,14 @@ import TireServicePhone from "@/components/TireServicePhone";
 import { siteUrl } from "@/utils/site";
 
 export const metadata: Metadata = {
-  title: "Kerékcsere és Gumicsere Zalaegerszeg",
+  title: "Kerékcsere és gumiszerviz Zalaegerszeg-Ságod",
   description:
     "Kerékcsere és gumicsere szolgáltatásunk Zalaegerszegen: szezonális gumicsere, kiegyensúlyozás, defektjavítás és gumihotel a CARS SR99 Kft. ságodi telephelyén.",
   alternates: {
     canonical: `${siteUrl}/kerekcsere`,
   },
   openGraph: {
-    title: "Kerékcsere és Gumicsere Zalaegerszeg | CARS SR99 Kft.",
+    title: "Kerékcsere és gumiszerviz Zalaegerszeg-Ságod | CARS SR99 Kft.",
     description:
       "Kerékcsere és gumicsere szolgáltatásunk Zalaegerszegen: szezonális gumicsere, kiegyensúlyozás, defektjavítás és gumihotel a CARS SR99 Kft. ságodi telephelyén.",
     url: `${siteUrl}/kerekcsere`,
@@ -181,7 +181,7 @@ export default function KerekcserePage() {
             </p>
           </div>
           <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-100 sm:text-4xl lg:text-5xl">
-            Kerékcsere és Gumicsere Zalaegerszegen
+            Kerékcsere és gumiszerviz Zalaegerszeg-Ságod
           </h1>
           <p className="mt-6 leading-7 text-slate-300">
             A CARS SR99 Kft. új beruházású kerék- és gumiszerviz eszközparkkal bővítette szolgáltatásait.

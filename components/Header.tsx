@@ -10,7 +10,7 @@ const navItems = [
   { href: "/", label: "Főoldal" },
   { href: "/kinalat", label: "Kínálatunk" },
   { href: "/autobeszamitas", label: "Autóbeszámítás" },
-  { href: "/kerekcsere", label: "Kerékcsere" },
+  { href: "/kerekcsere", label: "Gumiszerviz" },
   { href: "/kapcsolat", label: "Kapcsolat" },
 ];
 

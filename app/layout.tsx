@@ -9,7 +9,6 @@ import {
   AIChatAssistant,
   CompareDock,
   CookieBanner,
-  FomoNotification,
 } from "@/components/DynamicClientComponents";
 import { businessId, siteUrl, websiteId } from "@/utils/site";
 
@@ -216,7 +215,6 @@ export default function RootLayout({
         </video>
         <div className="pointer-events-none fixed inset-0 -z-40 bg-black/5" />
         <Providers>
-          <FomoNotification />
           <Header />
           <EventBanner />
           <main className="relative z-10 flex-1 bg-transparent w-full max-w-full overflow-x-hidden">{children}</main>

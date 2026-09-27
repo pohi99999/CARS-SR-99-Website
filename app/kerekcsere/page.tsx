@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { RefreshCw, Gauge, Wrench, Warehouse, CalendarClock, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 import KerekcsereCTAButtons from "@/components/KerekcsereCTAButtons";
 
 import { siteUrl } from "@/utils/site";
@@ -133,6 +134,19 @@ const jsonLd = {
   url: `${siteUrl}/kerekcsere`,
 };
 
+// A műhely fotói (Robi, 2026-09-27; a vendégautó rendszáma kitakarva). Az alt szöveg azt
+// írja le, ami a képen látszik; márkát, gumitípust nem állítunk, amit a kép nem mutat.
+const workshopPhotos = [
+  { src: "/kerekcsere/2026-09-27-muhely-attekintes.webp", w: 1280, h: 960, alt: "A CARS SR99 gumiszervizének műhelye: oszlopos emelő, centírozógép és gumiszerelő gép" },
+  { src: "/kerekcsere/2026-09-27-emelo-jaguar.webp", w: 1280, h: 960, alt: "Emelőre állított fehér SUV a gumiszervizben, előtérben a gumiszerelő gép" },
+  { src: "/kerekcsere/2026-09-27-emelo-oldalnezet.webp", w: 1280, h: 960, alt: "Mobil oszlopos emelő fehér SUV-val, háttérben a centírozógép" },
+  { src: "/kerekcsere/2026-09-27-centirozo-es-szerelogep.webp", w: 1280, h: 960, alt: "Centírozógép és gumiszerelő gép egymás mellett a műhelyben" },
+  { src: "/kerekcsere/2026-09-27-centirozogep-muhely.webp", w: 1280, h: 960, alt: "Centírozógép felfogott kerékkel, mellette szerszámkocsi" },
+  { src: "/kerekcsere/2026-09-27-centirozogep-teli-gumi.webp", w: 1280, h: 960, alt: "Centírozógép kerékkel a CARS SR99 gumiszervizében" },
+  { src: "/kerekcsere/2026-09-27-szerelogep-kerekkel.webp", w: 1280, h: 960, alt: "Gumiszerelő gép felfogott alufelnis kerékkel" },
+  { src: "/kerekcsere/2026-09-27-szerelogep-allo.webp", w: 960, h: 1280, alt: "Gumiszerelő gép a műhelyben" },
+];
+
 export default function KerekcserePage() {
   return (
     <div className="relative w-full min-h-screen bg-[url('/hero-poster.webp')] bg-cover bg-center bg-no-repeat py-12">
@@ -178,6 +192,31 @@ export default function KerekcserePage() {
                 A szolgáltatás a ságodi telephelyünkön érhető el, ugyanott, ahol autókereskedési
                 és autóbeszámítási tevékenységünket is folytatjuk.
               </p>
+            </div>
+          </div>
+
+          <div className="mt-10">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
+              A műhely
+            </h2>
+            {/* Mobilon 1, sm felett 2 oszlop: a 8 kép 4 teli sort ad, magányos kép nincs. */}
+            <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {workshopPhotos.map((photo) => (
+                <figure
+                  key={photo.src}
+                  className="overflow-hidden rounded-xl border-t border-l border-r border-b border-t-white/15 border-l-white/10 border-r-white/5 border-b-white/5 bg-white/5"
+                >
+                  <Image
+                    src={photo.src}
+                    width={photo.w}
+                    height={photo.h}
+                    alt={photo.alt}
+                    sizes="(max-width: 639px) 100vw, 440px"
+                    loading="lazy"
+                    className="aspect-[4/3] h-auto w-full object-cover"
+                  />
+                </figure>
+              ))}
             </div>
           </div>
 

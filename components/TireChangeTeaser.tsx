@@ -46,7 +46,7 @@ export default function TireChangeTeaser() {
             href="/kerekcsere"
             className="inline-flex w-full shrink-0 items-center justify-center rounded-full border-2 border-sky-400 px-6 py-3 text-sm font-semibold text-sky-400 transition-all duration-300 ease-in-out hover:bg-sky-400/10 hover:shadow-[0_0_20px_rgba(56,189,248,0.2)] btn-shimmer hover:scale-[1.02] active:scale-[0.98] sm:w-auto"
           >
-            Kerékcsere részletei →
+            Gumiszerviz részletei →
           </Link>
         </div>
       </m.section>

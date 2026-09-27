@@ -73,7 +73,7 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/kerekcsere" className="transition-colors duration-200 hover:text-sky-400">
-                Kerékcsere
+                Gumiszerviz
               </Link>
             </li>
             <li>

@@ -45,6 +45,13 @@ export default function ContactPage() {
                   <a href="tel:+36709070669" className="hover:text-sky-300 transition">06-70 907-06-69</a>
                 </div>
                 <div className="flex items-center gap-2 text-slate-200 font-medium">
+                  <Phone className="h-4 w-4 text-sky-400" />
+                  <span>
+                    Gumiszerviz időpontfoglalás:{" "}
+                    <a href="tel:+36308427297" className="whitespace-nowrap hover:text-sky-300 transition">06 30 842 7297</a>
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 text-slate-200 font-medium">
                   <Mail className="h-4 w-4 text-sky-400" />
                   <a href="mailto:carssr99@gmail.com" className="hover:text-sky-300 transition">carssr99@gmail.com</a>
                 </div>

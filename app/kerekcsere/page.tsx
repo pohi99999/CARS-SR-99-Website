@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { RefreshCw, Gauge, Wrench, Warehouse, CalendarClock, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import KerekcsereCTAButtons from "@/components/KerekcsereCTAButtons";
 
 import { siteUrl } from "@/utils/site";
@@ -193,6 +194,45 @@ export default function KerekcserePage() {
                 és autóbeszámítási tevékenységünket is folytatjuk.
               </p>
             </div>
+          </div>
+
+          <div className="mt-10">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
+              Így talál meg minket
+            </h2>
+            {/* sm felett a két oszlop a képarányokkal (16:9 és 660:885) arányos, így a két kép
+                közel egyforma magas, a keret miatti 1-2 px-t a tábla object-cover vágása veszi fel;
+                mobilon egymás alatt. */}
+            <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-[1.778fr_0.746fr]">
+              <figure className="overflow-hidden rounded-xl border-t border-l border-r border-b border-t-white/15 border-l-white/10 border-r-white/5 border-b-white/5 bg-white/5">
+                <Image
+                  src="/kerekcsere/2026-09-27-telephely-kivulrol.webp"
+                  width={1280}
+                  height={720}
+                  alt="A CARS SR99 Kft. telephelyének épülete a cégtáblával, előtte három parkoló autó"
+                  sizes="(max-width: 639px) 100vw, 620px"
+                  className="h-auto w-full"
+                />
+              </figure>
+              <figure className="mx-auto w-full max-w-xs overflow-hidden rounded-xl border-t border-l border-r border-b border-t-white/15 border-l-white/10 border-r-white/5 border-b-white/5 bg-white/5 sm:max-w-none">
+                <Image
+                  src="/kerekcsere/2026-09-27-utbaigazito-tabla.webp"
+                  width={660}
+                  height={885}
+                  alt="A Ságodi Iparterület útbaigazító táblája, rajta a „CARS SR99 KFT – GUMISZERVIZ” felirat"
+                  sizes="(max-width: 639px) 320px, 260px"
+                  loading="lazy"
+                  className="h-auto w-full sm:h-full sm:object-cover"
+                />
+              </figure>
+            </div>
+            <p className="mt-4 text-sm leading-6 text-slate-300">
+              8900 Zalaegerszeg, Ságod hrsz. 807/15 (Ságodi Iparterület). Az iparterület
+              útbaigazító tábláján a „CARS SR99 KFT – GUMISZERVIZ” feliratot keresse.{" "}
+              <Link href="/kapcsolat" className="text-sky-300 underline underline-offset-4 hover:text-sky-200">
+                Térkép és elérhetőség
+              </Link>
+            </p>
           </div>
 
           <div className="mt-10">

@@ -3,6 +3,7 @@ import { RefreshCw, Gauge, Wrench, Warehouse, CalendarClock, CheckCircle2 } from
 import Image from "next/image";
 import Link from "next/link";
 import KerekcsereCTAButtons from "@/components/KerekcsereCTAButtons";
+import TireServicePhone from "@/components/TireServicePhone";
 
 import { siteUrl } from "@/utils/site";
 
@@ -132,6 +133,16 @@ const jsonLd = {
     "@type": "City",
     name: "Zalaegerszeg",
   },
+  availableChannel: {
+    "@type": "ServiceChannel",
+    servicePhone: {
+      "@type": "ContactPoint",
+      telephone: "+36-30-842-7297",
+      contactType: "Gumiszerviz, időpontkérés",
+      areaServed: "HU",
+      availableLanguage: "hu",
+    },
+  },
   url: `${siteUrl}/kerekcsere`,
 };
 
@@ -177,6 +188,7 @@ export default function KerekcserePage() {
             Várjuk autóját szezonális gumicserére, kiegyensúlyozásra és gumiszervizre – ugyanazon a
             megbízható, ságodi telephelyen, ahol autóját is megvásárolta vagy vásárolná.
           </p>
+          <TireServicePhone className="mt-6" />
 
           <div className="mt-8 space-y-4 text-sm text-slate-300">
             <div className="rounded-xl border-t border-l border-r border-b border-t-white/15 border-l-white/10 border-r-white/5 border-b-white/5 bg-white/5 p-5">
@@ -233,6 +245,7 @@ export default function KerekcserePage() {
                 Térkép és elérhetőség
               </Link>
             </p>
+            <TireServicePhone className="mt-4" />
           </div>
 
           <div className="mt-10">

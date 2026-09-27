@@ -99,6 +99,19 @@ export default function Footer() {
                 06-70 907-06-69
               </a>
             </li>
+            <li className="flex items-start gap-2">
+              <Phone className="mt-0.5 h-4 w-4 shrink-0 text-sky-400" />
+              <span>
+                Gumiszerviz időpontfoglalás:{" "}
+                <a
+                  href="tel:+36308427297"
+                  onClick={() => trackContactClick("phone")}
+                  className="whitespace-nowrap transition-colors hover:text-sky-400"
+                >
+                  06 30 842 7297
+                </a>
+              </span>
+            </li>
             <li className="flex items-center gap-2">
               <Mail className="h-4 w-4 shrink-0 text-sky-400" />
               <a

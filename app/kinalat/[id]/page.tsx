@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import FomoNotification from "@/components/FomoNotification";
 import ImageGallery from "@/components/ImageGallery";
 import LeasingCalculator from "@/components/LeasingCalculator";
 import PdfBrochureButton from "@/components/PdfBrochureButton";
@@ -179,7 +178,6 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
 
   return (
     <section className="mx-auto w-full max-w-7xl px-6 py-12 sm:px-6 lg:px-8 overflow-hidden">
-      <FomoNotification />
       <VehicleViewTracker
         carId={car.id}
         marka={car.marka}

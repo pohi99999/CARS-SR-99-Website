@@ -33,7 +33,7 @@ export default function TireChangeTeaser() {
             </div>
             <div>
               <div className="flex flex-wrap items-center gap-2">
-                <h2 className="text-lg font-semibold text-white">Kerékcsere és gumicsere</h2>
+                <h2 className="text-lg font-semibold text-white">Kerékcsere és gumiszerviz</h2>
               </div>
               <p className="mt-1 text-sm text-slate-400">
                 Új szolgáltatásunk elérhető: szezonális gumicsere, kiegyensúlyozás és gumiszerviz

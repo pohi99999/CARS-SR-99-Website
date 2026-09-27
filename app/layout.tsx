@@ -143,7 +143,7 @@ const jsonLdSchema = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Kerékcsere és gumicsere",
+          name: "Kerékcsere és gumiszerviz",
           areaServed: { "@type": "City", name: "Zalaegerszeg" },
         },
       },

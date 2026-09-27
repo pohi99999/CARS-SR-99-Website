@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "CARS SR99 Kft. - Kerékcsere és Gumicsere",
+        alt: "CARS SR99 Kft. - Kerékcsere és gumiszerviz",
       },
     ],
   },
@@ -113,8 +113,8 @@ const faqJsonLd = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  serviceType: "Kerékcsere és gumicsere",
-  name: "CARS SR99 Kerékcsere és Gumicsere",
+  serviceType: "Kerékcsere és gumiszerviz",
+  name: "CARS SR99 Kerékcsere és gumiszerviz",
   description:
     "Szezonális gumicsere, kiegyensúlyozás, defektjavítás és gumihotel szolgáltatás Zalaegerszegen, a CARS SR99 Kft. kerék- és gumiszervizében.",
   provider: {

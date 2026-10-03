@@ -42,6 +42,11 @@ export default function AboutSection() {
             A Ságodi Iparterület kiváló infrastruktúrája biztonságos megtekintést, kényelmes
             tesztvezetést és gördülékeny ügyintézést biztosít minden érdeklődőnek.
           </p>
+          <p className="mt-4 leading-7 font-light text-slate-300">
+            2026-ban az Arany Vállalkozás rangsor díjazottja lettünk: a hiteles értékeléseket
+            tartalmazó webhelyek értékelései alapján a legjobban értékelt magyarországi vállalkozások
+            közé kerültünk.
+          </p>
         </div>
       </div>
       </m.section>

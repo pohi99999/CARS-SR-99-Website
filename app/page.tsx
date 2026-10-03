@@ -12,6 +12,7 @@ const TrustBadges = dynamic(() => import("@/components/TrustBadges"));
 const TireChangeTeaser = dynamic(() => import("@/components/TireChangeTeaser"));
 const SocialProofWall = dynamic(() => import("@/components/SocialProofWall"));
 const Testimonials = dynamic(() => import("@/components/Testimonials"));
+const AwardBand = dynamic(() => import("@/components/AwardBand"));
 
 type HomePageProps = {
   searchParams: Promise<{
@@ -135,6 +136,7 @@ export default async function Home({ searchParams }: HomePageProps) {
       <TireChangeTeaser />
       <AboutSection />
       <SocialProofWall />
+      <AwardBand />
       <Testimonials />
     </>
   );

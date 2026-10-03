@@ -102,24 +102,6 @@ export const inventory: Car[] = [
     "leiras": "Gyönyörű, sérülésmentes Jaguar F-Pace 2.0d AWD vezetett szervizkönyvvel, garantált és leinformálható 87 800 km-es futásteljesítménnyel. Rendkívül elegáns megjelenés, prémium vezetési élmény és megbízható összkerékhajtás. Jelenleg még külföldi okmányokkal rendelkezik, de a vételár már a magyarországi forgalomba helyezés és regisztráció minden költségét tartalmazza."
   },
   {
-    "id": "seat-alhambra-2015",
-    "marka": "Seat",
-    "modell": "Alhambra 2.0 TDI S&S",
-    "evjarat": 2015,
-    "ar": "2 799 000 Ft",
-    "futasteljesitmeny": "290 000 km",
-    "uzemanyag": "Dízel",
-    "images": [
-      "/geppark/Seat-Alhambra-2015/kepek/2026-09-13-elol-1.webp",
-      "/geppark/Seat-Alhambra-2015/kepek/2026-09-13-elol-2.webp",
-      "/geppark/Seat-Alhambra-2015/kepek/fo.webp",
-      "/geppark/Seat-Alhambra-2015/kepek/743282710_1751326392853702_6377459396269776274_n.webp",
-      "/geppark/Seat-Alhambra-2015/kepek/747530660_2579782709115349_1032856940276771584_n.webp",
-      "/geppark/Seat-Alhambra-2015/kepek/747561659_1475935837883010_4697401629169117369_n.webp"
-    ],
-    "leiras": "Kiváló állapotban lévő, gondosan karbantartott Seat Alhambra, amely tökéletes választás nagycsaládosoknak. Praktikus, dupla tolóajtós kialakítással, tágas 5 személyes utastérrel, nagy navigációs rendszerrel és tolatókamerával szerelve. Motorikusan és esztétikailag is szép, megkímélt állapot. A vételár a magyarországi forgalomba helyezés költségeit már tartalmazza. Megtekinthető Zalaegerszegen."
-  },
-  {
     "id": "skoda-octavia-2020-dsg",
     "marka": "Skoda",
     "modell": "Octavia Combi 2.0 TDI DSG",

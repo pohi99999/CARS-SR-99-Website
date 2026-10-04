@@ -57,30 +57,6 @@ export const inventory: Car[] = [
     "leiras": "Elegáns alpesi fehér fényezésű BMW 5-ös sorozat (F11) Touring, a közkedvelt és megbízható N47-es dízelmotorral (218 LE). Kiváló esztétikai és műszaki állapot, tágas és kényelmes utastér jellemzi. Kiváló utazóautó mindennapi használatra vagy hosszabb távokra egyaránt. A gépjármű érvényes magyar okmányokkal, friss magyar forgalmi engedéllyel és rendszámmal (AO-TM-039) rendelkezik, így azonnal, várakozás és további papírmunka nélkül elvihető."
   },
   {
-    "id": "citroen-jumpy-spacetourer-2017",
-    "marka": "Citroën",
-    "modell": "Jumpy Spacetourer (8 személyes)",
-    "evjarat": 2017,
-    "ar": "6 999 000 Ft",
-    "futasteljesitmeny": "154 000 km",
-    "uzemanyag": "Dízel",
-    "szin": "Fekete",
-    "images": [
-      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/2026-09-13-elol-1.webp",
-      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/2026-09-13-hatul.webp",
-      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/2026-09-13-elol-2.webp",
-      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/2026-09-13-elol-3.webp",
-      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/fo.webp",
-      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/748175729_893242940503310_2539838661510690519_n.webp",
-      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/744274759_1593426068810512_62443435036008230_n.webp",
-      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/745235798_2283580042475077_553780261190129874_n.webp",
-      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/747962051_2224654521666863_4862507255607421810_n.webp",
-      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/748043639_2726650611065975_1477736940090135847_n.webp",
-      "/geppark/Citroen-Jumpy-Spacetourer-2017/kepek/748175729_1036167785527219_2049127727718372007_n.webp"
-    ],
-    "leiras": "Luxus felszereltségű, 8 személyes Citroën Jumpy Spacetourer kiváló esztétikai és műszaki állapotban. Megbízható és dinamikus 2.0 BlueHDi motorral (150 LE), 154 000 km-es garantált futásteljesítménnyel. Gazdag extrafelszereltség: prémium teljes bőrbelső, panorámatető, valamint elektromosan és távirányítással is működtethető tolóajtók. Az autó esztétikailag és műszakilag is hibátlan, minden létező extra tökéletesen funkcionál. A vételár a magyarországi forgalomba helyezés és rendszámozás teljes költségét tartalmazza."
-  },
-  {
     "id": "jaguar-f-pace-2017",
     "marka": "Jaguar",
     "modell": "F-Pace 20d AWD",

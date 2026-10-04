@@ -197,6 +197,30 @@ export const inventory: Car[] = [
       "/geppark/Ford-Focus-2006/kepek/06.webp"
     ],
     "leiras": "Kék színű, ötajtós Ford Focus 1.6 TDCi, takarékos dízelmotorral (1560 cm³, 66 kW / 90 LE), 4 literes fogyasztással. 303 000 km-es futásteljesítmény. Friss műszaki vizsgával, új fékekkel, elvégzett vezérlés-cserével, friss olaj- és olajszűrő-cserével, új négyévszakos gumikkal. Klímás. Kívül-belül normál, szép állapotban. Érvényes magyar rendszámmal (PPL-952). Csere, beszámítás nem lehetséges. Megtekinthető Zalaegerszegen."
+  },
+  {
+    "id": "bmw-x1-sdrive18i-2011",
+    "marka": "BMW",
+    "modell": "X1 sDrive18i",
+    "evjarat": 2011,
+    "ar": "2 500 000 Ft",
+    "futasteljesitmeny": "147 200 km",
+    "uzemanyag": "Benzin",
+    "images": [
+      "/geppark/BMW-X1-sDrive18i-2011/kepek/fo.webp",
+      "/geppark/BMW-X1-sDrive18i-2011/kepek/01.webp",
+      "/geppark/BMW-X1-sDrive18i-2011/kepek/02.webp",
+      "/geppark/BMW-X1-sDrive18i-2011/kepek/03.webp",
+      "/geppark/BMW-X1-sDrive18i-2011/kepek/04.webp",
+      "/geppark/BMW-X1-sDrive18i-2011/kepek/05.webp",
+      "/geppark/BMW-X1-sDrive18i-2011/kepek/06.webp",
+      "/geppark/BMW-X1-sDrive18i-2011/kepek/07.webp",
+      "/geppark/BMW-X1-sDrive18i-2011/kepek/08.webp",
+      "/geppark/BMW-X1-sDrive18i-2011/kepek/09.webp",
+      "/geppark/BMW-X1-sDrive18i-2011/kepek/10.webp",
+      "/geppark/BMW-X1-sDrive18i-2011/kepek/11.webp"
+    ],
+    "leiras": "Elegáns, barna metálfényezésű BMW X1 sDrive18i (E84), első tulajdonostól. Megbízható 2.0 literes benzinmotorral (1995 cm³, 110 kW / 150 LE) és kézi váltóval. 147 200 km-es futásteljesítmény. Motorikusan és esztétikailag is nagyon szép állapotban, rozsdamentes karosszériával. Gyári, levehető vonóhoroggal (1,7 tonna vontatható tömeg). A vételár a magyarországi forgalomba helyezést és a friss műszaki vizsgát is tartalmazza. Csere, beszámítás nem lehetséges. Megtekinthető Zalaegerszegen."
   }
 ];
 

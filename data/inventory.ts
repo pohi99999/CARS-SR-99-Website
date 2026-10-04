@@ -178,6 +178,25 @@ export const inventory: Car[] = [
       "/geppark/BMW-F11-530d-xDrive-2011-zold/kepek/c9c55166-6d09-401c-badc-3944ee285fc7.webp"
     ],
     "leiras": "Ritkaságszámba menő, zöld metálfényezésű BMW 530d xDrive Touring (F11), a sorozat legerősebb és legjobban felszerelt dízel-összkerekes változata. Erőteljes, 3.0 literes dízelmotorral (190 kW / 258 LE) és állandó xDrive összkerékhajtással szerelve, amely minden évszakban biztos tapadást és magabiztos vezetést garantál. 249 000 km-es futásteljesítmény. Érvényes magyar rendszámmal (AORA-931), magyar forgalomba helyezve, rendben lévő magyar okmányokkal kerül értékesítésre."
+  },
+  {
+    "id": "ford-focus-2006",
+    "marka": "Ford",
+    "modell": "Focus 1.6 TDCi",
+    "evjarat": 2006,
+    "ar": "549 999 Ft",
+    "futasteljesitmeny": "303 000 km",
+    "uzemanyag": "Dízel",
+    "images": [
+      "/geppark/Ford-Focus-2006/kepek/fo.webp",
+      "/geppark/Ford-Focus-2006/kepek/01.webp",
+      "/geppark/Ford-Focus-2006/kepek/02.webp",
+      "/geppark/Ford-Focus-2006/kepek/03.webp",
+      "/geppark/Ford-Focus-2006/kepek/04.webp",
+      "/geppark/Ford-Focus-2006/kepek/05.webp",
+      "/geppark/Ford-Focus-2006/kepek/06.webp"
+    ],
+    "leiras": "Kék színű, ötajtós Ford Focus 1.6 TDCi, takarékos dízelmotorral (1560 cm³, 66 kW / 90 LE), 4 literes fogyasztással. 303 000 km-es futásteljesítmény. Friss műszaki vizsgával, új fékekkel, elvégzett vezérlés-cserével, friss olaj- és olajszűrő-cserével, új négyévszakos gumikkal. Klímás. Kívül-belül normál, szép állapotban. Érvényes magyar rendszámmal (PPL-952). Csere, beszámítás nem lehetséges. Megtekinthető Zalaegerszegen."
   }
 ];
 

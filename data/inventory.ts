@@ -206,6 +206,7 @@ export const inventory: Car[] = [
     "ar": "2 500 000 Ft",
     "futasteljesitmeny": "147 200 km",
     "uzemanyag": "Benzin",
+    "szin": "Barna",
     "images": [
       "/geppark/BMW-X1-sDrive18i-2011/kepek/fo.webp",
       "/geppark/BMW-X1-sDrive18i-2011/kepek/01.webp",
